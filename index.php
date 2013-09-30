@@ -1,5 +1,17 @@
+<?php
+include_once("DatabaseConnection.php");
+DatabaseConnection::connectToDatabase();
+$couple = DatabaseConnection::getCustomer();
+$customCss = DatabaseConnection::getCss();
+?>
+
 <html>
 <head>
+    <script type = "text/javascript">
+        var temp = '<?php echo $customCss; ?>';
+        document.getElementById('mySource').innerHTML = temp;
+
+    </script>
 
 
 <script type = "text/javascript" >
@@ -13,7 +25,10 @@ function makeBold() {
 function duplicateThis() {
 	//alert(document.getElementById('bride').value);
 	var temp = document.getElementById('mySource').innerHTML;
+    //alert(temp);
 	document.getElementById('myResult').value = temp;
+
+
 	//var html = $(".mySource");
 //var htmlString = html.html();
 //localStorage.setItem('first',document.getElementById('bride').value);
@@ -26,33 +41,21 @@ function duplicateThis() {
 </head>
 
 <body>
-<?php
 
-if(isset($_POST['myResult'])) {
-	echo $_POST['myResult'];
-	
-	?>
-	<script type="text/javascript">
-	document.getElementById('groom').value = "<?php echo $_POST['groom']; ?>"
-	document.getElementById('bride').value = "<?php echo $_POST['bride']; ?>"
-	</script>
-	<?
-}
-else {
 
-	?>
 
 <div  id = "mySource">
-<form method = "POST" action = "<? echo $_SERVER['PHP_SELF']; ?>" onsubmit="duplicateThis()">
-<input id = "bride" name = "bride" class = "bride" type = "text"  > <br />WEDS <br />
-<input id = "groom"  class = "groom" name = "groom" type = "text"  value = > <br />
+<!--
+<form method = "POST" action = "process.php" onsubmit="duplicateThis()">
+<input id = "bride" name = "bride" class = "bride" type = "text"  value = "<?php echo $couple[0]; ?>" > <br />WEDS <br />
+<input id = "groom"  class = "groom" name = "groom" type = "text" value = "<?php echo $couple[1]; ?>" > <br />
 <input type = "hidden" id = "myResult" name = "myResult">
-<input type = "submit" value = "Duplicate" >
+<input type = "submit" value = "Save" >
 </form>
+-->
 </div>
-<?php
-}
-?>
+
+
 <input type = "button" value = "changeColor" onClick = "makeBold()">
 
 </body>
