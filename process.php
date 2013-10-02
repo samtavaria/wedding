@@ -7,6 +7,7 @@
  * To change this template use File | Settings | File Templates.
  */
 include_once("DatabaseConnection.php");
-
-DatabaseConnection::setCss($_POST['myresult']);
+DatabaseConnection::connectToDatabase();
+var_dump($_POST);
+DatabaseConnection::setCss(base64_encode($_POST['myCss']));
 header("Location: index.php");

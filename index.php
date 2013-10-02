@@ -2,41 +2,27 @@
 include_once("DatabaseConnection.php");
 DatabaseConnection::connectToDatabase();
 $couple = DatabaseConnection::getCustomer();
-$customCss = DatabaseConnection::getCss();
+$customCss = base64_decode(DatabaseConnection::getCss());
+
 ?>
 
 <html>
 <head>
-    <script type = "text/javascript">
-        var temp = '<?php echo $customCss; ?>';
-        document.getElementById('mySource').innerHTML = temp;
 
-    </script>
+
 
 
 <script type = "text/javascript" >
-function makeBold() {
-	var elem = document.getElementById('groom');
-	elem.setAttribute("style","font-weight: bold; background-color: yellow;float:left");
-	 elem = document.getElementById('bride');
-	elem.setAttribute("style","font-weight: bold; background-color: green;float:left");
+function changeColor() {
+	//var elem = document.getElementById('groom');
+	//elem.setAttribute("style","font-weight: bold; background-color: yellow;float:left");
+	 //elem = document.getElementById('bride');
+	//elem.setAttribute("style","font-weight: bold; background-color: green;float:left");
+     document.getElementById('myStyle').innerHTML = "#bride {font-weight: bold; background-color: green; float:left} #groom {font-weight: bold; background-color: blue; float: left}";
+        document.getElementById('myCss').value = document.getElementById('myStyle').innerHTML;
+    //alert(document.getElementById('myCss'));
 }
 
-function duplicateThis() {
-	//alert(document.getElementById('bride').value);
-	var temp = document.getElementById('mySource').innerHTML;
-    //alert(temp);
-	document.getElementById('myResult').value = temp;
-
-
-	//var html = $(".mySource");
-//var htmlString = html.html();
-//localStorage.setItem('first',document.getElementById('bride').value);
-
-//alert(htmlString);
-//document.getElementById('target').innerHTML = temp;
-//document.getElementById('groom').value = localStorage.getItem('first');
-}
 </script>
 </head>
 
@@ -45,18 +31,24 @@ function duplicateThis() {
 
 
 <div  id = "mySource">
-<!--
-<form method = "POST" action = "process.php" onsubmit="duplicateThis()">
+
+<form method = "POST" action = "process.php" >
 <input id = "bride" name = "bride" class = "bride" type = "text"  value = "<?php echo $couple[0]; ?>" > <br />WEDS <br />
 <input id = "groom"  class = "groom" name = "groom" type = "text" value = "<?php echo $couple[1]; ?>" > <br />
-<input type = "hidden" id = "myResult" name = "myResult">
+<input type = "hidden" id = "myCss" name ="myCss">
 <input type = "submit" value = "Save" >
 </form>
--->
+
 </div>
 
 
-<input type = "button" value = "changeColor" onClick = "makeBold()">
+<style id = "myStyle" type = "text/css">
+<?php echo $customCss;
+?>
+
+    </style>
+
+<input type = "button" value = "changeColor" onClick = "changeColor()">
 
 </body>
 </html>

@@ -34,21 +34,19 @@ public static function connectToDatabase() {
             exit;
         }
 
-        if (mysql_num_rows($result) == 0) {
-            echo "No rows found, nothing to print so am exiting";
-            exit;
-        }
+
 
 
         $row = mysql_fetch_assoc($result);
-        return base64_decode($row['css']);
+        return $row['css'];
 
     }
 
-    public static function setCss($css) {
-        $css = base64_encode($css);
-        $sql = "insert into custom_css values (1, '".$css."')";
+    public static function setCss($base64EncodedCss) {
+        echo $base64EncodedCss;
+        $sql = "insert into custom_css values ('', '".$base64EncodedCss."')";
         $result = mysql_query($sql);
+        var_dump($result);
     }
 
 public static function getCustomer() {
