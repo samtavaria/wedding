@@ -2,16 +2,29 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="85cdb505-0481-4b81-a195-4f5b84a784ff" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DatabaseConnection.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/process.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DatabaseQueries.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/LoginProcess.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/PersistentDatabaseConnection.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wedding.css" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DatabaseConnection_OLD.php" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/index.php" afterPath="$PROJECT_DIR$/Invitation.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.php" afterPath="$PROJECT_DIR$/index.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/process.php" afterPath="$PROJECT_DIR$/process.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="wedding.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="85cdb505-0481-4b81-a195-4f5b84a784ff" time="1380494537876" ignored="false" />
-    <file path="/index.php" changelist="85cdb505-0481-4b81-a195-4f5b84a784ff" time="1380502434721" ignored="false" />
-    <file path="/DatabaseConnection.php" changelist="85cdb505-0481-4b81-a195-4f5b84a784ff" time="1380500516976" ignored="false" />
-    <file path="/process.php" changelist="85cdb505-0481-4b81-a195-4f5b84a784ff" time="1380500153791" ignored="false" />
+    <file path="/Dummy.txt" changelist="85cdb505-0481-4b81-a195-4f5b84a784ff" time="1380753340149" ignored="false" />
+    <file path="/index.php" changelist="85cdb505-0481-4b81-a195-4f5b84a784ff" time="1380687851123" ignored="false" />
+    <file path="/DatabaseConnection.php" changelist="85cdb505-0481-4b81-a195-4f5b84a784ff" time="1380761369547" ignored="false" />
+    <file path="/process.php" changelist="85cdb505-0481-4b81-a195-4f5b84a784ff" time="1380684241014" ignored="false" />
+    <file path="/Login.php" changelist="85cdb505-0481-4b81-a195-4f5b84a784ff" time="1380758935033" ignored="false" />
+    <file path="/LoginProcess.php" changelist="85cdb505-0481-4b81-a195-4f5b84a784ff" time="1380760106594" ignored="false" />
+    <file path="/PersistentDatabaseConnection.php" changelist="85cdb505-0481-4b81-a195-4f5b84a784ff" time="1380759952045" ignored="false" />
+    <file path="/a.dummy" changelist="85cdb505-0481-4b81-a195-4f5b84a784ff" time="1380761315222" ignored="false" />
+    <file path="/Invitation.php" changelist="85cdb505-0481-4b81-a195-4f5b84a784ff" time="1380764048863" ignored="false" />
+    <file path="/DatabaseQueries.php" changelist="85cdb505-0481-4b81-a195-4f5b84a784ff" time="1380761536414" ignored="false" />
+    <file path="/wedding.css" changelist="85cdb505-0481-4b81-a195-4f5b84a784ff" time="1380762903986" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,28 +44,57 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="Invitation.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Invitation.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="42" column="66" selection-start="1480" selection-end="1480" vertical-scroll-proportion="0.5415677">
+              <folding>
+                <element signature="n#style#0;n#input#0;n#form#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="wedding.css" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/wedding.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="1" column="1" selection-start="2" selection-end="2" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="42" column="6" selection-start="1197" selection-end="1197" vertical-scroll-proportion="0.8694097">
+            <state line="4" column="121" selection-start="199" selection-end="199" vertical-scroll-proportion="-2.7142856">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="process.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/process.php">
+      <file leaf-file-name="LoginProcess.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/LoginProcess.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="18" selection-start="272" selection-end="272" vertical-scroll-proportion="-10.083333">
+            <state line="1" column="0" selection-start="6" selection-end="55" vertical-scroll-proportion="-0.6785714">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DatabaseConnection.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/DatabaseConnection.php">
+      <file leaf-file-name="DatabaseQueries.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/DatabaseQueries.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="27" column="76" selection-start="611" selection-end="671" vertical-scroll-proportion="-18.321428">
+            <state line="84" column="28" selection-start="2296" selection-end="2296" vertical-scroll-proportion="-7.848101">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PersistentDatabaseConnection.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/PersistentDatabaseConnection.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="2" column="15" selection-start="38" selection-end="59" vertical-scroll-proportion="-1.3571428">
               <folding />
             </state>
           </provider>
@@ -77,8 +119,14 @@
     <option name="changedFiles">
       <list>
         <option value="$PROJECT_DIR$/process.php" />
-        <option value="$PROJECT_DIR$/DatabaseConnection.php" />
         <option value="$PROJECT_DIR$/index.php" />
+        <option value="$PROJECT_DIR$/Login.php" />
+        <option value="$PROJECT_DIR$/PersistentDatabaseConnection.php" />
+        <option value="$PROJECT_DIR$/LoginProcess.php" />
+        <option value="$PROJECT_DIR$/DatabaseConnection.php" />
+        <option value="$PROJECT_DIR$/DatabaseQueries.php" />
+        <option value="$PROJECT_DIR$/wedding.css" />
+        <option value="$PROJECT_DIR$/Invitation.php" />
       </list>
     </option>
   </component>
@@ -140,9 +188,14 @@
   <component name="PropertiesComponent">
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="options.lastSelected" value="editor" />
-    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.lastSelected" value="reference.settingsdialog.IDE.editor.colors.Font" />
     <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration default="true" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
@@ -184,12 +237,14 @@
     <frame x="-3" y="0" width="1926" height="1057" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32968238" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32968238" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32893288" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.12860192" sideWeight="0.67031765" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.13180363" sideWeight="0.6710671" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2497332" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -197,9 +252,7 @@
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -264,21 +317,71 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/index.php">
+    <entry file="file://$PROJECT_DIR$/process.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+        <state line="11" column="25" selection-start="249" selection-end="249" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
+    <entry file="file://$PROJECT_DIR$/DatabaseQueries.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+        <state line="46" column="56" selection-start="1092" selection-end="1092" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
+    <entry file="file://$PROJECT_DIR$/Invitation.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="26" column="6" selection-start="874" selection-end="874" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="n#style#0;n#input#0;n#form#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/process.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="18" selection-start="272" selection-end="272" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DatabaseQueries.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="27" column="76" selection-start="611" selection-end="671" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Invitation.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="n#style#0;n#input#0;n#form#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Invitation.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="n#style#0;n#input#0;n#form#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Invitation.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="n#style#0;n#input#0;n#form#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.DatabaseConnection.php.old">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
@@ -287,22 +390,52 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/process.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="18" selection-start="272" selection-end="272" vertical-scroll-proportion="-10.083333">
+        <state line="12" column="0" selection-start="324" selection-end="359" vertical-scroll-proportion="-8.142858">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DatabaseConnection.php">
+    <entry file="file://$PROJECT_DIR$/PersistentDatabaseConnection.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="76" selection-start="611" selection-end="671" vertical-scroll-proportion="-18.321428">
+        <state line="2" column="15" selection-start="38" selection-end="59" vertical-scroll-proportion="-1.3571428">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DatabaseQueries.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="84" column="28" selection-start="2296" selection-end="2296" vertical-scroll-proportion="-7.848101">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LoginProcess.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="0" selection-start="6" selection-end="55" vertical-scroll-proportion="-0.6785714">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wedding.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="1" selection-start="2" selection-end="2" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="42" column="6" selection-start="1197" selection-end="1197" vertical-scroll-proportion="0.8694097">
+        <state line="4" column="121" selection-start="199" selection-end="199" vertical-scroll-proportion="-2.7142856">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Invitation.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="42" column="66" selection-start="1480" selection-end="1480" vertical-scroll-proportion="0.5415677">
+          <folding>
+            <element signature="n#style#0;n#input#0;n#form#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
