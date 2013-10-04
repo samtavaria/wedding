@@ -25,7 +25,7 @@
     <!--Facebook Like Button OpenGraph Settings End-->
 
     <title>
-        Create Free Wedding Websites | Sites with Indian Designs |khwdfjsn </title>
+        Create Free Wedding Websites | Sites with Indian Designs | </title>
 
     <meta name="description"
           content="Getting Married? Create your Free Wedding Website with Indian Designs! It takes only a minute to create your wedding site! Try Now!"/>
@@ -35,29 +35,6 @@
     <link rel="stylesheet" type="text/css" href=""/>
     <!-- <link rel="stylesheet" type="text/css" href="http://myshaadi.in/main/css/slider.css" /> -->
     <link rel="stylesheet" type="text/css" href=""/>
-
-    <script type="text/javascript">
-        window.$zopim || (function (d, s) {
-            var z = $zopim = function (c) {
-                z._.push(c)
-            }, $ = z.s =
-                    d.createElement(s), e = d.getElementsByTagName(s)[0];
-            z.set = function (o) {
-                z.set.
-                        _.push(o)
-            };
-            z._ = [];
-            z.set._ = [];
-            $.async = !0;
-            $.setAttribute('charset', 'utf-8');
-            $.src = '//cdn.zopim.com/?lCPLq0U4wY637dSDw1qeNapqscL5yLKM';
-            z.t = +new Date;
-            $.
-                    type = 'text/javascript';
-            e.parentNode.insertBefore($, e)
-        })(document, 'script');
-    </script>
-    <!--End of Zopim Live Chat Script-->
 
     <script type="text/javascript">
         function formValidate() {
@@ -102,9 +79,9 @@
 <div style = "float: left; margin-left: 40%">
 <form method="POST" action="LoginProcess.php" onsubmit="return formValidate();">
     Username:<br/>
-    <input type="text" id="username" name="username" autocomplete="off"><br/>
+    <input type="text" id="username" name="username" ><br/>
     Password: <br/>
-    <input type="password" id="password" name="password" autocomplete="off"><br/>
+    <input type="password" id="password" name="password" ><br/>
     <input type="submit" value="submit">
 </form>
 </div>

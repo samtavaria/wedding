@@ -7,4 +7,4 @@ $query = "select * from Couple where username = "."'$username'"." and password =
 $sql = mysql_query($query);
 $couple = mysql_fetch_assoc($sql);
 $_SESSION['cid'] = $couple['c_id'];
-header("Location: Invitation.php");
+header("Location: TemplateSelection.php");

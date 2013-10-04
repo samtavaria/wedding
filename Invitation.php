@@ -8,6 +8,7 @@ if(!isset($_SESSION['cid']) || empty($_SESSION['cid'])) {
 }
 $couple = DatabaseConnection::getCouple();
 //$customCss = base64_decode(DatabaseConnection::getCss());
+$backgroundImage = DatabaseConnection::getInvitationBackground($_SESSION['cid']);
 
 ?>
 
@@ -36,7 +37,7 @@ function changeColor() {
 
 
 
-<div  id = "mySource">
+<div  id = "mySource" style = "float:left">
 
 <form method = "POST" action = "process.php" >
 <input id = "bride" name = "bride" class = "myInputBox" width="500px" onmouseover="this.style.width = ((this.value.length + 1) * 8) + 'px';" style = "outline:none" type = "text"  value = "<?php echo $couple[0]." ".$couple[1]." ".$couple[2]; ?>" > <br />WEDS <br />
@@ -47,6 +48,9 @@ function changeColor() {
 
 </div>
 
+<div id = "myCanvas" style = "float: right">
+    <img src = "<?php echo $backgroundImage; ?>" id = "card_background" height = "640" width = "720">
+</div>
 
 <style id = "myStyle" type = "text/css">
 <?php //echo $customCss;
