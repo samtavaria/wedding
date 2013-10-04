@@ -6,8 +6,8 @@
  * Time: 5:14 PM
  * To change this template use File | Settings | File Templates.
  */
-include_once("DatabaseQueries.php");
+include_once('PersistentDatabaseConnection.php');
 DatabaseConnection::connectToDatabase();
-var_dump($_POST);
-DatabaseConnection::setCss(base64_encode($_POST['myCss']));
+//var_dump($_POST);
+DatabaseConnection::setPosition($_POST);
 header("Location: Invitation.php");

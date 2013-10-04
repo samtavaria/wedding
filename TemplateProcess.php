@@ -8,5 +8,5 @@ include_once('PersistentDatabaseConnection.php');
  * To change this template use File | Settings | File Templates.
  */
 var_dump($_POST);
-DatabaseConnection::setInvitationBackground($_SESSION['cid'],$_POST['background']);
+DatabaseConnection::setInvitationBackground($_SESSION['cid'], $_POST['background']);
 header("Location: Invitation.php");

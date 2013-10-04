@@ -62,7 +62,7 @@
 <br><br><br>
 
 
-<div style = "float: left; width: 90%">
+<div style="float: left; width: 90%">
 <span style="float:left; margin-left:400px">
   <img src="website_images/website.jpg" style="width:150px; height:150px; border: none;"/>
   <br/>
@@ -76,14 +76,14 @@
 <p style="font-family: forte, cursive, Serif;">INVITATION DESIGN</p>
 </span>
 </div>
-<div style = "float: left; margin-left: 40%">
-<form method="POST" action="LoginProcess.php" onsubmit="return formValidate();">
-    Username:<br/>
-    <input type="text" id="username" name="username" ><br/>
-    Password: <br/>
-    <input type="password" id="password" name="password" ><br/>
-    <input type="submit" value="submit">
-</form>
+<div style="float: left; margin-left: 40%">
+    <form method="POST" action="LoginProcess.php" onsubmit="return formValidate();">
+        Username:<br/>
+        <input type="text" id="username" name="username"><br/>
+        Password: <br/>
+        <input type="password" id="password" name="password"><br/>
+        <input type="submit" value="submit">
+    </form>
 </div>
 </body>
 
