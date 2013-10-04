@@ -10,4 +10,5 @@ include_once('PersistentDatabaseConnection.php');
 DatabaseConnection::connectToDatabase();
 //var_dump($_POST);
 DatabaseConnection::setPosition($_POST);
+DatabaseConnection::updateCoupleInformationFromInvitation($_POST);
 header("Location: Invitation.php");

@@ -27,11 +27,11 @@ if (!isset($_SESSION['cid']) || empty($_SESSION['cid'])) {
         }
     </script>
 </head>
-<body>
+<body background = "website_images/body.jpg">
 
-
+<p style = "font-weight: bold; font-family: fantasy;font: fantasy"> Please make a selection from the following templates</p><br /><br />
 <div id="Layout_Selection" style="float: left; width:40%">
-    <p> Select a template</p></br>
+
 
 
     <img class="template_icon selected" title="Title 1" width="160" height="120"
@@ -48,6 +48,7 @@ if (!isset($_SESSION['cid']) || empty($_SESSION['cid'])) {
 
     <form action="TemplateProcess.php" method="POST" onSubmit="setBackground()">
         <input type="hidden" id="background" name="background">
+        <br /><br />
         <input type="submit" value="Submit">
     </form>
 

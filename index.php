@@ -63,7 +63,7 @@
 
 
 <div style="float: left; width: 90%">
-<span style="float:left; margin-left:400px">
+<span style="float:left; margin-left:500px">
   <img src="website_images/website.jpg" style="width:150px; height:150px; border: none;"/>
   <br/>
   <p style="font-family: forte, cursive, Serif;">WEBSITE DESIGN</p>

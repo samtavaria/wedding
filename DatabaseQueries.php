@@ -121,4 +121,17 @@ class DatabaseConnection
         $resultRow = mysql_fetch_assoc($result);
         return $resultRow;
     }
+
+    public static function updateCoupleInformationFromInvitation($coupleInfo) {
+        $cid = $_SESSION['cid'];
+        $bride = explode(' ', $coupleInfo['bride']);
+        $groom = explode(' ', $coupleInfo['groom']);
+        $sql = "update Bride b set b.b_first_name = "."'$bride[0]'"." , b.b_middle_name = "."'$bride[1]'"." , b.b_last_name = "."'$bride[2]'"."  ";
+        $sql.= " where b.b_id = "."'$cid'";
+        $result = mysql_query($sql);
+        $sql = "update Groom g set g.g_first_name = "."'$groom[0]'"." , g.g_middle_name = "."'$groom[1]'"." , g.g_last_name = "."'$groom[2]'"."  ";
+        $sql.= " where g.g_id = "."'$cid'";
+        $result = mysql_query($sql);
+
+    }
 }

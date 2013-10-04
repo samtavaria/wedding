@@ -90,7 +90,7 @@ $position1 = explode(',', $position['all_positions']);
 </head>
 
 
-<body>
+<body background = "website_images/body.jpg">
 
 
 <div id="mySource" style="float:left">
@@ -122,7 +122,7 @@ $position1 = explode(',', $position['all_positions']);
         </div>
         <input type="hidden" id="myCss" name="myCss">
         <input type="submit" value="Save">
-        <img src="invitation_card_backgrounds_preview/1.jpeg" id="library_img" style= "position: absolute;
+        <img src="invitation_card_icons/1.jpeg" id="library_img" style= "position: absolute;
             top: <?php echo $position1[6]; ?> ;left: <?php echo $position1[7]; ?>">
 
     </form>
