@@ -49,7 +49,10 @@
 
 </head>
 
-<body class="home" background="website_images/background.jpg">
+<body class="home" background="website_images/2.jpeg" style = "background-repeat: no-repeat;-webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;" >
 
 
 <div align='center'>
@@ -76,7 +79,7 @@
 <p style="font-family: forte, cursive, Serif;">INVITATION DESIGN</p>
 </span>
 </div>
-<div style="float: left; margin-left: 40%">
+<div style="float: left; margin-left: 45%">
     <form method="POST" action="LoginProcess.php" onsubmit="return formValidate();">
         Username:<br/>
         <input type="text" id="username" name="username"><br/>
