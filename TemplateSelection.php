@@ -27,7 +27,7 @@ if (!isset($_SESSION['cid']) || empty($_SESSION['cid'])) {
         }
     </script>
 </head>
-<body background = "website_images/body.jpg">
+<body background = "media/website_images/body.jpg">
 
 <p style = "font-weight: bold; font-family: fantasy;font: fantasy"> Please make a selection from the following templates</p><br /><br />
 <div id="Layout_Selection" style="float: left; width:40%">
@@ -35,14 +35,14 @@ if (!isset($_SESSION['cid']) || empty($_SESSION['cid'])) {
 
 
     <img class="template_icon selected" title="Title 1" width="160" height="120"
-         src="invitation_card_backgrounds_preview/1.jpeg" onmouseover="showImage1();"/>
+         src="media/invitation_card_backgrounds_preview/1.jpeg" onmouseover="showImage1();"/>
 
 
-    <img class="template_icon" title="Title 2" width="160" height="120" src="invitation_card_backgrounds_preview/2.jpeg"
+    <img class="template_icon" title="Title 2" width="160" height="120" src="media/invitation_card_backgrounds_preview/2.jpeg"
          onmouseover="showImage2();"/>
 
 
-    <img class="template_icon" title="Title 3" width="160" height="120" src="invitation_card_backgrounds_preview/3.jpeg"
+    <img class="template_icon" title="Title 3" width="160" height="120" src="media/invitation_card_backgrounds_preview/3.jpeg"
          onmouseover="showImage3();"/>
 
 

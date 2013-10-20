@@ -49,7 +49,7 @@
 
 </head>
 
-<body class="home" background="website_images/2.jpeg" style = "background-repeat: no-repeat;-webkit-background-size: cover;
+<body class="home" background="media/website_images/2.jpeg" style = "background-repeat: no-repeat;-webkit-background-size: cover;
         -moz-background-size: cover;
         -o-background-size: cover;
         background-size: cover;" >
@@ -67,14 +67,14 @@
 
 <div style="float: left; width: 90%">
 <span style="float:left; margin-left:500px">
-  <img src="website_images/website.jpg" style="width:150px; height:150px; border: none;"/>
+  <img src="media/website_images/website.jpg" style="width:150px; height:150px; border: none;"/>
   <br/>
   <p style="font-family: forte, cursive, Serif;">WEBSITE DESIGN</p>
 </span>
 
 
 <span style="float:left; margin-left:250px">
-  <img src="website_images/invitation.jpg" style="width:150px; height:150px; border: none;"/>
+  <img src="media/website_images/invitation.jpg" style="width:150px; height:150px; border: none;"/>
   <br/>
 <p style="font-family: forte, cursive, Serif;">INVITATION DESIGN</p>
 </span>

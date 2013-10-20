@@ -16,7 +16,7 @@ $position1 = explode(',', $position['all_positions']);
 
 <html>
 <head>
-    <link rel="stylesheet" type="text/css" href="wedding.css"/>
+    <link rel="stylesheet" type="text/css" href="css/wedding.css"/>
 
 
     <script type="text/javascript">
@@ -33,10 +33,10 @@ $position1 = explode(',', $position['all_positions']);
 
     </script>
 
-    <script src="jquery-1.9.1.js"></script>
-    <script src="jquery-ui.js"></script>
-    <script type="text/javascript" src="farbtastic/farbtastic.js"></script>
-    <link rel="stylesheet" href="farbtastic/farbtastic.css" type="text/css"/>
+    <script src="javascript/jquery-1.9.1.js"></script>
+    <script src="javascript/jquery-ui.js"></script>
+    <script type="text/javascript" src="media/farbtastic/farbtastic.js"></script>
+    <link rel="stylesheet" href="media/farbtastic/farbtastic.css" type="text/css"/>
 
     <script type="text/javascript">
 
@@ -90,7 +90,7 @@ $position1 = explode(',', $position['all_positions']);
 </head>
 
 
-<body background = "website_images/body.jpg">
+<body background = "media/website_images/body.jpg">
 
 
 <div id="mySource" style="float:left">
@@ -122,7 +122,7 @@ $position1 = explode(',', $position['all_positions']);
         </div>
         <input type="hidden" id="myCss" name="myCss">
         <input type="submit" value="Save">
-        <img src="invitation_card_icons/1.jpeg" id="library_img" style= "position: absolute;
+        <img src="media/invitation_card_icons/1.jpeg" id="library_img" style= "position: absolute;
             top: <?php echo $position1[6]; ?> ;left: <?php echo $position1[7]; ?>">
 
     </form>
