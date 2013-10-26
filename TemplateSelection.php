@@ -12,15 +12,15 @@ if (!isset($_SESSION['cid']) || empty($_SESSION['cid'])) {
 
     <script type="text/javascript">
         function showImage1() {
-            document.getElementById('selectedBackground').src = "invitation_card_backgrounds/1.jpeg";
+            document.getElementById('selectedBackground').src = "media/invitation_card_backgrounds/1.jpeg";
         }
 
         function showImage2() {
-            document.getElementById('selectedBackground').src = "invitation_card_backgrounds/2.jpeg";
+            document.getElementById('selectedBackground').src = "media/invitation_card_backgrounds/2.jpeg";
         }
 
         function showImage3() {
-            document.getElementById('selectedBackground').src = "invitation_card_backgrounds/3.jpeg";
+            document.getElementById('selectedBackground').src = "media/invitation_card_backgrounds/3.jpeg";
         }
         function setBackground() {
             document.getElementById('background').value = document.getElementById('selectedBackground').src;

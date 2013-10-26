@@ -23,15 +23,15 @@
 <body onload="pageLoad()">
 <div id="GuestManagementMenu" style="float: left">
     <br/>
-    <span  onClick="showGuestUpload()"> Upload Guest list</span><br/><br/>
-    <span onclick="showGuestList()"> Show Guest List</span>
+    <span  onClick="showGuestUpload()"> <img src = "media/button/UploadGuestList.png" /></span><br/><br/>
+    <span onclick="showGuestList()"> <img src = "media/button/ViewGuestList.png" /></span>
 </div>
 <div id="GuestManagementData" style="float: left; margin-left: 30px">
     <div id="GuestUpload">
         <p>Please <a href="GuestDatabaseTemplate/guestData.csv">Click here</a> to download the fie where you can add
             your guest data</p>
 
-        <form method="POST" action="GuestDatabaseUpload.php">
+        <form method="POST" action="GuestDatabaseUpload.php" enctype="multipart/form-data">
             Select File: <input type="file" name="guestDatabase" id="guestDatabase"/> <br/>
             <input type="submit" value="upload">
         </form>

@@ -1,5 +1,5 @@
 <?php
-include_once('PersistentDatabaseConnection.php');
+include_once('model/PersistentDatabaseConnection.php');
 DatabaseConnection::connectToDatabase();
 
 if (!isset($_SESSION['cid']) || empty($_SESSION['cid'])) {
