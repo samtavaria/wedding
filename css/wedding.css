@@ -2,3 +2,12 @@
     border: none;
     background-color: red;
 }
+
+.GuestmanagementMenu {
+    float: left;
+}
+
+.GuestmanagementData {
+    float:left;
+
+}

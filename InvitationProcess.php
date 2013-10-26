@@ -6,7 +6,7 @@
  * Time: 5:14 PM
  * To change this template use File | Settings | File Templates.
  */
-include_once('PersistentDatabaseConnection.php');
+include_once('model/PersistentDatabaseConnection.php');
 DatabaseConnection::connectToDatabase();
 //var_dump($_POST);
 DatabaseConnection::setPosition($_POST);
