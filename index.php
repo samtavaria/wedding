@@ -49,10 +49,10 @@
 
 </head>
 
-<body class="home" background="media/website_images/2.jpeg" style = "background-repeat: no-repeat;-webkit-background-size: cover;
+<body class="home" background="media/website_images/2.jpeg" style="background-repeat: no-repeat;-webkit-background-size: cover;
         -moz-background-size: cover;
         -o-background-size: cover;
-        background-size: cover;" >
+        background-size: cover;">
 
 
 <div align='center'>
