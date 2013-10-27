@@ -37,7 +37,12 @@
         </form>
     </div>
     <div id="GuestList">
-        <?php echo 'hii';
+        <?php
+        $result = DatabaseConnection::getGuestlist();
+        echo '<table border = "1">';
+        foreach($result as $key => $value) {
+            echo '<tr>';
+        }
         ?>
     </div>
 </div>

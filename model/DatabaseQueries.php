@@ -134,4 +134,42 @@ class DatabaseConnection
         $result = mysql_query($sql);
 
     }
+
+    public static function insertGuestInfoIntoDatabase($dataRow, $counter) {
+
+        $cid = $_SESSION['cid'];
+        $sql = 'INSERT INTO Guest values(';
+        $sql.= "'',";
+        $sql.= "'C{$cid}G".$counter."',";
+        $sql.= "'$cid'".',';
+        if(sizeof($dataRow) != 12) {
+            return;
+        }
+        foreach($dataRow as $value) {
+            $value = addslashes(ucfirst(trim($value)));
+            if(empty($value)) {
+                $value = 'Error';
+            }
+            $sql.= "'$value'".',';
+        }
+        //To take care of the rsvp columns which will be set to null initially
+        for($i = 1; $i <= 5; $i++) {
+            $sql.="'NULL',";
+        }
+        $sql = substr($sql, 0, strlen($sql)-1);
+        $sql.=')';
+        //echo $sql.'<br />';
+        mysql_query($sql) or die(mysql_error());
+
+    }
+    public static function deleteGuestListIfPresent() {
+        $cid = $_SESSION['cid'];
+        $sql = "Delete from Guest where c_id = "."'$cid'";
+        mysql_query($sql);
+    }
+
+    public static function getGuestlist() {
+        $cid = $_SESSION['cid'];
+        $sql = "Select * from Guest where cid = "."'$cid'"." order by guest_number";
+    }
 }
