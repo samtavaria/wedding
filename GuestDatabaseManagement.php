@@ -16,7 +16,7 @@ class GuestDatabaseManagement {
         //discard first row since it is just the headings
         array_shift($dataList);
         $i = 0;
-        DatabaseConnection::deleteGuestListIfPresent();
+        //DatabaseConnection::deleteGuestListIfPresent();
         foreach($dataList as $dataRowList) {
             $dataRow = explode(',', $dataRowList);
             DatabaseConnection::insertGuestInfoIntoDatabase($dataRow, ++$i);

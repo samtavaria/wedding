@@ -13,7 +13,9 @@ if (!isset($_SESSION['cid']) || empty($_SESSION['cid'])) {
     exit;
 }
 
+echo '<body background = "media/website_images/body.jpg" >';
 echo '<p> What do you wish to select</p>';
 
 echo '<a href = "TemplateSelection.php"> Invitation card Design</a>'.'<br />';
 echo '<a href = "GuestManagement.php"> Guest Management</a>'.'<br />';
+echo '</body>';

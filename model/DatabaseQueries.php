@@ -148,7 +148,7 @@ class DatabaseConnection
         foreach($dataRow as $value) {
             $value = addslashes(ucfirst(trim($value)));
             if(empty($value)) {
-                $value = 'Error';
+                $value = 'n/a';
             }
             $sql.= "'$value'".',';
         }
@@ -159,17 +159,31 @@ class DatabaseConnection
         $sql = substr($sql, 0, strlen($sql)-1);
         $sql.=')';
         //echo $sql.'<br />';
-        mysql_query($sql) or die(mysql_error());
+        mysql_query($sql);//
+        // dont die if duplicate entry avoid that row
+        //or die(mysql_error());
 
     }
+
     public static function deleteGuestListIfPresent() {
         $cid = $_SESSION['cid'];
+        //The below step is essential because if somehow cid is not set the query will remove data for all guests
+        if(empty($cid) || ! isset($cid)) {
+            $cid = 'asdf';
+        }
         $sql = "Delete from Guest where c_id = "."'$cid'";
         mysql_query($sql);
     }
 
+
     public static function getGuestlist() {
         $cid = $_SESSION['cid'];
-        $sql = "Select * from Guest where cid = "."'$cid'"." order by guest_number";
+        $sql = "Select * from Guest where c_id = "."'$cid'"." order by guest_number";
+        $result = mysql_query($sql);
+        $guest = array();
+        while($row = mysql_fetch_row($result)) {
+            $guest[] = $row;
+        }
+        return $guest;
     }
 }
