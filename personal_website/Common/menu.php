@@ -4,9 +4,12 @@
  $menu_array = array(
 			"Welcome" => "welcome.php",
 		    "About Us" => "aboutUs.php",
-			"Our Proposal" => "ourProposal.php",
+			//"Our Proposal" => "ourProposal.php",
 			"Ceremony" => "ceremony.php",
-			"Reception" => "reception.php",
+			//"Reception" => "reception.php",
+			"Guest Information" => "guestInformation.php",
+			"Photo Album" => "photoAlbum.php",
+			"RSVP" => "rsvp.php",
 			//"Wedding Party" => "weddingParty.php",
 			//"Our Registries" => "ourRegistries.php",
 			"Guest Information" => "guestInformation.php",
@@ -14,14 +17,7 @@
 			//"Guest Book" => "guestBook.php",
 			"RSVP" => "rsvp.php",
 			//"Honeymoon" => "honeymoon.php",
-			"Wedding Party" => "weddingParty.php",
-			"Our Registries" => "ourRegistries.php",
-			"Guest Information" => "guestInformation.php",
-			"Photo Album" => "photoAlbum.php",
-			"Guest Book" => "guestBook.php",
-			"RSVP" => "rsvp.php",
-			"Honeymoon" => "honeymoon.php",
-			"Map of Events" => "mapOfEvents.php"
+			//"Map of Events" => "mapOfEvents.php"
 			);
  ?>
 <div id='navLeft'>
