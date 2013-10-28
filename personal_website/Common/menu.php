@@ -7,7 +7,6 @@
 			"Our Proposal" => "ourProposal.php",
 			"Ceremony" => "ceremony.php",
 			"Reception" => "reception.php",
-<<<<<<< HEAD
 			//"Wedding Party" => "weddingParty.php",
 			//"Our Registries" => "ourRegistries.php",
 			"Guest Information" => "guestInformation.php",
@@ -15,7 +14,6 @@
 			//"Guest Book" => "guestBook.php",
 			"RSVP" => "rsvp.php",
 			//"Honeymoon" => "honeymoon.php",
-=======
 			"Wedding Party" => "weddingParty.php",
 			"Our Registries" => "ourRegistries.php",
 			"Guest Information" => "guestInformation.php",
@@ -23,7 +21,6 @@
 			"Guest Book" => "guestBook.php",
 			"RSVP" => "rsvp.php",
 			"Honeymoon" => "honeymoon.php",
->>>>>>> d4bb5fcd550fc86d999e12b5bb07707711dd09ff
 			"Map of Events" => "mapOfEvents.php"
 			);
  ?>
