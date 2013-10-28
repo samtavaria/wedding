@@ -35,6 +35,7 @@ CREATE TABLE IF NOT EXISTS `Bride` (
   `b_last_name` varchar(50) NOT NULL,
   `b_father_name` varchar(50) NOT NULL,
   `b_mother_name` varchar(50) NOT NULL,
+  `bio` text NOT NULL,
   PRIMARY KEY (`b_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -263,6 +264,7 @@ CREATE TABLE IF NOT EXISTS `Groom` (
   `g_last_name` varchar(50) NOT NULL,
   `g_father_name` varchar(50) NOT NULL,
   `g_mother_name` varchar(50) NOT NULL,
+  `bio` text NOT NULL,
   PRIMARY KEY (`g_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -355,6 +357,30 @@ CREATE TABLE IF NOT EXISTS `User_Pictures` (
   `c_id` int(11) NOT NULL COMMENT 'foregin key to couple id',
   PRIMARY KEY (`user_image_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Table structure for table `website_basic_info`
+--
+
+CREATE TABLE IF NOT EXISTS `website_basic_info` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `c_id` int(11) NOT NULL,
+  `welcome_text` text NOT NULL,
+  `how_met_text` text NOT NULL,
+  `proposal_text` text NOT NULL,
+  `wedding_party_text` text NOT NULL,
+  `registry_text` text NOT NULL,
+  `honeymoon_text` text NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
+
+--
+-- Dumping data for table `website_basic_info`
+--
+
+INSERT INTO `website_basic_info` (`id`, `c_id`, `welcome_text`, `how_met_text`, `proposal_text`, `wedding_party_text`, `registry_text`, `honeymoon_text`) VALUES
+(1, 1, 'This our site where you can see all the great things we are planning for our wedding!', 'We meet and the rest is history.', '', 'Bob, Sue, George', 'Macy''s, Crate&Barrel, Target', 'A tropical wonderland.');
+
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
