@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 30, 2013 at 12:00 AM
+-- Generation Time: Oct 30, 2013 at 12:09 AM
 -- Server version: 5.5.32
 -- PHP Version: 5.4.19
 
@@ -185,6 +185,18 @@ INSERT INTO `event` (`e_id`, `venue_name`, `venue_address`, `date`, `event_name`
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `font`
+--
+
+CREATE TABLE IF NOT EXISTS `font` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(128) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `groom`
 --
 
@@ -250,6 +262,20 @@ CREATE TABLE IF NOT EXISTS `invitation_contents` (
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `invitation_text`
+--
+
+CREATE TABLE IF NOT EXISTS `invitation_text` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `c_id` int(11) NOT NULL,
+  `value` text NOT NULL,
+  `font` int(11) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `media_type`
 --
 
@@ -268,7 +294,7 @@ INSERT INTO `media_type` (`id`, `type`) VALUES
 (3, 'prayers'),
 (4, 'user_invitation_images'),
 (5, 'traditional_image'),
-(6, 'text_style'),
+(6, 'invitation_text'),
 (7, 'color');
 
 -- --------------------------------------------------------
