@@ -57,8 +57,8 @@ class DatabaseConnection
 
         $cid = $_SESSION['cid'];
 
-        $sql = "SELECT Bride.b_first_name, Bride.b_middle_name, Bride.b_last_name, Groom.g_first_name, Groom.g_middle_name, Groom.g_last_name from Couple, Bride, Groom where ";
-        $sql .= "Couple.c_id =" . "'$cid'" . " and Couple.b_id = Bride.b_id and Couple.g_id = Groom.g_id";
+        $sql = "SELECT bride.b_first_name, bride.b_middle_name, bride.b_last_name, groom.g_first_name, groom.g_middle_name, groom.g_last_name from Couple, Bride, groom where ";
+        $sql .= "couple.c_id =" . "'$cid'" . " and couple.b_id = bride.b_id and couple.g_id = groom.g_id";
 
 
         $result = mysql_query($sql);
@@ -176,10 +176,10 @@ class DatabaseConnection
         $cid = $_SESSION['cid'];
         $bride = explode(' ', $coupleInfo['bride']);
         $groom = explode(' ', $coupleInfo['groom']);
-        $sql = "update Bride b set b.b_first_name = "."'$bride[0]'"." , b.b_middle_name = "."'$bride[1]'"." , b.b_last_name = "."'$bride[2]'"."  ";
+        $sql = "update bride b set b.b_first_name = "."'$bride[0]'"." , b.b_middle_name = "."'$bride[1]'"." , b.b_last_name = "."'$bride[2]'"."  ";
         $sql.= " where b.b_id = "."'$cid'";
         $result = mysql_query($sql);
-        $sql = "update Groom g set g.g_first_name = "."'$groom[0]'"." , g.g_middle_name = "."'$groom[1]'"." , g.g_last_name = "."'$groom[2]'"."  ";
+        $sql = "update groom g set g.g_first_name = "."'$groom[0]'"." , g.g_middle_name = "."'$groom[1]'"." , g.g_last_name = "."'$groom[2]'"."  ";
         $sql.= " where g.g_id = "."'$cid'";
         $result = mysql_query($sql);
 
@@ -188,7 +188,7 @@ class DatabaseConnection
     public static function insertGuestInfoIntoDatabase($dataRow, $counter) {
 
         $cid = $_SESSION['cid'];
-        $sql = 'INSERT INTO Guest values(';
+        $sql = 'INSERT INTO guest values(';
         $sql.= "'',";
         $sql.= "'C{$cid}G".$counter."',";
         $sql.= "'$cid'".',';
@@ -221,14 +221,14 @@ class DatabaseConnection
         if(empty($cid) || ! isset($cid)) {
             $cid = 'asdf';
         }
-        $sql = "Delete from Guest where c_id = "."'$cid'";
+        $sql = "Delete from guest where c_id = "."'$cid'";
         mysql_query($sql);
     }
 
 
     public static function getGuestlist() {
         $cid = $_SESSION['cid'];
-        $sql = "Select * from Guest where c_id = "."'$cid'"." order by guest_number";
+        $sql = "Select * from guest where c_id = "."'$cid'"." order by guest_number";
         $result = mysql_query($sql);
         $guest = array();
         while($row = mysql_fetch_row($result)) {
