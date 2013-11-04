@@ -93,56 +93,6 @@ class DatabaseConnection
 
     }
 
-	public static function getWebsiteData()
-	{
-		$cid = $_SESSION['cid'];
-		$sql = "SELECT * from website_basic_info where c_id =" . "'$cid'";
-		
-		$result = mysql_query($sql);
-
-        if (!$result) {
-            echo "Could not successfully run query ($sql) from DB: " . mysql_error();
-            exit;
-        }
-		if (mysql_num_rows($result) == 0) {
-            echo "No rows found, nothing to print so am exiting";
-            exit;
-        }
-		
-		$row = mysql_fetch_assoc($result);
-		return $row;
-	}
-
-	public static function getEventData()
-	{
-		$cid = $_SESSION['cid'];
-		$sql = "SELECT * from event where c_id =" . "'$cid'";
-		$result = mysql_query($sql);
-		$events = array();
-		while ($row = mysql_fetch_assoc($result)) {
-			$events[] = $row;
-		}
-		return $events;
-	}
-	
-	public static function getBrideData()
-	{
-		$cid = $_SESSION['cid'];
-		$sql = "SELECT * from bride where b_id =" . "'$cid'";
-		$result = mysql_query($sql);
-		$row = mysql_fetch_assoc($result);
-		return $row;
-	}
-	
-	public static function getGroomData()
-	{
-		$cid = $_SESSION['cid'];
-		$sql = "SELECT * from groom where g_id =" . "'$cid'";
-		$result = mysql_query($sql);
-		$row = mysql_fetch_assoc($result);
-		return $row;
-	}
-	
     public static function setInvitationBackground($cid, $background)
     {
         $sql = "insert into css values ('', '" . $cid . "', '" . $background . "', '')";
@@ -236,4 +186,54 @@ class DatabaseConnection
         }
         return $guest;
     }
+	
+		public static function getWebsiteData()
+	{
+		$cid = $_SESSION['cid'];
+		$sql = "SELECT * from website_basic_info where c_id =" . "'$cid'";
+		
+		$result = mysql_query($sql);
+
+        if (!$result) {
+            echo "Could not successfully run query ($sql) from DB: " . mysql_error();
+            exit;
+        }
+		if (mysql_num_rows($result) == 0) {
+            echo "No rows found, nothing to print so am exiting";
+            exit;
+        }
+		
+		$row = mysql_fetch_assoc($result);
+		return $row;
+	}
+
+	public static function getEventData()
+	{
+		$cid = $_SESSION['cid'];
+		$sql = "SELECT * from event where c_id =" . "'$cid'";
+		$result = mysql_query($sql);
+		$events = array();
+		while ($row = mysql_fetch_assoc($result)) {
+			$events[] = $row;
+		}
+		return $events;
+	}
+	
+	public static function getBrideData()
+	{
+		$cid = $_SESSION['cid'];
+		$sql = "SELECT * from bride where b_id =" . "'$cid'";
+		$result = mysql_query($sql);
+		$row = mysql_fetch_assoc($result);
+		return $row;
+	}
+	
+	public static function getGroomData()
+	{
+		$cid = $_SESSION['cid'];
+		$sql = "SELECT * from groom where g_id =" . "'$cid'";
+		$result = mysql_query($sql);
+		$row = mysql_fetch_assoc($result);
+		return $row;
+	}
 }
