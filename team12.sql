@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 30, 2013 at 12:09 AM
+-- Generation Time: Nov 06, 2013 at 03:23 AM
 -- Server version: 5.5.32
 -- PHP Version: 5.4.19
 
@@ -162,25 +162,33 @@ INSERT INTO `draggable` (`draggable_id`, `c_id`, `id`, `position_top`, `position
 --
 
 CREATE TABLE IF NOT EXISTS `event` (
-  `e_id` int(11) NOT NULL,
+  `e_id` int(11) NOT NULL AUTO_INCREMENT,
   `venue_name` varchar(50) NOT NULL,
   `venue_address` varchar(100) NOT NULL,
+  `city` varchar(50) NOT NULL,
+  `state` varchar(4) NOT NULL,
+  `zipcode` varchar(10) NOT NULL,
+  `parking` varchar(512) NOT NULL,
   `date` date NOT NULL,
   `event_name` varchar(50) NOT NULL,
   `venue_phone` varchar(15) NOT NULL,
   `attire` varchar(100) NOT NULL,
   `c_id` int(11) NOT NULL COMMENT 'foreign key',
   `website` varchar(512) NOT NULL,
+  `details` varchar(512) NOT NULL,
+  `otherDetails` varchar(512) NOT NULL,
+  `gift` varchar(512) NOT NULL,
   PRIMARY KEY (`e_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=11 ;
 
 --
 -- Dumping data for table `event`
 --
 
-INSERT INTO `event` (`e_id`, `venue_name`, `venue_address`, `date`, `event_name`, `venue_phone`, `attire`, `c_id`, `website`) VALUES
-(1, 'USC', '36 WattWay', '2014-02-13', 'shaadi', '2147483647', 'formal', 1, 'http://www.usc.edu/'),
-(2, 'USC', '35 watt way', '2014-03-27', 'sangeet', '8888888888', 'traditional', 1, 'http://www.usc.edu/');
+INSERT INTO `event` (`e_id`, `venue_name`, `venue_address`, `city`, `state`, `zipcode`, `parking`, `date`, `event_name`, `venue_phone`, `attire`, `c_id`, `website`, `details`, `otherDetails`, `gift`) VALUES
+(1, 'USC', '36 WattWay', '', '', '', '', '2014-02-13', 'shaadi', '2147483647', 'formal', 1, 'http://www.usc.edu/', '', '', ''),
+(2, 'USC', '35 watt way', '', '', '', '', '2014-03-27', 'sangeet', '8888888888', 'traditional', 1, 'http://www.usc.edu/', '', '', ''),
+(3, 'Albnay Country Club', 'Albany', 'Albany', 'NY', '12345', 'Lots of it', '0000-00-00', 'Wedding', '555-5555', 'Formal', 1, 'GoogleIt.com', 'Will be great', 'Will be super great', 'Yes Please');
 
 -- --------------------------------------------------------
 

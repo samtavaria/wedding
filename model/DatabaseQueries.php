@@ -11,7 +11,7 @@ class DatabaseConnection
 
     public static function connectToDatabase()
     {
-        $conn = mysql_connect("localhost", "root", "admin");
+        $conn = mysql_connect("localhost", "root", "");
 
         if (!$conn) {
             echo "Unable to connect to DB: " . mysql_error();
@@ -217,6 +217,134 @@ class DatabaseConnection
 			$events[] = $row;
 		}
 		return $events;
+	}
+	
+	public static function addSangeetEventData($result)
+	{
+	    $cid = $_SESSION['cid'];
+        $sql = "INSERT INTO event (" .
+		        "`venue_name`, `venue_address`," .
+				"`city`, `state`," .
+				"`zipcode`, `parking`," . 
+				"`date`, `event_name`," .
+				"`attire`, `details`," .
+				"`otherDetails`, `gift`, `c_id`)" .
+				"VALUES ( " .
+				"'" . $result['location'] . "'," .
+				"'" . $result['street'] . "'," .
+				"'" . $result['city'] . "'," .
+				"'" . $result['state'] . "'," .
+				"'" . $result['zipcode'] . "'," .
+				"'" . $result['parking'] . "'," .
+				"'" . $result['date'] . "'," .
+				"'" . $result['eventType'] . "'," .
+				"'" . $result['cloth'] . "'," .
+				"'" . $result['details'] . "'," .
+				"'" . $result['otherDetails'] . "'," .
+				"'" . $result['gift'] . "'," .
+				"'" . $result['c_id'] . "')";
+				
+				echo $sql;
+        //echo $sql.'<br />';
+        mysql_query($sql);//
+        // dont die if duplicate entry avoid that row
+        //or die(mysql_error());
+	}
+	
+		public static function addHaldiEventData($result)
+	{
+	    $cid = $_SESSION['cid'];
+        $sql = "INSERT INTO event (" .
+		        "`venue_name`, `venue_address`," .
+				"`city`, `state`," .
+				"`zipcode`, `parking`," . 
+				"`date`, `event_name`," .
+				"`attire`, `details`," .
+				"`otherDetails`, `gift`, `c_id`)" .
+				"VALUES ( " .
+				"'" . $result['location'] . "'," .
+				"'" . $result['street'] . "'," .
+				"'" . $result['city'] . "'," .
+				"'" . $result['state'] . "'," .
+				"'" . $result['zipcode'] . "'," .
+				"'" . $result['parking'] . "'," .
+				"'" . $result['date'] . "'," .
+				"'" . $result['eventType'] . "'," .
+				"'" . $result['cloth'] . "'," .
+				"'" . $result['details'] . "'," .
+				"'" . $result['otherDetails'] . "'," .
+				"'" . $result['gift'] . "'," .
+				"'" . $result['c_id'] . "')";
+				
+				echo $sql;
+        //echo $sql.'<br />';
+        mysql_query($sql);//
+        // dont die if duplicate entry avoid that row
+        //or die(mysql_error());
+	}
+	
+	public static function addPhereEventData($result)
+	{
+	    $cid = $_SESSION['cid'];
+        $sql = "INSERT INTO event (" .
+		        "`venue_name`, `venue_address`," .
+				"`city`, `state`," .
+				"`zipcode`, `parking`," . 
+				"`date`, `event_name`," .
+				"`attire`, `details`," .
+				"`otherDetails`, `gift`, `c_id`)" .
+				"VALUES ( " .
+				"'" . $result['location'] . "'," .
+				"'" . $result['street'] . "'," .
+				"'" . $result['city'] . "'," .
+				"'" . $result['state'] . "'," .
+				"'" . $result['zipcode'] . "'," .
+				"'" . $result['parking'] . "'," .
+				"'" . $result['date'] . "'," .
+				"'" . $result['eventType'] . "'," .
+				"'" . $result['cloth'] . "'," .
+				"'" . $result['details'] . "'," .
+				"'" . $result['otherDetails'] . "'," .
+				"'" . $result['gift'] . "'," .
+				"'" . $result['c_id'] . "')";
+				
+				echo $sql;
+        //echo $sql.'<br />';
+        mysql_query($sql);//
+        // dont die if duplicate entry avoid that row
+        //or die(mysql_error());
+	}
+	
+	public static function addRokaEventData($result)
+	{
+	    $cid = $_SESSION['cid'];
+        $sql = "INSERT INTO event (" .
+		        "`venue_name`, `venue_address`," .
+				"`city`, `state`," .
+				"`zipcode`, `parking`," . 
+				"`date`, `event_name`," .
+				"`attire`, `details`," .
+				"`otherDetails`, `gift`, `c_id`)" .
+				"VALUES ( " .
+				"'" . $result['location'] . "'," .
+				"'" . $result['street'] . "'," .
+				"'" . $result['city'] . "'," .
+				"'" . $result['state'] . "'," .
+				"'" . $result['zipcode'] . "'," .
+				"'" . $result['parking'] . "'," .
+				"'" . $result['date'] . "'," .
+				"'" . $result['eventType'] . "'," .
+				"'" . $result['cloth'] . "'," .
+				"'" . $result['details'] . "'," .
+				"'" . $result['otherDetails'] . "'," .
+				"'" . $result['gift'] . "'," .
+				"'" . $result['c_id'] . "')";
+				
+				echo $sql;
+        //echo $sql.'<br />';
+        mysql_query($sql);//
+        // dont die if duplicate entry avoid that row
+        //or die(mysql_error());
 	}
 	
 	public static function getBrideData()
