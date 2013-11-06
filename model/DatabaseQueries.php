@@ -11,7 +11,7 @@ class DatabaseConnection
 
     public static function connectToDatabase()
     {
-        $conn = mysql_connect("localhost", "root", "");
+        $conn = mysql_connect("localhost", "root", "admin");
 
         if (!$conn) {
             echo "Unable to connect to DB: " . mysql_error();
