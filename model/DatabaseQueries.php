@@ -210,7 +210,7 @@ class DatabaseConnection
 	public static function getEventData()
 	{
 		$cid = $_SESSION['cid'];
-		$sql = "SELECT * from event where c_id =" . "'$cid'";
+		$sql = "SELECT * from Event where c_id =" . "'$cid'";
 		$result = mysql_query($sql);
 		$events = array();
 		while ($row = mysql_fetch_assoc($result)) {
@@ -350,7 +350,7 @@ class DatabaseConnection
 	public static function getBrideData()
 	{
 		$cid = $_SESSION['cid'];
-		$sql = "SELECT * from bride where b_id =" . "'$cid'";
+		$sql = "SELECT * from Bride where b_id =" . "'$cid'";
 		$result = mysql_query($sql);
 		$row = mysql_fetch_assoc($result);
 		return $row;
@@ -359,7 +359,7 @@ class DatabaseConnection
 	public static function getGroomData()
 	{
 		$cid = $_SESSION['cid'];
-		$sql = "SELECT * from groom where g_id =" . "'$cid'";
+		$sql = "SELECT * from Groom where g_id =" . "'$cid'";
 		$result = mysql_query($sql);
 		$row = mysql_fetch_assoc($result);
 		return $row;
