@@ -18,6 +18,6 @@ echo '<p> What do you wish to select</p>';
 
 echo '<a href = "TemplateSelection.php"> Invitation card Design</a>'.'<br />';
 echo '<a href = "GuestManagement.php"> Guest Management</a>'.'<br />';
-echo '<a href = "/personal_website/index.php"> Personal Website</a>'.'<br />';
+echo '<a href = "personal_website/index.php"> Personal Website</a>'.'<br />';
 echo '<a href = "survey.html"> Survey</a>'.'<br />';
 echo '</body>';
