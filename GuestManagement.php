@@ -9,6 +9,7 @@ include_once('model/PersistentDatabaseConnection.php');
         function showGuestUpload() {
             document.getElementById('GuestUpload').style.display = "block";
             document.getElementById('GuestList').style.display = "none";
+            document.getElementById('GuestListViewOptions').style.display = "none";
             document.getElementById('DeleteGuestList').style.display = "none";
         }
 
@@ -16,16 +17,19 @@ include_once('model/PersistentDatabaseConnection.php');
             document.getElementById('GuestUpload').style.display = "none";
             document.getElementById('DeleteGuestList').style.display = "none";
             document.getElementById('GuestList').style.display = "block";
+            document.getElementById('GuestListViewOptions').style.display = "block";
         }
         function showDeleteGuestList() {
             document.getElementById('GuestUpload').style.display = "none";
             document.getElementById('GuestList').style.display = "none";
+            document.getElementById('GuestListViewOptions').style.display = "none";
             document.getElementById('DeleteGuestList').style.display = "block";
         }
 
         function pageLoad() {
             document.getElementById('GuestUpload').style.display = "none";
             document.getElementById('GuestList').style.display = "none";
+            document.getElementById('GuestListViewOptions').style.display = "none";
             document.getElementById('DeleteGuestList').style.display = "none";
         }
 
@@ -35,7 +39,16 @@ include_once('model/PersistentDatabaseConnection.php');
 <div id="GuestManagementMenu" style="float: left">
     <br/>
     <span  onClick="showGuestUpload()"> <img src = "media/button/UploadGuestList.png" /></span><br/><br/>
-    <span onclick="showGuestList()"> <img src = "media/button/ViewGuestList.png" /></span><br/><br/>
+    <span onclick="showGuestList('')"> <img src = "media/button/ViewGuestList.png" /></span><br/><br/>
+    <div id = "GuestListViewOptions" >
+    <span onclick="showGuestList('group')"> View Guests by Group</span><br/><br/>
+    <span onclick="showGuestList('wedding')"> View Guests Invited To Wedding Ceremony</span><br/><br/>
+    <span onclick="showGuestList('reception')"> View Guests Invited To Wedding Reception</span><br/><br/>
+    <span onclick="showGuestList('haldi')"> View Guests Invited To Haldi Ceremony</span><br/><br/>
+    <span onclick="showGuestList('mehndi')"> View Guests Invited To Mehndi Ceremony</span><br/><br/>
+    <span onclick="showGuestList('sangeet')"> View Guests Invited To Sangeet Ceremony</span><br/><br/>
+    <span onclick="showGuestList('reception')"> View Guests Invited To Wedding Reception</span><br/><br/>
+    </div>
     <span onclick="showDeleteGuestList()"> <img src = "media/button/DeleteGuestList.png" /></span>
 
 </div>

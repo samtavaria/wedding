@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Nov 09, 2013 at 01:10 AM
+-- Generation Time: Nov 15, 2013 at 09:12 PM
 -- Server version: 5.6.12
 -- PHP Version: 5.5.3
 
@@ -16,6 +16,247 @@ SET time_zone = "+00:00";
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
 /*!40101 SET NAMES utf8 */;
 
+--
+-- Database: `cdcol`
+--
+CREATE DATABASE IF NOT EXISTS `cdcol` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
+USE `cdcol`;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `cds`
+--
+
+CREATE TABLE IF NOT EXISTS `cds` (
+  `titel` varchar(200) DEFAULT NULL,
+  `interpret` varchar(200) DEFAULT NULL,
+  `jahr` int(11) DEFAULT NULL,
+  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=13 ;
+
+--
+-- Dumping data for table `cds`
+--
+
+INSERT INTO `cds` (`titel`, `interpret`, `jahr`, `id`) VALUES
+('Beauty', 'Ryuichi Sakamoto', 1990, 1),
+('Goodbye Country (Hello Nightclub)', 'Groove Armada', 2001, 4),
+('Glee', 'Bran Van 3000', 1997, 5);
+--
+-- Database: `phpmyadmin`
+--
+CREATE DATABASE IF NOT EXISTS `phpmyadmin` DEFAULT CHARACTER SET utf8 COLLATE utf8_bin;
+USE `phpmyadmin`;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `pma__bookmark`
+--
+
+CREATE TABLE IF NOT EXISTS `pma__bookmark` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `dbase` varchar(255) COLLATE utf8_bin NOT NULL DEFAULT '',
+  `user` varchar(255) COLLATE utf8_bin NOT NULL DEFAULT '',
+  `label` varchar(255) CHARACTER SET utf8 NOT NULL DEFAULT '',
+  `query` text COLLATE utf8_bin NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_bin COMMENT='Bookmarks' AUTO_INCREMENT=2 ;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `pma__column_info`
+--
+
+CREATE TABLE IF NOT EXISTS `pma__column_info` (
+  `id` int(5) unsigned NOT NULL AUTO_INCREMENT,
+  `db_name` varchar(64) COLLATE utf8_bin NOT NULL DEFAULT '',
+  `table_name` varchar(64) COLLATE utf8_bin NOT NULL DEFAULT '',
+  `column_name` varchar(64) COLLATE utf8_bin NOT NULL DEFAULT '',
+  `comment` varchar(255) CHARACTER SET utf8 NOT NULL DEFAULT '',
+  `mimetype` varchar(255) CHARACTER SET utf8 NOT NULL DEFAULT '',
+  `transformation` varchar(255) COLLATE utf8_bin NOT NULL DEFAULT '',
+  `transformation_options` varchar(255) COLLATE utf8_bin NOT NULL DEFAULT '',
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `db_name` (`db_name`,`table_name`,`column_name`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_bin COMMENT='Column information for phpMyAdmin' AUTO_INCREMENT=88 ;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `pma__designer_coords`
+--
+
+CREATE TABLE IF NOT EXISTS `pma__designer_coords` (
+  `db_name` varchar(64) COLLATE utf8_bin NOT NULL DEFAULT '',
+  `table_name` varchar(64) COLLATE utf8_bin NOT NULL DEFAULT '',
+  `x` int(11) DEFAULT NULL,
+  `y` int(11) DEFAULT NULL,
+  `v` tinyint(4) DEFAULT NULL,
+  `h` tinyint(4) DEFAULT NULL,
+  PRIMARY KEY (`db_name`,`table_name`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_bin COMMENT='Table coordinates for Designer';
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `pma__history`
+--
+
+CREATE TABLE IF NOT EXISTS `pma__history` (
+  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+  `username` varchar(64) COLLATE utf8_bin NOT NULL DEFAULT '',
+  `db` varchar(64) COLLATE utf8_bin NOT NULL DEFAULT '',
+  `table` varchar(64) COLLATE utf8_bin NOT NULL DEFAULT '',
+  `timevalue` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `sqlquery` text COLLATE utf8_bin NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `username` (`username`,`db`,`table`,`timevalue`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_bin COMMENT='SQL history for phpMyAdmin' AUTO_INCREMENT=1 ;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `pma__pdf_pages`
+--
+
+CREATE TABLE IF NOT EXISTS `pma__pdf_pages` (
+  `db_name` varchar(64) COLLATE utf8_bin NOT NULL DEFAULT '',
+  `page_nr` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `page_descr` varchar(50) CHARACTER SET utf8 NOT NULL DEFAULT '',
+  PRIMARY KEY (`page_nr`),
+  KEY `db_name` (`db_name`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_bin COMMENT='PDF relation pages for phpMyAdmin' AUTO_INCREMENT=3 ;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `pma__recent`
+--
+
+CREATE TABLE IF NOT EXISTS `pma__recent` (
+  `username` varchar(64) COLLATE utf8_bin NOT NULL,
+  `tables` text COLLATE utf8_bin NOT NULL,
+  PRIMARY KEY (`username`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_bin COMMENT='Recently accessed tables';
+
+--
+-- Dumping data for table `pma__recent`
+--
+
+INSERT INTO `pma__recent` (`username`, `tables`) VALUES
+('root', '[{"db":"team12","table":"Bride"},{"db":"team12","table":"Event"},{"db":"team12","table":"Guest"},{"db":"team12","table":"guest"},{"db":"team12","table":"css"},{"db":"team12","table":"prayers"},{"db":"team12","table":"website_basic_info"},{"db":"team12","table":"background_images"},{"db":"team12","table":"couple"},{"db":"team12","table":"bride"}]');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `pma__relation`
+--
+
+CREATE TABLE IF NOT EXISTS `pma__relation` (
+  `master_db` varchar(64) COLLATE utf8_bin NOT NULL DEFAULT '',
+  `master_table` varchar(64) COLLATE utf8_bin NOT NULL DEFAULT '',
+  `master_field` varchar(64) COLLATE utf8_bin NOT NULL DEFAULT '',
+  `foreign_db` varchar(64) COLLATE utf8_bin NOT NULL DEFAULT '',
+  `foreign_table` varchar(64) COLLATE utf8_bin NOT NULL DEFAULT '',
+  `foreign_field` varchar(64) COLLATE utf8_bin NOT NULL DEFAULT '',
+  PRIMARY KEY (`master_db`,`master_table`,`master_field`),
+  KEY `foreign_field` (`foreign_db`,`foreign_table`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_bin COMMENT='Relation table';
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `pma__table_coords`
+--
+
+CREATE TABLE IF NOT EXISTS `pma__table_coords` (
+  `db_name` varchar(64) COLLATE utf8_bin NOT NULL DEFAULT '',
+  `table_name` varchar(64) COLLATE utf8_bin NOT NULL DEFAULT '',
+  `pdf_page_number` int(11) NOT NULL DEFAULT '0',
+  `x` float unsigned NOT NULL DEFAULT '0',
+  `y` float unsigned NOT NULL DEFAULT '0',
+  PRIMARY KEY (`db_name`,`table_name`,`pdf_page_number`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_bin COMMENT='Table coordinates for phpMyAdmin PDF output';
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `pma__table_info`
+--
+
+CREATE TABLE IF NOT EXISTS `pma__table_info` (
+  `db_name` varchar(64) COLLATE utf8_bin NOT NULL DEFAULT '',
+  `table_name` varchar(64) COLLATE utf8_bin NOT NULL DEFAULT '',
+  `display_field` varchar(64) COLLATE utf8_bin NOT NULL DEFAULT '',
+  PRIMARY KEY (`db_name`,`table_name`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_bin COMMENT='Table information for phpMyAdmin';
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `pma__table_uiprefs`
+--
+
+CREATE TABLE IF NOT EXISTS `pma__table_uiprefs` (
+  `username` varchar(64) COLLATE utf8_bin NOT NULL,
+  `db_name` varchar(64) COLLATE utf8_bin NOT NULL,
+  `table_name` varchar(64) COLLATE utf8_bin NOT NULL,
+  `prefs` text COLLATE utf8_bin NOT NULL,
+  `last_update` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (`username`,`db_name`,`table_name`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_bin COMMENT='Tables'' UI preferences';
+
+--
+-- Dumping data for table `pma__table_uiprefs`
+--
+
+INSERT INTO `pma__table_uiprefs` (`username`, `db_name`, `table_name`, `prefs`, `last_update`) VALUES
+('root', 'wedding', 'custom_css', '[]', '2013-09-30 00:33:17'),
+('root', 'team12', 'Guest', '[]', '2013-10-27 00:53:42');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `pma__tracking`
+--
+
+CREATE TABLE IF NOT EXISTS `pma__tracking` (
+  `db_name` varchar(64) COLLATE utf8_bin NOT NULL,
+  `table_name` varchar(64) COLLATE utf8_bin NOT NULL,
+  `version` int(10) unsigned NOT NULL,
+  `date_created` datetime NOT NULL,
+  `date_updated` datetime NOT NULL,
+  `schema_snapshot` text COLLATE utf8_bin NOT NULL,
+  `schema_sql` text COLLATE utf8_bin,
+  `data_sql` longtext COLLATE utf8_bin,
+  `tracking` set('UPDATE','REPLACE','INSERT','DELETE','TRUNCATE','CREATE DATABASE','ALTER DATABASE','DROP DATABASE','CREATE TABLE','ALTER TABLE','RENAME TABLE','DROP TABLE','CREATE INDEX','DROP INDEX','CREATE VIEW','ALTER VIEW','DROP VIEW') COLLATE utf8_bin DEFAULT NULL,
+  `tracking_active` int(1) unsigned NOT NULL DEFAULT '1',
+  PRIMARY KEY (`db_name`,`table_name`,`version`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_bin ROW_FORMAT=COMPACT COMMENT='Database changes tracking for phpMyAdmin';
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `pma__userconfig`
+--
+
+CREATE TABLE IF NOT EXISTS `pma__userconfig` (
+  `username` varchar(64) COLLATE utf8_bin NOT NULL,
+  `timevalue` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `config_data` text COLLATE utf8_bin NOT NULL,
+  PRIMARY KEY (`username`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_bin COMMENT='User preferences storage for phpMyAdmin';
+
+--
+-- Dumping data for table `pma__userconfig`
+--
+
+INSERT INTO `pma__userconfig` (`username`, `timevalue`, `config_data`) VALUES
+('root', '2013-10-26 21:04:27', '[]');
 --
 -- Database: `team12`
 --
@@ -71,167 +312,6 @@ INSERT INTO `Couple` (`c_id`, `g_id`, `b_id`, `username`, `password`, `salt`) VA
 -- --------------------------------------------------------
 
 --
--- Table structure for table `css`
---
-
-CREATE TABLE IF NOT EXISTS `css` (
-  `css_id` int(12) NOT NULL AUTO_INCREMENT,
-  `c_id` int(11) NOT NULL,
-  `invitation_background` text NOT NULL,
-  `custom_css` text NOT NULL,
-  PRIMARY KEY (`css_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=70 ;
-
---
--- Dumping data for table `css`
---
-
-INSERT INTO `css` (`css_id`, `c_id`, `invitation_background`, `custom_css`) VALUES
-(4, 1, 'http://localhost:8083/wedding/invitation_card_backgrounds/2.jpeg', ''),
-(5, 1, 'http://localhost:8083/wedding/invitation_card_backgrounds/1.jpeg', ''),
-(6, 1, 'http://localhost:8083/wedding/invitation_card_backgrounds/1.jpeg', ''),
-(7, 1, 'http://localhost:8083/wedding/TemplateSelection.php', ''),
-(8, 1, 'http://localhost:8083/wedding/invitation_card_backgrounds/3.jpeg', ''),
-(9, 1, 'http://localhost:8083/wedding/invitation_card_backgrounds/1.jpeg', ''),
-(10, 1, 'http://localhost:8083/wedding/invitation_card_backgrounds/2.jpeg', ''),
-(11, 1, 'http://localhost:8083/wedding/invitation_card_backgrounds/3.jpeg', ''),
-(12, 1, 'http://localhost:8083/wedding/invitation_card_backgrounds/1.jpeg', ''),
-(13, 1, 'http://localhost:8083/wedding/invitation_card_backgrounds/2.jpeg', ''),
-(14, 1, 'http://localhost:8083/wedding/invitation_card_backgrounds/1.jpeg', ''),
-(15, 1, 'http://localhost:8083/wedding/invitation_card_backgrounds/1.jpeg', ''),
-(16, 1, 'http://localhost:8083/wedding/invitation_card_backgrounds/3.jpeg', ''),
-(17, 1, 'http://localhost:8083/wedding/invitation_card_backgrounds/1.jpeg', ''),
-(18, 1, 'http://localhost:8083/wedding/invitation_card_backgrounds/1.jpeg', ''),
-(19, 1, 'http://localhost:8083/wedding/invitation_card_backgrounds/1.jpeg', ''),
-(20, 1, 'http://localhost:8083/wedding/invitation_card_backgrounds/1.jpeg', ''),
-(21, 1, 'http://localhost:8083/wedding/invitation_card_backgrounds/1.jpeg', ''),
-(22, 1, 'http://localhost:8083/wedding/invitation_card_backgrounds/2.jpeg', ''),
-(23, 1, 'http://localhost:8083/wedding/invitation_card_backgrounds/2.jpeg', ''),
-(24, 1, 'http://localhost:8083/wedding/invitation_card_backgrounds/2.jpeg', ''),
-(25, 1, 'http://localhost:8083/wedding/invitation_card_backgrounds/3.jpeg', ''),
-(26, 1, 'http://localhost:8083/wedding/invitation_card_backgrounds/2.jpeg', ''),
-(27, 1, 'http://localhost:8083/wedding/invitation_card_backgrounds/3.jpeg', ''),
-(28, 1, 'http://localhost:8083/wedding/invitation_card_backgrounds/1.jpeg', ''),
-(29, 1, 'http://localhost:8083/wedding/invitation_card_backgrounds/2.jpeg', ''),
-(30, 1, 'http://localhost:8083/wedding/invitation_card_backgrounds/2.jpeg', ''),
-(31, 1, 'http://localhost:8083/wedding/invitation_card_backgrounds/2.jpeg', ''),
-(32, 1, 'http://localhost:8083/wedding/invitation_card_backgrounds/1.jpeg', ''),
-(33, 1, 'http://localhost:8083/wedding/invitation_card_backgrounds/2.jpeg', ''),
-(34, 1, 'http://localhost:8083/wedding/invitation_card_backgrounds/3.jpeg', ''),
-(35, 1, 'http://localhost:8083/wedding/invitation_card_backgrounds/1.jpeg', ''),
-(36, 1, 'http://localhost:8083/wedding/invitation_card_backgrounds/1.jpeg', ''),
-(37, 1, 'http://localhost:8083/wedding/invitation_card_backgrounds/1.jpeg', ''),
-(38, 1, 'http://localhost:8083/wedding/invitation_card_backgrounds/2.jpeg', ''),
-(39, 1, 'http://localhost:8083/wedding/invitation_card_backgrounds/2.jpeg', ''),
-(40, 1, 'http://localhost:8083/wedding/invitation_card_backgrounds/2.jpeg', ''),
-(41, 1, 'http://localhost:8083/wedding/invitation_card_backgrounds/2.jpeg', ''),
-(42, 1, 'http://localhost:8083/wedding/invitation_card_backgrounds/2.jpeg', ''),
-(43, 1, 'http://localhost:8083/wedding/invitation_card_backgrounds/1.jpeg', ''),
-(44, 1, 'http://localhost:8083/wedding/invitation_card_backgrounds/3.jpeg', ''),
-(45, 1, 'http://localhost:8083/wedding/invitation_card_backgrounds/2.jpeg', ''),
-(46, 1, 'http://localhost:8083/wedding/invitation_card_backgrounds/1.jpeg', ''),
-(47, 1, 'http://localhost:8083/wedding/invitation_card_backgrounds/1.jpeg', ''),
-(48, 1, 'http://localhost:8083/wedding/invitation_card_backgrounds/3.jpeg', ''),
-(49, 1, 'http://localhost:8083/wedding/invitation_card_backgrounds/1.jpeg', ''),
-(50, 1, 'http://localhost:8083/wedding/invitation_card_backgrounds/1.jpeg', ''),
-(51, 1, 'http://localhost:8083/wedding/invitation_card_backgrounds/1.jpeg', ''),
-(52, 1, 'http://localhost:8083/wedding/invitation_card_backgrounds/1.jpeg', ''),
-(53, 1, 'http://localhost:8083/wedding/invitation_card_backgrounds/3.jpeg', ''),
-(54, 1, 'http://localhost:8083/wedding/invitation_card_backgrounds/2.jpeg', ''),
-(55, 1, 'http://localhost:8083/wedding/invitation_card_backgrounds/1.jpeg', ''),
-(56, 1, 'http://localhost:8083/wedding/invitation_card_backgrounds/1.jpeg', ''),
-(57, 1, 'http://localhost:8083/wedding/invitation_card_backgrounds/3.jpeg', ''),
-(58, 1, 'http://localhost:8083/wedding/invitation_card_backgrounds/3.jpeg', ''),
-(59, 1, 'http://localhost:8083/wedding/invitation_card_backgrounds/2.jpeg', ''),
-(60, 1, 'http://localhost:8083/wedding/invitation_card_backgrounds/1.jpeg', ''),
-(61, 1, 'http://localhost:8083/wedding/invitation_card_backgrounds/3.jpeg', ''),
-(62, 1, 'http://localhost:8083/wedding/invitation_card_backgrounds/3.jpeg', ''),
-(63, 1, 'http://localhost:8083/wedding/invitation_card_backgrounds/1.jpeg', ''),
-(64, 1, 'http://localhost:8083/wedding/media/invitation_card_backgrounds/1.jpeg', ''),
-(65, 1, 'http://localhost:8083/wedding/media/invitation_card_backgrounds/2.jpeg', ''),
-(66, 1, 'http://localhost:8083/wedding/media/invitation_card_backgrounds/3.jpeg', ''),
-(67, 1, 'http://localhost:8083/wedding/media/invitation_card_backgrounds/1.jpeg', ''),
-(68, 1, 'http://localhost:8083/wedding/media/invitation_card_backgrounds/2.jpeg', ''),
-(69, 1, 'http://localhost:8083/wedding/media/invitation_card_backgrounds/1.jpeg', '');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `draggable`
---
-
-CREATE TABLE IF NOT EXISTS `draggable` (
-  `draggable_id` int(11) NOT NULL AUTO_INCREMENT,
-  `c_id` int(11) NOT NULL,
-  `id` varchar(50) NOT NULL,
-  `position_top` double NOT NULL,
-  `position_left` double NOT NULL,
-  `all_positions` varchar(512) NOT NULL,
-  PRIMARY KEY (`draggable_id`),
-  UNIQUE KEY `draggable_id` (`draggable_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=53 ;
-
---
--- Dumping data for table `draggable`
---
-
-INSERT INTO `draggable` (`draggable_id`, `c_id`, `id`, `position_top`, `position_left`, `all_positions`) VALUES
-(1, 1, '', 0, 0, '73.33332824707031,624,129.5,686,172.6666717529297,676,10.833328247070312,1016.5'),
-(2, 1, '', 0, 0, '39.33332824707031,815,105.5,840,165.6666717529297,833,156.8333282470703,1017.5'),
-(3, 1, '', 0, 0, '38.33332824707031,815,undefined,undefined,undefined,undefined,undefined,undefined'),
-(4, 1, '', 0, 0, '38.33332824707031,800,undefined,undefined,undefined,undefined,undefined,undefined'),
-(5, 1, '', 0, 0, 'undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined'),
-(6, 1, '', 0, 0, 'undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined'),
-(7, 1, '', 0, 0, 'undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined'),
-(8, 1, '', 0, 0, 'undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined'),
-(9, 1, '', 0, 0, 'undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined'),
-(10, 1, '', 0, 0, 'undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined'),
-(11, 1, '', 0, 0, 'undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined'),
-(12, 1, '', 0, 0, 'undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined'),
-(13, 1, '', 0, 0, 'undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined'),
-(14, 1, '', 0, 0, '43.33332824707031,662,78.5,703,119.66667175292969,696,37.83332824707031,1028.5'),
-(15, 1, '', 0, 0, '27.333328247070312,775,66.5,820,103.66667175292969,786,20.833328247070312,602.5'),
-(16, 1, '', 0, 0, 'undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined'),
-(17, 1, '', 0, 0, 'undefined,undefined,undefined,undefined,undefined,undefined,177.8333282470703,1.5'),
-(18, 1, '', 0, 0, 'undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined'),
-(19, 1, '', 0, 0, 'undefined,undefined,undefined,undefined,undefined,undefined,138.8333282470703,-3.5'),
-(20, 1, '', 0, 0, 'undefined,undefined,undefined,undefined,undefined,undefined,160.8333282470703,-10.5'),
-(21, 1, '', 0, 0, 'undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined'),
-(22, 1, '', 0, 0, 'undefined,undefined,undefined,undefined,undefined,undefined,149.8333282470703,3.5'),
-(23, 1, '', 0, 0, 'undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined'),
-(24, 1, '', 0, 0, 'undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined'),
-(25, 1, '', 0, 0, '80.33332824707031,809,120.5,887,164.6666717529297,828,11.833328247070312,1031.5'),
-(26, 1, '', 0, 0, 'undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined'),
-(27, 1, '', 0, 0, 'undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined'),
-(28, 1, '', 0, 0, 'undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined'),
-(29, 1, '', 0, 0, 'undefined,undefined,undefined,undefined,undefined,undefined,162.8333282470703,16.5'),
-(30, 1, '', 0, 0, 'undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined'),
-(31, 1, '', 0, 0, 'undefined,undefined,undefined,undefined,undefined,undefined,164.8333282470703,-0.5'),
-(32, 1, '', 0, 0, '112.33332824707031,636,168.5,705,205.6666717529297,644,55.83332824707031,443.5'),
-(33, 1, '', 0, 0, '48.33332824707031,772,81.5,810,147.6666717529297,772,308.8333282470703,890.5'),
-(34, 1, '', 0, 0, 'undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined'),
-(35, 1, '', 0, 0, '58.33332824707031,644,94.5,694,139.6666717529297,667,96.83332824707031,959.5'),
-(36, 1, '', 0, 0, 'undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined'),
-(37, 1, '', 0, 0, 'undefined,undefined,undefined,undefined,undefined,undefined,153.8333282470703,-0.5'),
-(38, 1, '', 0, 0, '58,388,97,429,146,396,41.83332824707031,704.5'),
-(39, 1, '', 0, 0, 'undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined'),
-(40, 1, '', 0, 0, '52,301,107,424,158,334,360,650'),
-(41, 1, '', 0, 0, 'undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined'),
-(42, 1, '', 0, 0, 'undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined'),
-(43, 1, '', 0, 0, 'undefined,undefined,undefined,undefined,undefined,undefined,153.8333282470703,0.5'),
-(44, 1, '', 0, 0, '104.33332824707031,676,146.5,742,193.6666717529297,685,6.8333282470703125,1025.5'),
-(45, 1, '', 0, 0, '70.33332824707031,691,134.5,815,178.6666717529297,767,222.8333282470703,792.5'),
-(46, 1, '', 0, 0, 'undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined'),
-(47, 1, '', 0, 0, 'undefined,undefined,undefined,undefined,undefined,undefined,146.8333282470703,14.5'),
-(48, 1, '', 0, 0, '79.33332824707031,709,157.5,758,261.6666717529297,710,46.83332824707031,538.5'),
-(49, 1, '', 0, 0, 'undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined'),
-(50, 1, '', 0, 0, '47.33332824707031,575,84.5,665,164.6666717529297,661,188.8333282470703,842.5'),
-(51, 1, '', 0, 0, 'undefined,undefined,84.5,667,81.66667175292969,805,undefined,undefined'),
-(52, 1, '', 0, 0, '186.3333282470703,680,79.5,743,38.66667175292969,758,35.83332824707031,500.8333282470703');
-
--- --------------------------------------------------------
-
---
 -- Table structure for table `Event`
 --
 
@@ -254,18 +334,6 @@ CREATE TABLE IF NOT EXISTS `Event` (
 INSERT INTO `Event` (`e_id`, `venue_name`, `venue_address`, `date`, `event_name`, `venue_phone`, `attire`, `c_id`) VALUES
 (1, 'USC', '36 WattWay', '2013-10-15', 'shaadi', '2147483647', 'formal', 1),
 (2, 'USC', '35 watt way', '2013-10-15', 'sangeet', '8888888888', 'traditional', 1);
-
--- --------------------------------------------------------
-
---
--- Table structure for table `font`
---
-
-CREATE TABLE IF NOT EXISTS `font` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `name` varchar(128) NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -726,6 +794,205 @@ CREATE TABLE IF NOT EXISTS `Images` (
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `Prayers`
+--
+
+CREATE TABLE IF NOT EXISTS `Prayers` (
+  `prayer_id` int(11) NOT NULL,
+  `prayer_text` varchar(200) NOT NULL,
+  PRIMARY KEY (`prayer_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `User_Pictures`
+--
+
+CREATE TABLE IF NOT EXISTS `User_Pictures` (
+  `user_image_id` int(11) NOT NULL,
+  `name` varchar(50) NOT NULL,
+  `path` varchar(512) NOT NULL,
+  `c_id` int(11) NOT NULL COMMENT 'foregin key to couple id',
+  PRIMARY KEY (`user_image_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `css`
+--
+
+CREATE TABLE IF NOT EXISTS `css` (
+  `css_id` int(12) NOT NULL AUTO_INCREMENT,
+  `c_id` int(11) NOT NULL,
+  `invitation_background` text NOT NULL,
+  `custom_css` text NOT NULL,
+  PRIMARY KEY (`css_id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=70 ;
+
+--
+-- Dumping data for table `css`
+--
+
+INSERT INTO `css` (`css_id`, `c_id`, `invitation_background`, `custom_css`) VALUES
+(4, 1, 'http://localhost:8083/wedding/invitation_card_backgrounds/2.jpeg', ''),
+(5, 1, 'http://localhost:8083/wedding/invitation_card_backgrounds/1.jpeg', ''),
+(6, 1, 'http://localhost:8083/wedding/invitation_card_backgrounds/1.jpeg', ''),
+(7, 1, 'http://localhost:8083/wedding/TemplateSelection.php', ''),
+(8, 1, 'http://localhost:8083/wedding/invitation_card_backgrounds/3.jpeg', ''),
+(9, 1, 'http://localhost:8083/wedding/invitation_card_backgrounds/1.jpeg', ''),
+(10, 1, 'http://localhost:8083/wedding/invitation_card_backgrounds/2.jpeg', ''),
+(11, 1, 'http://localhost:8083/wedding/invitation_card_backgrounds/3.jpeg', ''),
+(12, 1, 'http://localhost:8083/wedding/invitation_card_backgrounds/1.jpeg', ''),
+(13, 1, 'http://localhost:8083/wedding/invitation_card_backgrounds/2.jpeg', ''),
+(14, 1, 'http://localhost:8083/wedding/invitation_card_backgrounds/1.jpeg', ''),
+(15, 1, 'http://localhost:8083/wedding/invitation_card_backgrounds/1.jpeg', ''),
+(16, 1, 'http://localhost:8083/wedding/invitation_card_backgrounds/3.jpeg', ''),
+(17, 1, 'http://localhost:8083/wedding/invitation_card_backgrounds/1.jpeg', ''),
+(18, 1, 'http://localhost:8083/wedding/invitation_card_backgrounds/1.jpeg', ''),
+(19, 1, 'http://localhost:8083/wedding/invitation_card_backgrounds/1.jpeg', ''),
+(20, 1, 'http://localhost:8083/wedding/invitation_card_backgrounds/1.jpeg', ''),
+(21, 1, 'http://localhost:8083/wedding/invitation_card_backgrounds/1.jpeg', ''),
+(22, 1, 'http://localhost:8083/wedding/invitation_card_backgrounds/2.jpeg', ''),
+(23, 1, 'http://localhost:8083/wedding/invitation_card_backgrounds/2.jpeg', ''),
+(24, 1, 'http://localhost:8083/wedding/invitation_card_backgrounds/2.jpeg', ''),
+(25, 1, 'http://localhost:8083/wedding/invitation_card_backgrounds/3.jpeg', ''),
+(26, 1, 'http://localhost:8083/wedding/invitation_card_backgrounds/2.jpeg', ''),
+(27, 1, 'http://localhost:8083/wedding/invitation_card_backgrounds/3.jpeg', ''),
+(28, 1, 'http://localhost:8083/wedding/invitation_card_backgrounds/1.jpeg', ''),
+(29, 1, 'http://localhost:8083/wedding/invitation_card_backgrounds/2.jpeg', ''),
+(30, 1, 'http://localhost:8083/wedding/invitation_card_backgrounds/2.jpeg', ''),
+(31, 1, 'http://localhost:8083/wedding/invitation_card_backgrounds/2.jpeg', ''),
+(32, 1, 'http://localhost:8083/wedding/invitation_card_backgrounds/1.jpeg', ''),
+(33, 1, 'http://localhost:8083/wedding/invitation_card_backgrounds/2.jpeg', ''),
+(34, 1, 'http://localhost:8083/wedding/invitation_card_backgrounds/3.jpeg', ''),
+(35, 1, 'http://localhost:8083/wedding/invitation_card_backgrounds/1.jpeg', ''),
+(36, 1, 'http://localhost:8083/wedding/invitation_card_backgrounds/1.jpeg', ''),
+(37, 1, 'http://localhost:8083/wedding/invitation_card_backgrounds/1.jpeg', ''),
+(38, 1, 'http://localhost:8083/wedding/invitation_card_backgrounds/2.jpeg', ''),
+(39, 1, 'http://localhost:8083/wedding/invitation_card_backgrounds/2.jpeg', ''),
+(40, 1, 'http://localhost:8083/wedding/invitation_card_backgrounds/2.jpeg', ''),
+(41, 1, 'http://localhost:8083/wedding/invitation_card_backgrounds/2.jpeg', ''),
+(42, 1, 'http://localhost:8083/wedding/invitation_card_backgrounds/2.jpeg', ''),
+(43, 1, 'http://localhost:8083/wedding/invitation_card_backgrounds/1.jpeg', ''),
+(44, 1, 'http://localhost:8083/wedding/invitation_card_backgrounds/3.jpeg', ''),
+(45, 1, 'http://localhost:8083/wedding/invitation_card_backgrounds/2.jpeg', ''),
+(46, 1, 'http://localhost:8083/wedding/invitation_card_backgrounds/1.jpeg', ''),
+(47, 1, 'http://localhost:8083/wedding/invitation_card_backgrounds/1.jpeg', ''),
+(48, 1, 'http://localhost:8083/wedding/invitation_card_backgrounds/3.jpeg', ''),
+(49, 1, 'http://localhost:8083/wedding/invitation_card_backgrounds/1.jpeg', ''),
+(50, 1, 'http://localhost:8083/wedding/invitation_card_backgrounds/1.jpeg', ''),
+(51, 1, 'http://localhost:8083/wedding/invitation_card_backgrounds/1.jpeg', ''),
+(52, 1, 'http://localhost:8083/wedding/invitation_card_backgrounds/1.jpeg', ''),
+(53, 1, 'http://localhost:8083/wedding/invitation_card_backgrounds/3.jpeg', ''),
+(54, 1, 'http://localhost:8083/wedding/invitation_card_backgrounds/2.jpeg', ''),
+(55, 1, 'http://localhost:8083/wedding/invitation_card_backgrounds/1.jpeg', ''),
+(56, 1, 'http://localhost:8083/wedding/invitation_card_backgrounds/1.jpeg', ''),
+(57, 1, 'http://localhost:8083/wedding/invitation_card_backgrounds/3.jpeg', ''),
+(58, 1, 'http://localhost:8083/wedding/invitation_card_backgrounds/3.jpeg', ''),
+(59, 1, 'http://localhost:8083/wedding/invitation_card_backgrounds/2.jpeg', ''),
+(60, 1, 'http://localhost:8083/wedding/invitation_card_backgrounds/1.jpeg', ''),
+(61, 1, 'http://localhost:8083/wedding/invitation_card_backgrounds/3.jpeg', ''),
+(62, 1, 'http://localhost:8083/wedding/invitation_card_backgrounds/3.jpeg', ''),
+(63, 1, 'http://localhost:8083/wedding/invitation_card_backgrounds/1.jpeg', ''),
+(64, 1, 'http://localhost:8083/wedding/media/invitation_card_backgrounds/1.jpeg', ''),
+(65, 1, 'http://localhost:8083/wedding/media/invitation_card_backgrounds/2.jpeg', ''),
+(66, 1, 'http://localhost:8083/wedding/media/invitation_card_backgrounds/3.jpeg', ''),
+(67, 1, 'http://localhost:8083/wedding/media/invitation_card_backgrounds/1.jpeg', ''),
+(68, 1, 'http://localhost:8083/wedding/media/invitation_card_backgrounds/2.jpeg', ''),
+(69, 1, 'http://localhost:8083/wedding/media/invitation_card_backgrounds/1.jpeg', '');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `draggable`
+--
+
+CREATE TABLE IF NOT EXISTS `draggable` (
+  `draggable_id` int(11) NOT NULL AUTO_INCREMENT,
+  `c_id` int(11) NOT NULL,
+  `id` varchar(50) NOT NULL,
+  `position_top` double NOT NULL,
+  `position_left` double NOT NULL,
+  `all_positions` varchar(512) NOT NULL,
+  PRIMARY KEY (`draggable_id`),
+  UNIQUE KEY `draggable_id` (`draggable_id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=53 ;
+
+--
+-- Dumping data for table `draggable`
+--
+
+INSERT INTO `draggable` (`draggable_id`, `c_id`, `id`, `position_top`, `position_left`, `all_positions`) VALUES
+(1, 1, '', 0, 0, '73.33332824707031,624,129.5,686,172.6666717529297,676,10.833328247070312,1016.5'),
+(2, 1, '', 0, 0, '39.33332824707031,815,105.5,840,165.6666717529297,833,156.8333282470703,1017.5'),
+(3, 1, '', 0, 0, '38.33332824707031,815,undefined,undefined,undefined,undefined,undefined,undefined'),
+(4, 1, '', 0, 0, '38.33332824707031,800,undefined,undefined,undefined,undefined,undefined,undefined'),
+(5, 1, '', 0, 0, 'undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined'),
+(6, 1, '', 0, 0, 'undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined'),
+(7, 1, '', 0, 0, 'undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined'),
+(8, 1, '', 0, 0, 'undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined'),
+(9, 1, '', 0, 0, 'undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined'),
+(10, 1, '', 0, 0, 'undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined'),
+(11, 1, '', 0, 0, 'undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined'),
+(12, 1, '', 0, 0, 'undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined'),
+(13, 1, '', 0, 0, 'undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined'),
+(14, 1, '', 0, 0, '43.33332824707031,662,78.5,703,119.66667175292969,696,37.83332824707031,1028.5'),
+(15, 1, '', 0, 0, '27.333328247070312,775,66.5,820,103.66667175292969,786,20.833328247070312,602.5'),
+(16, 1, '', 0, 0, 'undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined'),
+(17, 1, '', 0, 0, 'undefined,undefined,undefined,undefined,undefined,undefined,177.8333282470703,1.5'),
+(18, 1, '', 0, 0, 'undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined'),
+(19, 1, '', 0, 0, 'undefined,undefined,undefined,undefined,undefined,undefined,138.8333282470703,-3.5'),
+(20, 1, '', 0, 0, 'undefined,undefined,undefined,undefined,undefined,undefined,160.8333282470703,-10.5'),
+(21, 1, '', 0, 0, 'undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined'),
+(22, 1, '', 0, 0, 'undefined,undefined,undefined,undefined,undefined,undefined,149.8333282470703,3.5'),
+(23, 1, '', 0, 0, 'undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined'),
+(24, 1, '', 0, 0, 'undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined'),
+(25, 1, '', 0, 0, '80.33332824707031,809,120.5,887,164.6666717529297,828,11.833328247070312,1031.5'),
+(26, 1, '', 0, 0, 'undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined'),
+(27, 1, '', 0, 0, 'undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined'),
+(28, 1, '', 0, 0, 'undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined'),
+(29, 1, '', 0, 0, 'undefined,undefined,undefined,undefined,undefined,undefined,162.8333282470703,16.5'),
+(30, 1, '', 0, 0, 'undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined'),
+(31, 1, '', 0, 0, 'undefined,undefined,undefined,undefined,undefined,undefined,164.8333282470703,-0.5'),
+(32, 1, '', 0, 0, '112.33332824707031,636,168.5,705,205.6666717529297,644,55.83332824707031,443.5'),
+(33, 1, '', 0, 0, '48.33332824707031,772,81.5,810,147.6666717529297,772,308.8333282470703,890.5'),
+(34, 1, '', 0, 0, 'undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined'),
+(35, 1, '', 0, 0, '58.33332824707031,644,94.5,694,139.6666717529297,667,96.83332824707031,959.5'),
+(36, 1, '', 0, 0, 'undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined'),
+(37, 1, '', 0, 0, 'undefined,undefined,undefined,undefined,undefined,undefined,153.8333282470703,-0.5'),
+(38, 1, '', 0, 0, '58,388,97,429,146,396,41.83332824707031,704.5'),
+(39, 1, '', 0, 0, 'undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined'),
+(40, 1, '', 0, 0, '52,301,107,424,158,334,360,650'),
+(41, 1, '', 0, 0, 'undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined'),
+(42, 1, '', 0, 0, 'undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined'),
+(43, 1, '', 0, 0, 'undefined,undefined,undefined,undefined,undefined,undefined,153.8333282470703,0.5'),
+(44, 1, '', 0, 0, '104.33332824707031,676,146.5,742,193.6666717529297,685,6.8333282470703125,1025.5'),
+(45, 1, '', 0, 0, '70.33332824707031,691,134.5,815,178.6666717529297,767,222.8333282470703,792.5'),
+(46, 1, '', 0, 0, 'undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined'),
+(47, 1, '', 0, 0, 'undefined,undefined,undefined,undefined,undefined,undefined,146.8333282470703,14.5'),
+(48, 1, '', 0, 0, '79.33332824707031,709,157.5,758,261.6666717529297,710,46.83332824707031,538.5'),
+(49, 1, '', 0, 0, 'undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined'),
+(50, 1, '', 0, 0, '47.33332824707031,575,84.5,665,164.6666717529297,661,188.8333282470703,842.5'),
+(51, 1, '', 0, 0, 'undefined,undefined,84.5,667,81.66667175292969,805,undefined,undefined'),
+(52, 1, '', 0, 0, '186.3333282470703,680,79.5,743,38.66667175292969,758,35.83332824707031,500.8333282470703');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `font`
+--
+
+CREATE TABLE IF NOT EXISTS `font` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(128) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `invitation_contents`
 --
 
@@ -782,18 +1049,6 @@ INSERT INTO `media_type` (`id`, `type`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `Prayers`
---
-
-CREATE TABLE IF NOT EXISTS `Prayers` (
-  `prayer_id` int(11) NOT NULL,
-  `prayer_text` varchar(200) NOT NULL,
-  PRIMARY KEY (`prayer_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
--- --------------------------------------------------------
-
---
 -- Table structure for table `prayers`
 --
 
@@ -836,20 +1091,6 @@ CREATE TABLE IF NOT EXISTS `user_invitation_images` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `User_Pictures`
---
-
-CREATE TABLE IF NOT EXISTS `User_Pictures` (
-  `user_image_id` int(11) NOT NULL,
-  `name` varchar(50) NOT NULL,
-  `path` varchar(512) NOT NULL,
-  `c_id` int(11) NOT NULL COMMENT 'foregin key to couple id',
-  PRIMARY KEY (`user_image_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
--- --------------------------------------------------------
-
---
 -- Table structure for table `website_basic_info`
 --
 
@@ -872,6 +1113,11 @@ CREATE TABLE IF NOT EXISTS `website_basic_info` (
 
 INSERT INTO `website_basic_info` (`id`, `c_id`, `welcome_text`, `how_met_text`, `proposal_text`, `wedding_party_text`, `registry_text`, `honeymoon_text`, `img_path`) VALUES
 (1, 1, 'This our site where you can see all the great things we are planning for our wedding!', 'We meet and the rest is history.', '', 'Bob, Sue, George', 'Macy''s, Crate&Barrel, Target', 'A tropical wonderland.', NULL);
+--
+-- Database: `test`
+--
+CREATE DATABASE IF NOT EXISTS `test` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
+USE `test`;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
