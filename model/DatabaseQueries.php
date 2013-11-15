@@ -8,6 +8,10 @@
  */
 class DatabaseConnection
 {
+    function __construct()
+    {
+        parent::__construct();
+    }
 
     public static function connectToDatabase()
     {
