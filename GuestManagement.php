@@ -30,8 +30,58 @@ include_once('GuestListView.php');
         function pageLoad() {
             document.getElementById('GuestUpload').style.display = "none";
             document.getElementById('GuestList').style.display = "none";
+            document.getElementById('GuestListMehndi').style.display = "none";
+            document.getElementById('GuestListSangeet').style.display = "none";
+            document.getElementById('GuestListHaldi').style.display = "none";
+            document.getElementById('GuestListCeremony').style.display = "none";
+            document.getElementById('GuestListReception').style.display = "none";
             document.getElementById('GuestListViewOptions').style.display = "none";
             document.getElementById('DeleteGuestList').style.display = "none";
+        }
+
+        function showMehndi() {
+            pageLoad();
+            document.getElementById('GuestListViewOptions').style.display = "block";
+            document.getElementById('GuestListMehndi').style.display = "block";
+        }
+        function showSangeet() {
+            pageLoad();
+            document.getElementById('GuestListViewOptions').style.display = "block";
+            document.getElementById('GuestListSangeet').style.display = "block";
+        }
+        function showHaldi() {
+            pageLoad();
+            document.getElementById('GuestListViewOptions').style.display = "block";
+            document.getElementById('GuestListHaldi').style.display = "block";
+        }
+        function showCeremony() {
+            pageLoad();
+            document.getElementById('GuestListViewOptions').style.display = "block";
+            document.getElementById('GuestListCeremony').style.display = "block";
+        }
+        function showReception() {
+            pageLoad();
+            document.getElementById('GuestListViewOptions').style.display = "block";
+            document.getElementById('GuestListReception').style.display = "block";
+        }
+        function showEntireList() {
+            pageLoad();
+            document.getElementById('GuestListViewOptions').style.display = "block";
+            document.getElementById('GuestList').style.display = "block";
+        }
+
+
+
+        function myfun(x) {
+            var ceremony = x+8;
+            switch (ceremony) {
+                case 9: showMehndi(); break;
+                case 10: showSangeet(); break;
+                case 11: showHaldi(); break;
+                case 12: showCeremony(); break;
+                case 13: showReception(); break;
+                default: showEntireList();break
+            }
         }
 
     </script>
@@ -42,13 +92,15 @@ include_once('GuestListView.php');
     <span  onClick="showGuestUpload()"> <img src = "media/button/UploadGuestList.png" /></span><br/><br/>
     <span onclick="showGuestList('')"> <img src = "media/button/ViewGuestList.png" /></span><br/><br/>
     <div id = "GuestListViewOptions" >
-    <span onclick="showGuestList('group')"> View Guests by Group</span><br/><br/>
-    <span onclick="showGuestList('wedding')"> View Guests Invited To Wedding Ceremony</span><br/><br/>
-    <span onclick="showGuestList('reception')"> View Guests Invited To Wedding Reception</span><br/><br/>
-    <span onclick="showGuestList('haldi')"> View Guests Invited To Haldi Ceremony</span><br/><br/>
-    <span onclick="showGuestList('mehndi')"> View Guests Invited To Mehndi Ceremony</span><br/><br/>
-    <span onclick="showGuestList('sangeet')"> View Guests Invited To Sangeet Ceremony</span><br/><br/>
-    <span onclick="showGuestList('reception')"> View Guests Invited To Wedding Reception</span><br/><br/>
+      <select onChange = "myfun(this.selectedIndex);">
+          <option onClick = "showAll();">View All Guests</option>
+          <option onClick = "showMehndi();">View Guests Invited to Mehndi</option>
+          <option onClick = showSangeet()>View Guests Invited to Sangeet</option>
+          <option onClick = showHaldi()>View Guests Invited to Haldi</option>
+          <option onClick = showCeremony()>View Guests Invited to Ceremony</option>
+          <option onClick = showReception()>View Guests Invited to Reception</option>
+      </select>
+        <br />
     </div>
     <span onclick="showDeleteGuestList()"> <img src = "media/button/DeleteGuestList.png" /></span>
 
@@ -68,6 +120,32 @@ include_once('GuestListView.php');
         GuestListView::viewGuestList();
         ?>
     </div>
+    <div id="GuestListMehndi">
+        <?php
+        GuestListView::viewGuestList(9);
+        ?>
+    </div>
+    <div id="GuestListSangeet">
+        <?php
+        GuestListView::viewGuestList(10);
+        ?>
+    </div>
+    <div id="GuestListHaldi">
+        <?php
+        GuestListView::viewGuestList(11);
+        ?>
+    </div>
+    <div id="GuestListCeremony">
+        <?php
+        GuestListView::viewGuestList(12);
+        ?>
+    </div>
+    <div id="GuestListReception">
+        <?php
+        GuestListView::viewGuestList(13);
+        ?>
+    </div>
+
     <div id="DeleteGuestList">
         Please Note Clicking this button will remove ALL your guest from the database.<br/>
         Precede With Caution<br /><br />

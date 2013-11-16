@@ -182,7 +182,7 @@ class DatabaseConnection
 
     public static function getGuestlist() {
         $cid = $_SESSION['cid'];
-        $sql = "Select * from Guest where c_id = "."'$cid'"." order by guest_number";
+        $sql = "Select * from Guest where c_id = " . "'$cid'" . " order by guest_group, first_name, middle_name, last_name";
         $result = mysql_query($sql);
         $guest = array();
         while($row = mysql_fetch_row($result)) {
