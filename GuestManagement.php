@@ -39,6 +39,51 @@ include_once('GuestListView.php');
             document.getElementById('DeleteGuestList').style.display = "none";
         }
 
+        function showMehndi() {
+            pageLoad();
+            document.getElementById('GuestListViewOptions').style.display = "block";
+            document.getElementById('GuestListMehndi').style.display = "block";
+        }
+        function showSangeet() {
+            pageLoad();
+            document.getElementById('GuestListViewOptions').style.display = "block";
+            document.getElementById('GuestListSangeet').style.display = "block";
+        }
+        function showHaldi() {
+            pageLoad();
+            document.getElementById('GuestListViewOptions').style.display = "block";
+            document.getElementById('GuestListHaldi').style.display = "block";
+        }
+        function showCeremony() {
+            pageLoad();
+            document.getElementById('GuestListViewOptions').style.display = "block";
+            document.getElementById('GuestListCeremony').style.display = "block";
+        }
+        function showReception() {
+            pageLoad();
+            document.getElementById('GuestListViewOptions').style.display = "block";
+            document.getElementById('GuestListReception').style.display = "block";
+        }
+        function showEntireList() {
+            pageLoad();
+            document.getElementById('GuestListViewOptions').style.display = "block";
+            document.getElementById('GuestList').style.display = "block";
+        }
+
+
+
+        function myfun(x) {
+            var ceremony = x+8;
+            switch (ceremony) {
+                case 9: showMehndi(); break;
+                case 10: showSangeet(); break;
+                case 11: showHaldi(); break;
+                case 12: showCeremony(); break;
+                case 13: showReception(); break;
+                default: showEntireList();break
+            }
+        }
+
     </script>
 </head>
 <body background = "media/website_images/body.jpg" onload="pageLoad()">
@@ -47,9 +92,9 @@ include_once('GuestListView.php');
     <span  onClick="showGuestUpload()"> <img src = "media/button/UploadGuestList.png" /></span><br/><br/>
     <span onclick="showGuestList('')"> <img src = "media/button/ViewGuestList.png" /></span><br/><br/>
     <div id = "GuestListViewOptions" >
-      <select>
-          <option onClick = showAll()>View All Guests</option>
-          <option onClick = showMehndi()>View Guests Invited to Mehndi</option>
+      <select onChange = "myfun(this.selectedIndex);">
+          <option onClick = "showAll();">View All Guests</option>
+          <option onClick = "showMehndi();">View Guests Invited to Mehndi</option>
           <option onClick = showSangeet()>View Guests Invited to Sangeet</option>
           <option onClick = showHaldi()>View Guests Invited to Haldi</option>
           <option onClick = showCeremony()>View Guests Invited to Ceremony</option>

@@ -36,34 +36,39 @@ class GuestListView
         foreach ($result as $guest) {
             switch ($ceremony) {
                 case 9 :
-                    if($guest[9] == 'Yes')
+                    if($guest[9] == 'Yes') {
                         echo '<tr>';
                     self::_displayGuestRow($guest);
                     echo '</tr>';
+                    }
                     break;
                 case 10 :
-                    if($guest[10] == 'Yes')
+                    if($guest[10] == 'Yes') {
                         echo '<tr>';
                     self::_displayGuestRow($guest);
                     echo '</tr>';
+                    }
                     break;
                 case 11 :
-                    if($guest[11] == 'Yes')
+                    if($guest[11] == 'Yes') {
                         echo '<tr>';
                     self::_displayGuestRow($guest);
                     echo '</tr>';
+                    }
                     break;
                 case 12 :
-                    if($guest[12] == 'Yes')
+                    if($guest[12] == 'Yes') {
                         echo '<tr>';
                     self::_displayGuestRow($guest);
                     echo '</tr>';
+                    }
                     break;
                 case 13 :
-                    if($guest[13] == 'Yes')
+                    if($guest[13] == 'Yes') {
                         echo '<tr>';
                     self::_displayGuestRow($guest);
                     echo '</tr>';
+                    }
                     break;
                 default :
                     echo '<tr>';
