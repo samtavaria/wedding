@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="85cdb505-0481-4b81-a195-4f5b84a784ff" name="Default" comment="Modified all include statements to refer to mode/PersistentDatabaseConnection">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/model/DatabaseQueries.php" afterPath="$PROJECT_DIR$/model/DatabaseQueries.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/GuestListView.php" afterPath="$PROJECT_DIR$/GuestListView.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/GuestManagement.php" afterPath="$PROJECT_DIR$/GuestManagement.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LoginProcess.php" afterPath="$PROJECT_DIR$/LoginProcess.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/team12.sql" afterPath="$PROJECT_DIR$/team12.sql" />
     </list>
     <ignored path="wedding.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -14,7 +12,7 @@
     <file path="/DatabaseConnection.php" changelist="85cdb505-0481-4b81-a195-4f5b84a784ff" time="1380761369547" ignored="false" />
     <file path="/process.php" changelist="85cdb505-0481-4b81-a195-4f5b84a784ff" time="1380684241014" ignored="false" />
     <file path="/Login.php" changelist="85cdb505-0481-4b81-a195-4f5b84a784ff" time="1384200058306" ignored="false" />
-    <file path="/LoginProcess.php" changelist="85cdb505-0481-4b81-a195-4f5b84a784ff" time="1382816609364" ignored="false" />
+    <file path="/LoginProcess.php" changelist="85cdb505-0481-4b81-a195-4f5b84a784ff" time="1384645515138" ignored="false" />
     <file path="/PersistentDatabaseConnection.php" changelist="85cdb505-0481-4b81-a195-4f5b84a784ff" time="1380759952045" ignored="false" />
     <file path="/a.dummy" changelist="85cdb505-0481-4b81-a195-4f5b84a784ff" time="1384046450992" ignored="false" />
     <file path="/Invitation.php" changelist="85cdb505-0481-4b81-a195-4f5b84a784ff" time="1380918997880" ignored="false" />
@@ -68,7 +66,7 @@
       <file leaf-file-name="GuestListView.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/GuestListView.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="85" column="28" selection-start="2467" selection-end="2467" vertical-scroll-proportion="-25.107143">
+            <state line="90" column="28" selection-start="2587" selection-end="2587" vertical-scroll-proportion="-25.107143">
               <folding>
                 <element signature="e#6#166#0" expanded="false" />
               </folding>
@@ -76,10 +74,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DatabaseQueries.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="DatabaseQueries.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/model/DatabaseQueries.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="14" selection-start="179" selection-end="189" vertical-scroll-proportion="0.02256532">
+            <state line="8" column="14" selection-start="179" selection-end="189" vertical-scroll-proportion="52.25">
               <folding />
             </state>
           </provider>
@@ -88,7 +86,25 @@
       <file leaf-file-name="GuestManagement.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/GuestManagement.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="34" selection-start="96" selection-end="96" vertical-scroll-proportion="0.0">
+            <state line="7" column="34" selection-start="149" selection-end="149" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PersistentDatabaseConnection.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/model/PersistentDatabaseConnection.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="1" column="10" selection-start="6" selection-end="100" vertical-scroll-proportion="-0.6785714">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LoginProcess.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/LoginProcess.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="8" column="35" selection-start="345" selection-end="345" vertical-scroll-proportion="0.17777778">
               <folding />
             </state>
           </provider>
@@ -122,7 +138,6 @@
         <option value="$PROJECT_DIR$/css/wedding.css" />
         <option value="$PROJECT_DIR$/InvitationProcess.php" />
         <option value="$PROJECT_DIR$/TemplateProcess.php" />
-        <option value="$PROJECT_DIR$/LoginProcess.php" />
         <option value="$PROJECT_DIR$/TemplateSelection.php" />
         <option value="$PROJECT_DIR$/Invitation.php" />
         <option value="$PROJECT_DIR$/GuestDatabaseManagement.php" />
@@ -130,9 +145,10 @@
         <option value="$PROJECT_DIR$/GuestDatabaseDeletion.php" />
         <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/Menu.php" />
-        <option value="$PROJECT_DIR$/model/DatabaseQueries.php" />
         <option value="$PROJECT_DIR$/GuestManagement.php" />
         <option value="$PROJECT_DIR$/GuestListView.php" />
+        <option value="$PROJECT_DIR$/model/DatabaseQueries.php" />
+        <option value="$PROJECT_DIR$/LoginProcess.php" />
       </list>
     </option>
   </component>
@@ -374,7 +390,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/model/PersistentDatabaseConnection.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="10" selection-start="6" selection-end="100" vertical-scroll-proportion="0.0" />
+        <state line="1" column="10" selection-start="6" selection-end="100" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/LoginProcess.php">
@@ -429,37 +447,39 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/model/PersistentDatabaseConnection.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="10" selection-start="6" selection-end="100" vertical-scroll-proportion="0.022170361" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/LoginProcess.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="0" selection-start="62" selection-end="376" vertical-scroll-proportion="0.22170362">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/GuestManagement.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="34" selection-start="96" selection-end="96" vertical-scroll-proportion="0.0">
+        <state line="7" column="34" selection-start="149" selection-end="149" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/GuestListView.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="85" column="28" selection-start="2467" selection-end="2467" vertical-scroll-proportion="-25.107143">
+        <state line="90" column="28" selection-start="2587" selection-end="2587" vertical-scroll-proportion="-25.107143">
           <folding>
             <element signature="e#6#166#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/model/PersistentDatabaseConnection.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="10" selection-start="6" selection-end="100" vertical-scroll-proportion="-0.6785714">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/model/DatabaseQueries.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="14" selection-start="179" selection-end="189" vertical-scroll-proportion="0.02256532">
+        <state line="8" column="14" selection-start="179" selection-end="189" vertical-scroll-proportion="52.25">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LoginProcess.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="35" selection-start="345" selection-end="345" vertical-scroll-proportion="0.17777778">
           <folding />
         </state>
       </provider>
