@@ -2,10 +2,10 @@
 -- version 4.0.4.1
 -- http://www.phpmyadmin.net
 --
--- Host: localhost
--- Generation Time: Nov 17, 2013 at 01:40 AM
--- Server version: 5.6.12
--- PHP Version: 5.5.3
+-- Host: 127.0.0.1
+-- Generation Time: Nov 17, 2013 at 02:53 AM
+-- Server version: 5.5.32
+-- PHP Version: 5.4.19
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -25,10 +25,10 @@ USE `team12`;
 -- --------------------------------------------------------
 
 --
--- Table structure for table `Bride`
+-- Table structure for table `bride`
 --
 
-CREATE TABLE IF NOT EXISTS `Bride` (
+CREATE TABLE IF NOT EXISTS `bride` (
   `c_id` int(11) NOT NULL,
   `b_id` int(11) NOT NULL AUTO_INCREMENT,
   `b_first_name` varchar(50) NOT NULL,
@@ -41,19 +41,19 @@ CREATE TABLE IF NOT EXISTS `Bride` (
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=4 ;
 
 --
--- Dumping data for table `Bride`
+-- Dumping data for table `bride`
 --
 
-INSERT INTO `Bride` (`c_id`, `b_id`, `b_first_name`, `b_middle_name`, `b_last_name`, `b_father_name`, `b_mother_name`) VALUES
+INSERT INTO `bride` (`c_id`, `b_id`, `b_first_name`, `b_middle_name`, `b_last_name`, `b_father_name`, `b_mother_name`) VALUES
 (1, 1, 'Danareas', 'K.', 'Targeryan', 'Rob Targeryan', 'Khaleesi Targeryan');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `Couple`
+-- Table structure for table `couple`
 --
 
-CREATE TABLE IF NOT EXISTS `Couple` (
+CREATE TABLE IF NOT EXISTS `couple` (
   `c_id` int(11) NOT NULL AUTO_INCREMENT,
   `username` varchar(50) NOT NULL,
   `password` varchar(50) NOT NULL,
@@ -63,10 +63,10 @@ CREATE TABLE IF NOT EXISTS `Couple` (
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
 
 --
--- Dumping data for table `Couple`
+-- Dumping data for table `couple`
 --
 
-INSERT INTO `Couple` (`c_id`, `username`, `password`, `salt`) VALUES
+INSERT INTO `couple` (`c_id`, `username`, `password`, `salt`) VALUES
 (1, 'admin', 'admin', 'salt1'),
 (2, 'temp1', 'ppp', 'sfdf');
 
@@ -82,7 +82,7 @@ CREATE TABLE IF NOT EXISTS `css` (
   `invitation_background` text NOT NULL,
   `custom_css` text NOT NULL,
   PRIMARY KEY (`css_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=72 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=75 ;
 
 --
 -- Dumping data for table `css`
@@ -156,7 +156,10 @@ INSERT INTO `css` (`css_id`, `c_id`, `invitation_background`, `custom_css`) VALU
 (68, 1, 'http://localhost:8083/wedding/media/invitation_card_backgrounds/2.jpeg', ''),
 (69, 1, 'http://localhost:8083/wedding/media/invitation_card_backgrounds/1.jpeg', ''),
 (70, 1, 'http://localhost:8083/wedding/media/invitation_card_backgrounds/1.jpeg', ''),
-(71, 1, 'http://localhost:8083/wedding/media/invitation_card_backgrounds/1.jpeg', '');
+(71, 1, 'http://localhost:8083/wedding/media/invitation_card_backgrounds/1.jpeg', ''),
+(72, 1, '', ''),
+(73, 1, '', ''),
+(74, 1, 'http://localhost/media/invitation_card_backgrounds/3.jpeg', '');
 
 -- --------------------------------------------------------
 
@@ -173,7 +176,7 @@ CREATE TABLE IF NOT EXISTS `draggable` (
   `all_positions` varchar(512) NOT NULL,
   PRIMARY KEY (`draggable_id`),
   UNIQUE KEY `draggable_id` (`draggable_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=53 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=55 ;
 
 --
 -- Dumping data for table `draggable`
@@ -231,15 +234,17 @@ INSERT INTO `draggable` (`draggable_id`, `c_id`, `id`, `position_top`, `position
 (49, 1, '', 0, 0, 'undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined'),
 (50, 1, '', 0, 0, '47.33332824707031,575,84.5,665,164.6666717529297,661,188.8333282470703,842.5'),
 (51, 1, '', 0, 0, 'undefined,undefined,84.5,667,81.66667175292969,805,undefined,undefined'),
-(52, 1, '', 0, 0, '186.3333282470703,680,79.5,743,38.66667175292969,758,35.83332824707031,500.8333282470703');
+(52, 1, '', 0, 0, '186.3333282470703,680,79.5,743,38.66667175292969,758,35.83332824707031,500.8333282470703'),
+(53, 1, '', 0, 0, 'undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined'),
+(54, 1, '', 0, 0, '58,744,85,574,113,763,179,572');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `Event`
+-- Table structure for table `event`
 --
 
-CREATE TABLE IF NOT EXISTS `Event` (
+CREATE TABLE IF NOT EXISTS `event` (
   `e_id` int(11) NOT NULL,
   `venue_name` varchar(50) NOT NULL,
   `venue_address` varchar(100) NOT NULL,
@@ -252,10 +257,10 @@ CREATE TABLE IF NOT EXISTS `Event` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `Event`
+-- Dumping data for table `event`
 --
 
-INSERT INTO `Event` (`e_id`, `venue_name`, `venue_address`, `date`, `event_name`, `venue_phone`, `attire`, `c_id`) VALUES
+INSERT INTO `event` (`e_id`, `venue_name`, `venue_address`, `date`, `event_name`, `venue_phone`, `attire`, `c_id`) VALUES
 (1, 'USC', '36 WattWay', '2013-10-15', 'shaadi', '2147483647', 'formal', 1),
 (2, 'USC', '35 watt way', '2013-10-15', 'sangeet', '8888888888', 'traditional', 1);
 
@@ -274,10 +279,10 @@ CREATE TABLE IF NOT EXISTS `font` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `Groom`
+-- Table structure for table `groom`
 --
 
-CREATE TABLE IF NOT EXISTS `Groom` (
+CREATE TABLE IF NOT EXISTS `groom` (
   `c_id` int(11) NOT NULL,
   `g_id` int(11) NOT NULL,
   `g_first_name` varchar(50) NOT NULL,
@@ -290,19 +295,19 @@ CREATE TABLE IF NOT EXISTS `Groom` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `Groom`
+-- Dumping data for table `groom`
 --
 
-INSERT INTO `Groom` (`c_id`, `g_id`, `g_first_name`, `g_middle_name`, `g_last_name`, `g_father_name`, `g_mother_name`) VALUES
+INSERT INTO `groom` (`c_id`, `g_id`, `g_first_name`, `g_middle_name`, `g_last_name`, `g_father_name`, `g_mother_name`) VALUES
 (1, 1, 'Khal', 'T.', 'Drogo', 'Edward Drogo', 'Lysa Drogo');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `Guest`
+-- Table structure for table `guest`
 --
 
-CREATE TABLE IF NOT EXISTS `Guest` (
+CREATE TABLE IF NOT EXISTS `guest` (
   `guest_number` bigint(20) NOT NULL AUTO_INCREMENT,
   `g_id` varchar(15) NOT NULL,
   `c_id` int(12) NOT NULL,
@@ -328,10 +333,10 @@ CREATE TABLE IF NOT EXISTS `Guest` (
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=5509 ;
 
 --
--- Dumping data for table `Guest`
+-- Dumping data for table `guest`
 --
 
-INSERT INTO `Guest` (`guest_number`, `g_id`, `c_id`, `side`, `first_name`, `middle_name`, `last_name`, `email`, `phone`, `mehndi`, `sangeet`, `haldi`, `wedding_ceremony`, `reception`, `guest_group`, `rsvp_wedding_ceremony`, `rsvp_reception`, `rsvp_mehndi`, `rsvp_haldi`, `rsvp_sangeet`) VALUES
+INSERT INTO `guest` (`guest_number`, `g_id`, `c_id`, `side`, `first_name`, `middle_name`, `last_name`, `email`, `phone`, `mehndi`, `sangeet`, `haldi`, `wedding_ceremony`, `reception`, `guest_group`, `rsvp_wedding_ceremony`, `rsvp_reception`, `rsvp_mehndi`, `rsvp_haldi`, `rsvp_sangeet`) VALUES
 (5140, 'C1G1', 1, 'Bride', 'Raju', 'N', 'Sharma', 'Raju.sharma@examle.com', '1234567890', 'Yes', 'No', 'No', 'Yes', 'n/a', 'Jain Mandir', 'NULL', 'NULL', 'NULL', 'NULL', 'NULL'),
 (5149, 'C1G10', 1, 'Bride', 'Ram', 'Q', 'Singh', 'Ram@a.com', '15555555555', 'n/a', 'YES', 'n/a', 'n/a', 'n/a', 'Dance friends', 'NULL', 'NULL', 'NULL', 'NULL', 'NULL'),
 (5239, 'C1G100', 1, 'Bride', 'Ram', 'Q', 'Singh', 'Ram@a.com', '192', 'n/a', 'YES', 'n/a', 'n/a', 'n/a', 'Dance friends', 'NULL', 'NULL', 'NULL', 'NULL', 'NULL'),
@@ -626,7 +631,7 @@ INSERT INTO `Guest` (`guest_number`, `g_id`, `c_id`, `side`, `first_name`, `midd
 (5500, 'C1G361', 1, 'Groom', 'Amar', 'B', 'Singh', 'A.singh@abc.com', '331', 'n/a', 'n/a', 'NO', 'YES', 'n/a', 'New group 1', 'NULL', 'NULL', 'NULL', 'NULL', 'NULL'),
 (5501, 'C1G362', 1, 'Bride', 'Ram', 'A', 'Singh', 'Ram@a.com', '332', 'n/a', 'YES', 'NO', 'n/a', 'n/a', 'New Group 2', 'NULL', 'NULL', 'NULL', 'NULL', 'NULL'),
 (5502, 'C1G363', 1, 'Groom', 'Amar', 'B', 'Singh', 'A.singh@abc.com', '331', 'n/a', 'n/a', 'NO', 'YES', 'n/a', 'New group 3', 'NULL', 'NULL', 'NULL', 'NULL', 'NULL');
-INSERT INTO `Guest` (`guest_number`, `g_id`, `c_id`, `side`, `first_name`, `middle_name`, `last_name`, `email`, `phone`, `mehndi`, `sangeet`, `haldi`, `wedding_ceremony`, `reception`, `guest_group`, `rsvp_wedding_ceremony`, `rsvp_reception`, `rsvp_mehndi`, `rsvp_haldi`, `rsvp_sangeet`) VALUES
+INSERT INTO `guest` (`guest_number`, `g_id`, `c_id`, `side`, `first_name`, `middle_name`, `last_name`, `email`, `phone`, `mehndi`, `sangeet`, `haldi`, `wedding_ceremony`, `reception`, `guest_group`, `rsvp_wedding_ceremony`, `rsvp_reception`, `rsvp_mehndi`, `rsvp_haldi`, `rsvp_sangeet`) VALUES
 (5503, 'C1G364', 1, 'Bride', 'Ram', 'A', 'Singh', 'Ram@a.com', '332', 'n/a', 'YES', 'NO', 'n/a', 'n/a', 'New Group 4', 'NULL', 'NULL', 'NULL', 'NULL', 'NULL'),
 (5504, 'C1G365', 1, 'Groom', 'Amar', 'B', 'Singh', 'A.singh@abc.com', '331', 'n/a', 'n/a', 'NO', 'YES', 'n/a', 'CS577 Friends', 'NULL', 'NULL', 'NULL', 'NULL', 'NULL'),
 (5505, 'C1G366', 1, 'Bride', 'Ram', 'A', 'Singh', 'Ram@a.com', '332', 'n/a', 'YES', 'NO', 'n/a', 'n/a', 'CS577 TA''s', 'NULL', 'NULL', 'NULL', 'NULL', 'NULL'),
@@ -706,10 +711,10 @@ INSERT INTO `Guest` (`guest_number`, `g_id`, `c_id`, `side`, `first_name`, `midd
 -- --------------------------------------------------------
 
 --
--- Table structure for table `Icons`
+-- Table structure for table `icons`
 --
 
-CREATE TABLE IF NOT EXISTS `Icons` (
+CREATE TABLE IF NOT EXISTS `icons` (
   `icon_id` int(11) NOT NULL,
   `name` varchar(50) NOT NULL,
   `path` varchar(512) NOT NULL,
@@ -719,15 +724,39 @@ CREATE TABLE IF NOT EXISTS `Icons` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `Images`
+-- Table structure for table `images`
 --
 
-CREATE TABLE IF NOT EXISTS `Images` (
+CREATE TABLE IF NOT EXISTS `images` (
   `image_id` int(11) NOT NULL,
   `image_name` varchar(50) NOT NULL,
   `image_path` varchar(512) NOT NULL,
   PRIMARY KEY (`image_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `invitation_background_images`
+--
+
+CREATE TABLE IF NOT EXISTS `invitation_background_images` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `img_path` varchar(512) NOT NULL,
+  `ico_path` varchar(512) NOT NULL,
+  `name` varchar(512) NOT NULL,
+  `culture` int(11) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=4 ;
+
+--
+-- Dumping data for table `invitation_background_images`
+--
+
+INSERT INTO `invitation_background_images` (`id`, `img_path`, `ico_path`, `name`, `culture`) VALUES
+(1, '/media/invitation_card_backgrounds/1.jpeg', '/media/invitation_card_backgrounds_preview/1.jpeg', 'Background 1', 1),
+(2, '/media/invitation_card_backgrounds/2.jpeg', '/media/invitation_card_backgrounds_preview/2.jpeg', 'Background 2', 1),
+(3, '/media/invitation_card_backgrounds/3.jpeg', '/media/invitation_card_backgrounds_preview/3.jpeg', 'Background 3', 1);
 
 -- --------------------------------------------------------
 
@@ -788,25 +817,12 @@ INSERT INTO `media_type` (`id`, `type`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `Prayers`
---
-
-CREATE TABLE IF NOT EXISTS `Prayers` (
-  `prayer_id` int(11) NOT NULL,
-  `prayer_text` varchar(200) NOT NULL,
-  PRIMARY KEY (`prayer_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
--- --------------------------------------------------------
-
---
 -- Table structure for table `prayers`
 --
 
 CREATE TABLE IF NOT EXISTS `prayers` (
   `prayer_id` int(11) NOT NULL,
   `prayer_text` varchar(200) NOT NULL,
-  `culture` int(11) NOT NULL,
   PRIMARY KEY (`prayer_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -823,7 +839,14 @@ CREATE TABLE IF NOT EXISTS `supplied_invitation_images` (
   `name` varchar(50) NOT NULL,
   `culture` int(11) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
+
+--
+-- Dumping data for table `supplied_invitation_images`
+--
+
+INSERT INTO `supplied_invitation_images` (`id`, `img_path`, `ico_path`, `name`, `culture`) VALUES
+(1, '/media/invitation_card_icons/1.jpeg', '/media/invitation_card_icons/1.jpeg', 'Cultural Icon 1', 1);
 
 -- --------------------------------------------------------
 
@@ -842,10 +865,10 @@ CREATE TABLE IF NOT EXISTS `user_invitation_images` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `User_Pictures`
+-- Table structure for table `user_pictures`
 --
 
-CREATE TABLE IF NOT EXISTS `User_Pictures` (
+CREATE TABLE IF NOT EXISTS `user_pictures` (
   `user_image_id` int(11) NOT NULL,
   `name` varchar(50) NOT NULL,
   `path` varchar(512) NOT NULL,

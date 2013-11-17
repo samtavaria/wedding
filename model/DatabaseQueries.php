@@ -15,7 +15,7 @@ class DatabaseConnection
 
     public static function connectToDatabase()
     {
-        $conn = mysql_connect("localhost", "root", "admin");
+        $conn = mysql_connect("localhost", "root", "");
 
         if (!$conn) {
             echo "Unable to connect to DB: " . mysql_error();
@@ -100,8 +100,10 @@ class DatabaseConnection
 
     public static function setInvitationBackground($cid, $background)
     {
+		// This will be deprecated, leave for now and add new functionality
         $sql = "insert into css values ('', '" . $cid . "', '" . $background . "', '')";
         $result = mysql_query($sql);
+
     }
 
     public static function getInvitationBackground($cid)
@@ -112,6 +114,26 @@ class DatabaseConnection
         return $row['invitation_background'];
     }
 
+	public static function getAllSystemInvitationBackgrounds() 
+	{
+		$sql = "select * from invitation_background_images";
+		$result = mysql_query($sql);
+		
+		$bg_images = array();
+		while ($row = mysql_fetch_assoc($result)) {
+			$bg_images[] = $row;
+		}
+		return $bg_images;
+	}
+	
+	public static function getAllUserInvitationImages($cid) 
+	{
+		$sql = "select * from user_invitation_images WHERE c_id = " . "'$cid'";
+		$result = mysql_query($sql);
+		$row = mysql_fetch_assoc($result);
+		return $row;
+	}
+	
     public static function setPosition($position) {
         $combinedPosition = $position['myCss'];
         $cid = $_SESSION['cid'];
