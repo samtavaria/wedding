@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.0.4.1
+-- version 4.0.4
 -- http://www.phpmyadmin.net
 --
--- Host: 127.0.0.1
--- Generation Time: Nov 17, 2013 at 02:53 AM
--- Server version: 5.5.32
--- PHP Version: 5.4.19
+-- Host: localhost
+-- Generation Time: Nov 17, 2013 at 09:55 PM
+-- Server version: 5.6.12-log
+-- PHP Version: 5.4.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -38,14 +38,30 @@ CREATE TABLE IF NOT EXISTS `bride` (
   `b_mother_name` varchar(50) NOT NULL,
   PRIMARY KEY (`b_id`),
   UNIQUE KEY `c_id` (`c_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=4 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=24 ;
 
 --
 -- Dumping data for table `bride`
 --
 
 INSERT INTO `bride` (`c_id`, `b_id`, `b_first_name`, `b_middle_name`, `b_last_name`, `b_father_name`, `b_mother_name`) VALUES
-(1, 1, 'Danareas', 'K.', 'Targeryan', 'Rob Targeryan', 'Khaleesi Targeryan');
+(1, 1, 'Danareas', 'K.', 'Targeryan', 'Rob Targeryan', 'Khaleesi Targeryan'),
+(12, 7, 'yjfluyf', 'lyf.hc.', 'yfuyf,uy', 'jyfluyf', 'uyfuyf'),
+(15, 8, 'yjfluyf', 'lyf.hc.', 'yfuyf,uy', 'jyfluyf', 'uyfuyf'),
+(17, 9, 'yjfluyf', 'lyf.hc.', 'yfuyf,uy', 'jyfluyf', 'uyfuyf'),
+(19, 10, 'jhfkuyfk,', 'lf.hfl,iufyjfckh', 'tdkuyf', 'kuyfluyf', 'yjflyf'),
+(21, 11, 'rg', 'RG', 'EGeth', 'ergerg', 'ergerg'),
+(0, 12, 'rg', 'RG', 'EGeth', 'ergerg', 'ergerg'),
+(25, 13, 'khff', 'lugl', 'ljgljg', 'ljlj', 'lulyfl'),
+(27, 14, 'l.kv.khv', 'l,jhvj,hvc', 'kjhjhc', 'jkhjh', 'ljkgljfvh'),
+(29, 15, 'f', 'g', 'h', 'i', 'j'),
+(33, 17, 'f', 'g', 'h', 'i', 'j'),
+(35, 18, 'f', 'g', 'h', 'i', 'j'),
+(37, 19, 'f', 'g', 'h', 'i', 'j'),
+(41, 20, 'f', 'g', 'h', 'i', 'j'),
+(43, 21, 'f', 'g', 'h', 'i', 'j'),
+(45, 22, 'f', 'g', 'h', 'i', 'j'),
+(47, 23, 'f', 'g', 'h', 'i', 'j');
 
 -- --------------------------------------------------------
 
@@ -60,7 +76,7 @@ CREATE TABLE IF NOT EXISTS `couple` (
   `salt` varchar(50) NOT NULL,
   PRIMARY KEY (`c_id`),
   UNIQUE KEY `username` (`username`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=48 ;
 
 --
 -- Dumping data for table `couple`
@@ -68,7 +84,8 @@ CREATE TABLE IF NOT EXISTS `couple` (
 
 INSERT INTO `couple` (`c_id`, `username`, `password`, `salt`) VALUES
 (1, 'admin', 'admin', 'salt1'),
-(2, 'temp1', 'ppp', 'sfdf');
+(2, 'temp1', 'ppp', 'sfdf'),
+(47, 'rathinusc@gmail.com', 'g', '');
 
 -- --------------------------------------------------------
 
@@ -82,7 +99,7 @@ CREATE TABLE IF NOT EXISTS `css` (
   `invitation_background` text NOT NULL,
   `custom_css` text NOT NULL,
   PRIMARY KEY (`css_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=75 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=72 ;
 
 --
 -- Dumping data for table `css`
@@ -156,10 +173,7 @@ INSERT INTO `css` (`css_id`, `c_id`, `invitation_background`, `custom_css`) VALU
 (68, 1, 'http://localhost:8083/wedding/media/invitation_card_backgrounds/2.jpeg', ''),
 (69, 1, 'http://localhost:8083/wedding/media/invitation_card_backgrounds/1.jpeg', ''),
 (70, 1, 'http://localhost:8083/wedding/media/invitation_card_backgrounds/1.jpeg', ''),
-(71, 1, 'http://localhost:8083/wedding/media/invitation_card_backgrounds/1.jpeg', ''),
-(72, 1, '', ''),
-(73, 1, '', ''),
-(74, 1, 'http://localhost/media/invitation_card_backgrounds/3.jpeg', '');
+(71, 1, 'http://localhost:8083/wedding/media/invitation_card_backgrounds/1.jpeg', '');
 
 -- --------------------------------------------------------
 
@@ -176,7 +190,7 @@ CREATE TABLE IF NOT EXISTS `draggable` (
   `all_positions` varchar(512) NOT NULL,
   PRIMARY KEY (`draggable_id`),
   UNIQUE KEY `draggable_id` (`draggable_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=55 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=53 ;
 
 --
 -- Dumping data for table `draggable`
@@ -234,9 +248,7 @@ INSERT INTO `draggable` (`draggable_id`, `c_id`, `id`, `position_top`, `position
 (49, 1, '', 0, 0, 'undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined'),
 (50, 1, '', 0, 0, '47.33332824707031,575,84.5,665,164.6666717529297,661,188.8333282470703,842.5'),
 (51, 1, '', 0, 0, 'undefined,undefined,84.5,667,81.66667175292969,805,undefined,undefined'),
-(52, 1, '', 0, 0, '186.3333282470703,680,79.5,743,38.66667175292969,758,35.83332824707031,500.8333282470703'),
-(53, 1, '', 0, 0, 'undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined'),
-(54, 1, '', 0, 0, '58,744,85,574,113,763,179,572');
+(52, 1, '', 0, 0, '186.3333282470703,680,79.5,743,38.66667175292969,758,35.83332824707031,500.8333282470703');
 
 -- --------------------------------------------------------
 
@@ -299,6 +311,7 @@ CREATE TABLE IF NOT EXISTS `groom` (
 --
 
 INSERT INTO `groom` (`c_id`, `g_id`, `g_first_name`, `g_middle_name`, `g_last_name`, `g_father_name`, `g_mother_name`) VALUES
+(29, 0, 'a', 'b', 'c', 'd', 'e'),
 (1, 1, 'Khal', 'T.', 'Drogo', 'Edward Drogo', 'Lysa Drogo');
 
 -- --------------------------------------------------------
@@ -737,30 +750,6 @@ CREATE TABLE IF NOT EXISTS `images` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `invitation_background_images`
---
-
-CREATE TABLE IF NOT EXISTS `invitation_background_images` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `img_path` varchar(512) NOT NULL,
-  `ico_path` varchar(512) NOT NULL,
-  `name` varchar(512) NOT NULL,
-  `culture` int(11) NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=4 ;
-
---
--- Dumping data for table `invitation_background_images`
---
-
-INSERT INTO `invitation_background_images` (`id`, `img_path`, `ico_path`, `name`, `culture`) VALUES
-(1, '/media/invitation_card_backgrounds/1.jpeg', '/media/invitation_card_backgrounds_preview/1.jpeg', 'Background 1', 1),
-(2, '/media/invitation_card_backgrounds/2.jpeg', '/media/invitation_card_backgrounds_preview/2.jpeg', 'Background 2', 1),
-(3, '/media/invitation_card_backgrounds/3.jpeg', '/media/invitation_card_backgrounds_preview/3.jpeg', 'Background 3', 1);
-
--- --------------------------------------------------------
-
---
 -- Table structure for table `invitation_contents`
 --
 
@@ -839,14 +828,84 @@ CREATE TABLE IF NOT EXISTS `supplied_invitation_images` (
   `name` varchar(50) NOT NULL,
   `culture` int(11) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+
+-- --------------------------------------------------------
 
 --
--- Dumping data for table `supplied_invitation_images`
+-- Table structure for table `temp_members_db`
 --
 
-INSERT INTO `supplied_invitation_images` (`id`, `img_path`, `ico_path`, `name`, `culture`) VALUES
-(1, '/media/invitation_card_icons/1.jpeg', '/media/invitation_card_icons/1.jpeg', 'Cultural Icon 1', 1);
+CREATE TABLE IF NOT EXISTS `temp_members_db` (
+  `confirm_code` varchar(255) NOT NULL,
+  `g_first_name` varchar(255) NOT NULL,
+  `g_middle_name` varchar(255) NOT NULL,
+  `g_last_name` varchar(255) NOT NULL,
+  `b_first_name` varchar(255) NOT NULL,
+  `b_middle_name` varchar(255) NOT NULL,
+  `b_last_name` varchar(255) NOT NULL,
+  `g_father_name` varchar(255) NOT NULL,
+  `g_mother_name` varchar(255) NOT NULL,
+  `b_father_name` varchar(255) NOT NULL,
+  `b_mother_name` varchar(255) NOT NULL,
+  `username` varchar(255) NOT NULL,
+  `password` varchar(255) NOT NULL,
+  `country` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `temp_members_db`
+--
+
+INSERT INTO `temp_members_db` (`confirm_code`, `g_first_name`, `g_middle_name`, `g_last_name`, `b_first_name`, `b_middle_name`, `b_last_name`, `g_father_name`, `g_mother_name`, `b_father_name`, `b_mother_name`, `username`, `password`, `country`) VALUES
+('994821a866343b0d33c355a919794909', '', '', '', 'R', 'R', 'R', 'R', 'R', 'R', 'R', 'R', '1234', 'In'),
+('dfeb31961656f7a87505b396ba56f77f', 'Rathin', 'Kumar Vijaya', 'Kumar', 'R', 'R', 'R', 'R', 'R', 'R', 'R', 'R', '1234', 'In'),
+('f79616029c55e2859b28c31a19c3d298', 'Rathin', 'Kumar Vijaya', 'Kumar', 'R', 'R', 'R', 'R', 'R', 'R', 'R', 'R', '1234', 'In'),
+('d1ecb59a93931fb54d2864884111b197', 'Rathin', 'Kumar Vijaya', 'Kumar', 'R', 'R', 'R', 'R', 'R', 'R', 'R', 'R', '1234', 'In'),
+('e0b842ae80c5fe228e5227b622fe2b18', 'Rathin', 'Kumar Vijaya', 'Kumar', 'R', 'R', 'R', 'R', 'R', 'R', 'R', 'rathinusc@gmail.com', '1234', 'In'),
+('240b29127ad12fde8255dbf576f11fc3', 'Rathin', 'Kumar Vijaya', 'Kumar', 'R', 'R', 'R', 'R', 'R', 'R', 'R', 'rathinusc@gmail.com', '1234', 'In'),
+('92be761bcec4cf4d01dab789bae1a51b', 'Rathin', 'Kumar Vijaya', 'Kumar', 'R', 'R', 'R', 'R', 'R', 'R', 'R', 'rathinusc@gmail.com', '3456', 'In'),
+('3a1763a3a48c841e33e1f7ab952032ea', 'Rathin', 'Kumar Vijaya', 'Kumar', 'R', 'R', 'R', 'R', 'R', 'R', 'R', 'rathinusc@gmail.com', '4567', 'In'),
+('1afee438a0872ea994e58767ae3a0807', 'Rathin', 'Kumar Vijaya', 'Kumar', 'R', 'R', 'R', 'R', 'R', 'R', 'R', 'rathinusc@gmail.com', '', 'In'),
+('a7909a6e8f9692fee911c59f6cde5a31', '', '', '', 'dfbadfbafbadfb', 'khk', ';lih;ih', 'sd', 'sdbb', ';ih;oiho', 'jgljgfl', 'rathinusc@gmail.com', '1234', 'India'),
+('024ee86759e7c87a21454b95ed11ff22', 'bjk', 'bkj', 'jb', ',jnb', ',nb', 'lknl', 'ljn', 'lkn', 'knk,', 'b,j', 'rathinusc@gmail.com', 'e', 'rer'),
+('cb2061ad8626233d6ab9f0715574235a', 'nk', 'n', 'kn', '.kn', '.kj', 'kj', '.kn', '.kn', 'k', 'n', 'rathinusc@gmail.com', 'j', 'kk'),
+('857372a84918355b014a7d0efc7c5cb7', 'nk', 'n', 'kn', '.kn', '.kj', 'kj', '.kn', '.kn', 'k', 'n', 'ghcgjv jh', 'da', 'kk'),
+('377bafdcf35b9bef56edac98a924a1d7', 'nk', 'n', 'kn', '.kn', '.kj', 'kj', '.kn', '.kn', 'k', 'n', 'jsfsdagku', 'vsdv', 'kk'),
+('8ab19b8bbaaea34cc0d536c9b36c4581', 'nk', 'n', 'kn', '.kn', '.kj', 'kj', '.kn', '.kn', 'k', 'n', 'bfukdsaglfkus', 'khkh', 'kk'),
+('7cd1064bfc18adbdb2c1d7b1275e93e3', 'hj', 'kg', 'kb', 'kjh', 'jh', 'ljh', 'kjb', 'kjh', 'ljhlj', 'lk', 'kj', 'guk', 'bljn'),
+('f4e703eacd553f4d070a02cff5c4c9fd', 'hm', 'bmj', 'b', 'b,j', 'b,', 'b,', 'b,j', 'b,j', 'b,', 'b,j', 'lidhclikdc;', 'b,j', ',m'),
+('288c4376dbd208b4903055b8f9d6122d', 'bjk', 'blj', 'bn,kb', 'lkn', '.kjn', 'k.h', 'kn', 'kn', 'lihg', 'ukg', 'ig', 'iygiu', 'khk'),
+('b14b4020dcdfc2f850064dfaee2235c8', '', '', '', 'khkj', 'luglg', 'tutg', 'Y', 'kjfkf', 'liugiug', 'kuyyf', 'rathinkumarusa@gmail.com', '1234', 'India'),
+('1b5954e5873dc84968f04a921aced79d', '', '', '', 'khkj', 'luglg', 'tutg', 'Y', 'kjfkf', 'liugiug', 'kuyyf', 'rvijayak@usc.edu', '1234', 'India'),
+('0db5af6191d675a13230e65feb027113', '', '', '', 'khkj', 'luglg', 'tutg', 'Y', 'kjfkf', 'liugiug', 'kuyyf', 'rathinusc@gmail.com', '1234', 'India'),
+('bf9be24de3d1933e05fb5e4b0c679e3c', '', '', '', 'sgb', 'df', 'dfnh', 'Ram', 'tjl', 'fshkhjkg', 'jgkkjh', 'rathinusc@gmail.com', '1234', 'jhgljglk'),
+('00a61bd59b6c777a3db3305635162b15', '', '', '', 'yjfluyf', 'lyf.hc.', 'yfuyf,uy', 'lgljflyfv', 'ljf.yhv.hy', 'jyfluyf', 'uyfuyf', 'rathinusa@yahoo.co.in', '1234', 'India'),
+('0b71fd9c81bd1bbf72209236551f06f2', '', '', '', 'yjfluyf', 'lyf.hc.', 'yfuyf,uy', 'lgljflyfv', 'ljf.yhv.hy', 'jyfluyf', 'uyfuyf', 'rathinusa@yahoo.co.in', 'khff,yjf', 'India'),
+('83b5cf96744bdc4531a9e9aab11771c6', '', '', '', 'yjfluyf', 'lyf.hc.', 'yfuyf,uy', 'lgljflyfv', 'ljf.yhv.hy', 'jyfluyf', 'uyfuyf', 'rathinusa@yahoo.co.in', '1234', 'India'),
+('62e565485b3f0f2862fe5c9ed8ec5244', '', '', '', 'yjfluyf', 'lyf.hc.', 'yfuyf,uy', 'lgljflyfv', 'ljf.yhv.hy', 'jyfluyf', 'uyfuyf', 'rathinusa@yahoo.co.in', '1234', 'India'),
+('5ce3fa90939c5adbae1d3630d33e35f8', '', '', '', 'jhfkuyfk,', 'lf.hfl,iufyjfckh', 'tdkuyf', 'jflf', 'uyf.hjv', 'kuyfluyf', 'yjflyf', 'rathinusc@gmail.com', 'kflfy', 'india'),
+('3fb6a3f2da7414923b6b8ad1b6f8adfb', 'jhv', 'ljhvljvh', 'ljvjhv', 'khff', 'lugl', 'ljgljg', 'kfl', 'ljfljf', 'ljlj', 'lulyfl', 'rathinusa@yahoo.co.in', '8787t', 'india'),
+('ca001c589bf79ed071c4bf49eec465fb', '', '', '', 'rg', 'RG', 'EGeth', '.kn', 'ar', 'ergerg', 'ergerg', 'rathinusc@gmail.com', '1234', 'india'),
+('aea1f7d93ac8aa3799198c8a7c90bb8f', 'kyfljfy', 'lfuf', 'ljyflfy', 'l.kv.khv', 'l,jhvj,hvc', 'kjhjhc', 'ljhffvh', 'lkjg.khv', 'jkhjh', 'ljkgljfvh', 'rathinkumarusa@gmail.com', '6789', 'liugliug'),
+('544f56de275b124414d8265f8b9b34fd', '', '', '', '', '', '', '', '', '', '', '', 'a', ''),
+('44785d84227f9aeddf11bfa4277fb54a', '', '', '', '', '', '', '', '', '', '', '', '', ''),
+('cd27575c4190e53ae9a28b6aa225541b', '', '', '', '', '', '', '', '', '', '', '', 'a', ''),
+('1c86cc0b38e9393cbb8dfa9d7882f33c', '', '', '', '', '', '', '', '', '', '', '', 'a', ''),
+('93d7004375fcb8a6b993512f9928259f', '', '', '', '', '', '', '', '', '', '', 'rvijayak@usc.edu', '1234', ''),
+('4d41bdcbbe62e82105563f166e6cc5da', '', '', '', '', '', '', '', '', '', '', 'rvijayak@usc.edu', '1234', ''),
+('1bf0195bb8ecf5bb3bd5ba1b97e5f6a7', '', '', '', '', '', '', '', '', '', '', 'rathinusc@gmail.com', 'abcd', ''),
+('831c4019abbe0fc6fb82af20471fdb5b', 'a', 'b', 'c', 'f', 'g', 'h', 'd', 'e', 'i', 'j', 'rathinusc@gmail.com', 'abc', 't'),
+('f735eff304bc98e7028c53ba9d027244', 'a', 'b', 'c', 'f', 'g', 'h', 'd', 'e', 'i', 'j', 'rathinusc@gmail.com', 'def', 't'),
+('7f40f3a0794a67b8c6b460bdd0f286a9', 'a', 'b', 'c', 'f', 'g', 'h', 'd', 'e', 'i', 'j', 'rathinusc@gmail.com', 'acv', 't'),
+('5eebd3edced4c96a9c94c6bb645d4690', 'a', 'b', 'c', 'f', 'g', 'h', 'd', 'e', 'i', 'j', 'rathinusc@gmail.com', 'acv', 't'),
+('67823b1b0f00a229e6d22c2fe4ef3d1a', 'a', 'b', 'c', 'f', 'g', 'h', 'd', 'e', 'i', 'j', 'rathinusc@gmail.com', 'acv', 't'),
+('9be40526af5f0b1be79a378144bcabf0', 'a', 'b', 'c', 'f', 'g', 'h', 'd', 'e', 'i', 'j', 'rathinusc@gmail.com', 'a', 't'),
+('ac7cfebf83639a8379da19930bbdcdb4', 'a', 'b', 'c', 'f', 'g', 'h', 'd', 'e', 'i', 'j', 'rathinusc@gmail.com', 'a', 't'),
+('1affaaf4e6c188b9ede0aed5c152bcf9', 'a', 'b', 'c', 'f', 'g', 'h', 'd', 'e', 'i', 'j', 'rathinusc@gmail.com', 'l', 't'),
+('d4e45423ac011d12299b4c9f9bd0eef4', 'a', 'b', 'c', 'f', 'g', 'h', 'd', 'e', 'i', 'j', 'rathinusc@gmail.com', 'l', 't'),
+('81e5c83b550b349b40a960e64b9691ce', 'a', 'b', 'c', 'f', 'g', 'h', 'd', 'e', 'i', 'j', 'rathinusc@gmail.com', 'a', 't'),
+('53e0b64380a1bea1a3897e06e94e0cc7', '', '', '', '', '', '', '', '', '', '', 'rathinusc@gmail.com', 'aa', '');
 
 -- --------------------------------------------------------
 
