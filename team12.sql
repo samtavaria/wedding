@@ -25,10 +25,10 @@ USE `team12`;
 -- --------------------------------------------------------
 
 --
--- Table structure for table `bride`
+-- Table structure for table `Bride`
 --
 
-CREATE TABLE IF NOT EXISTS `bride` (
+CREATE TABLE IF NOT EXISTS `Bride` (
   `c_id` int(11) NOT NULL,
   `b_id` int(11) NOT NULL AUTO_INCREMENT,
   `b_first_name` varchar(50) NOT NULL,
@@ -41,10 +41,10 @@ CREATE TABLE IF NOT EXISTS `bride` (
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=24 ;
 
 --
--- Dumping data for table `bride`
+-- Dumping data for table `Bride`
 --
 
-INSERT INTO `bride` (`c_id`, `b_id`, `b_first_name`, `b_middle_name`, `b_last_name`, `b_father_name`, `b_mother_name`) VALUES
+INSERT INTO `Bride` (`c_id`, `b_id`, `b_first_name`, `b_middle_name`, `b_last_name`, `b_father_name`, `b_mother_name`) VALUES
 (1, 1, 'Danareas', 'K.', 'Targeryan', 'Rob Targeryan', 'Khaleesi Targeryan'),
 (12, 7, 'yjfluyf', 'lyf.hc.', 'yfuyf,uy', 'jyfluyf', 'uyfuyf'),
 (15, 8, 'yjfluyf', 'lyf.hc.', 'yfuyf,uy', 'jyfluyf', 'uyfuyf'),
@@ -66,10 +66,10 @@ INSERT INTO `bride` (`c_id`, `b_id`, `b_first_name`, `b_middle_name`, `b_last_na
 -- --------------------------------------------------------
 
 --
--- Table structure for table `couple`
+-- Table structure for table `Couple`
 --
 
-CREATE TABLE IF NOT EXISTS `couple` (
+CREATE TABLE IF NOT EXISTS `Couple` (
   `c_id` int(11) NOT NULL AUTO_INCREMENT,
   `username` varchar(50) NOT NULL,
   `password` varchar(50) NOT NULL,
@@ -79,10 +79,10 @@ CREATE TABLE IF NOT EXISTS `couple` (
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=48 ;
 
 --
--- Dumping data for table `couple`
+-- Dumping data for table `Couple`
 --
 
-INSERT INTO `couple` (`c_id`, `username`, `password`, `salt`) VALUES
+INSERT INTO `Couple` (`c_id`, `username`, `password`, `salt`) VALUES
 (1, 'admin', 'admin', 'salt1'),
 (2, 'temp1', 'ppp', 'sfdf'),
 (47, 'rathinusc@gmail.com', 'g', '');
@@ -291,10 +291,10 @@ CREATE TABLE IF NOT EXISTS `font` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `groom`
+-- Table structure for table `Groom`
 --
 
-CREATE TABLE IF NOT EXISTS `groom` (
+CREATE TABLE IF NOT EXISTS `Groom` (
   `c_id` int(11) NOT NULL,
   `g_id` int(11) NOT NULL,
   `g_first_name` varchar(50) NOT NULL,
@@ -307,10 +307,10 @@ CREATE TABLE IF NOT EXISTS `groom` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `groom`
+-- Dumping data for table `Groom`
 --
 
-INSERT INTO `groom` (`c_id`, `g_id`, `g_first_name`, `g_middle_name`, `g_last_name`, `g_father_name`, `g_mother_name`) VALUES
+INSERT INTO `Groom` (`c_id`, `g_id`, `g_first_name`, `g_middle_name`, `g_last_name`, `g_father_name`, `g_mother_name`) VALUES
 (29, 0, 'a', 'b', 'c', 'd', 'e'),
 (1, 1, 'Khal', 'T.', 'Drogo', 'Edward Drogo', 'Lysa Drogo');
 
