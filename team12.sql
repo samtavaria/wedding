@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Nov 17, 2013 at 12:54 AM
+-- Generation Time: Nov 17, 2013 at 01:40 AM
 -- Server version: 5.6.12
 -- PHP Version: 5.5.3
 
@@ -29,21 +29,23 @@ USE `team12`;
 --
 
 CREATE TABLE IF NOT EXISTS `Bride` (
-  `b_id` int(11) NOT NULL,
+  `c_id` int(11) NOT NULL,
+  `b_id` int(11) NOT NULL AUTO_INCREMENT,
   `b_first_name` varchar(50) NOT NULL,
   `b_middle_name` varchar(50) NOT NULL,
   `b_last_name` varchar(50) NOT NULL,
   `b_father_name` varchar(50) NOT NULL,
   `b_mother_name` varchar(50) NOT NULL,
-  PRIMARY KEY (`b_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  PRIMARY KEY (`b_id`),
+  UNIQUE KEY `c_id` (`c_id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=4 ;
 
 --
 -- Dumping data for table `Bride`
 --
 
-INSERT INTO `Bride` (`b_id`, `b_first_name`, `b_middle_name`, `b_last_name`, `b_father_name`, `b_mother_name`) VALUES
-(1, 'Danareas', 'K.', 'Targeryan', 'Rob Targeryan', 'Khaleesi Targeryan');
+INSERT INTO `Bride` (`c_id`, `b_id`, `b_first_name`, `b_middle_name`, `b_last_name`, `b_father_name`, `b_mother_name`) VALUES
+(1, 1, 'Danareas', 'K.', 'Targeryan', 'Rob Targeryan', 'Khaleesi Targeryan');
 
 -- --------------------------------------------------------
 
@@ -52,23 +54,21 @@ INSERT INTO `Bride` (`b_id`, `b_first_name`, `b_middle_name`, `b_last_name`, `b_
 --
 
 CREATE TABLE IF NOT EXISTS `Couple` (
-  `c_id` int(11) NOT NULL,
-  `g_id` int(11) NOT NULL,
-  `b_id` int(11) NOT NULL,
+  `c_id` int(11) NOT NULL AUTO_INCREMENT,
   `username` varchar(50) NOT NULL,
   `password` varchar(50) NOT NULL,
   `salt` varchar(50) NOT NULL,
   PRIMARY KEY (`c_id`),
-  UNIQUE KEY `g_id` (`g_id`),
-  UNIQUE KEY `b_id` (`b_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  UNIQUE KEY `username` (`username`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
 
 --
 -- Dumping data for table `Couple`
 --
 
-INSERT INTO `Couple` (`c_id`, `g_id`, `b_id`, `username`, `password`, `salt`) VALUES
-(1, 1, 1, 'admin', 'admin', '');
+INSERT INTO `Couple` (`c_id`, `username`, `password`, `salt`) VALUES
+(1, 'admin', 'admin', 'salt1'),
+(2, 'temp1', 'ppp', 'sfdf');
 
 -- --------------------------------------------------------
 
@@ -82,7 +82,7 @@ CREATE TABLE IF NOT EXISTS `css` (
   `invitation_background` text NOT NULL,
   `custom_css` text NOT NULL,
   PRIMARY KEY (`css_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=70 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=72 ;
 
 --
 -- Dumping data for table `css`
@@ -154,7 +154,9 @@ INSERT INTO `css` (`css_id`, `c_id`, `invitation_background`, `custom_css`) VALU
 (66, 1, 'http://localhost:8083/wedding/media/invitation_card_backgrounds/3.jpeg', ''),
 (67, 1, 'http://localhost:8083/wedding/media/invitation_card_backgrounds/1.jpeg', ''),
 (68, 1, 'http://localhost:8083/wedding/media/invitation_card_backgrounds/2.jpeg', ''),
-(69, 1, 'http://localhost:8083/wedding/media/invitation_card_backgrounds/1.jpeg', '');
+(69, 1, 'http://localhost:8083/wedding/media/invitation_card_backgrounds/1.jpeg', ''),
+(70, 1, 'http://localhost:8083/wedding/media/invitation_card_backgrounds/1.jpeg', ''),
+(71, 1, 'http://localhost:8083/wedding/media/invitation_card_backgrounds/1.jpeg', '');
 
 -- --------------------------------------------------------
 
@@ -276,21 +278,23 @@ CREATE TABLE IF NOT EXISTS `font` (
 --
 
 CREATE TABLE IF NOT EXISTS `Groom` (
+  `c_id` int(11) NOT NULL,
   `g_id` int(11) NOT NULL,
   `g_first_name` varchar(50) NOT NULL,
   `g_middle_name` varchar(50) NOT NULL,
   `g_last_name` varchar(50) NOT NULL,
   `g_father_name` varchar(50) NOT NULL,
   `g_mother_name` varchar(50) NOT NULL,
-  PRIMARY KEY (`g_id`)
+  PRIMARY KEY (`g_id`),
+  UNIQUE KEY `c_id` (`c_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `Groom`
 --
 
-INSERT INTO `Groom` (`g_id`, `g_first_name`, `g_middle_name`, `g_last_name`, `g_father_name`, `g_mother_name`) VALUES
-(1, 'Khal', 'T.', 'Drogo', 'Edward Drogo', 'Lysa Drogo');
+INSERT INTO `Groom` (`c_id`, `g_id`, `g_first_name`, `g_middle_name`, `g_last_name`, `g_father_name`, `g_mother_name`) VALUES
+(1, 1, 'Khal', 'T.', 'Drogo', 'Edward Drogo', 'Lysa Drogo');
 
 -- --------------------------------------------------------
 
