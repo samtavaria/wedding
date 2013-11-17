@@ -61,8 +61,9 @@ class DatabaseConnection
 
         $cid = $_SESSION['cid'];
 
-        $sql = "SELECT Bride.b_first_name, Bride.b_middle_name, Bride.b_last_name, Groom.g_first_name, Groom.g_middle_name, Groom.g_last_name from Couple, Bride, Groom where ";
-        $sql .= "Couple.c_id =" . "'$cid'" . " and Couple.b_id = Bride.b_id and Couple.g_id = Groom.g_id";
+        $sql = "SELECT Bride.b_first_name, Bride.b_middle_name, Bride.b_last_name, Groom.g_first_name, Groom.g_middle_name, Groom.g_last_name from  Bride, Groom where ";
+        $sql .= "Bride.c_id =" . "'$cid'" ;
+        $sql .= "and Groom.c_id =" . "'$cid'" ;
 
 
         $result = mysql_query($sql);
@@ -131,10 +132,10 @@ class DatabaseConnection
         $bride = explode(' ', $coupleInfo['bride']);
         $groom = explode(' ', $coupleInfo['groom']);
         $sql = "update Bride b set b.b_first_name = "."'$bride[0]'"." , b.b_middle_name = "."'$bride[1]'"." , b.b_last_name = "."'$bride[2]'"."  ";
-        $sql.= " where b.b_id = "."'$cid'";
+        $sql.= " where b.c_id = "."'$cid'";
         $result = mysql_query($sql);
         $sql = "update Groom g set g.g_first_name = "."'$groom[0]'"." , g.g_middle_name = "."'$groom[1]'"." , g.g_last_name = "."'$groom[2]'"."  ";
-        $sql.= " where g.g_id = "."'$cid'";
+        $sql.= " where g.c_id = "."'$cid'";
         $result = mysql_query($sql);
 
     }
@@ -174,6 +175,9 @@ class DatabaseConnection
         //The below step is essential because if somehow cid is not set the query will remove data for all guests
         if(empty($cid) || ! isset($cid)) {
             $cid = 'asdf';
+            echo "Please Login Again";
+            exit;
+
         }
         $sql = "Delete from Guest where c_id = "."'$cid'";
         mysql_query($sql);
@@ -354,7 +358,7 @@ class DatabaseConnection
 	public static function getBrideData()
 	{
 		$cid = $_SESSION['cid'];
-		$sql = "SELECT * from Bride where b_id =" . "'$cid'";
+		$sql = "SELECT * from Bride where c_id =" . "'$cid'";
 		$result = mysql_query($sql);
 		$row = mysql_fetch_assoc($result);
 		return $row;
@@ -363,7 +367,7 @@ class DatabaseConnection
 	public static function getGroomData()
 	{
 		$cid = $_SESSION['cid'];
-		$sql = "SELECT * from Groom where g_id =" . "'$cid'";
+		$sql = "SELECT * from Groom where c_id =" . "'$cid'";
 		$result = mysql_query($sql);
 		$row = mysql_fetch_assoc($result);
 		return $row;
