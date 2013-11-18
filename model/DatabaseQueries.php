@@ -450,11 +450,11 @@ class DatabaseConnection
     public static function updateRSVP($results)
     {
 
+
         if(!empty($results[0]))
         {
-            $query=mysql_query("update Guest set rsvp_mehndi='$results[0]' where g_id='$results[5]'");
-            $sql=mysql_query($query) or die(mysql_error());
-            echo "Hi this is the query".$sql."------";
+            mysql_query("update Guest set rsvp_mehndi='$results[0]' where g_id='$results[5]'");
+
         }
 
         else

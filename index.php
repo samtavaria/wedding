@@ -87,7 +87,7 @@
         <input type="password" id="password" name="password"><br/>
         <input type="submit" value="submit">
         <br>
-        <pre><a href="http://localhost/wedding/signup.php">
+        <pre><a href="signup.php">
 <h2>Click here to create a new account</a></h2></pre>
     </form>
 </div>

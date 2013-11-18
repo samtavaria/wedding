@@ -67,7 +67,7 @@ $result4=mysql_query($sql4);
 
 echo "Your account has been activated";
 echo '<br>';
-echo '<a href="http://localhost/wedding/index.php"> Please Login Again</a>';
+echo '<a href="index.php"> Please Login Again</a>';
 
 // Delete information of this user from table "temp_members_db" that has this passkey
 $sql5="DELETE FROM $tbl_name1 WHERE confirm_code = '$passkey'";
@@ -80,4 +80,3 @@ else {
 echo "Wrong Confirmation code";
 }
 }
-?>
