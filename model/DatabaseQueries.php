@@ -394,4 +394,52 @@ class DatabaseConnection
 		$row = mysql_fetch_assoc($result);
 		return $row;
 	}
+
+    public static function insertTempregisterationData($confirm_code, $b_first_name, $b_middle_name, $b_last_name, $g_first_name, $g_middle_name, $g_last_name, $g_father_name, $g_mother_name, $b_father_name, $b_mother_name, $username, $password, $country)
+    {
+        $sql="INSERT into temp_members_db (confirm_code, b_first_name, b_middle_name, b_last_name, g_first_name, g_middle_name, g_last_name, g_father_name, g_mother_name, b_father_name, b_mother_name, username, password, country)VALUES($confirm_code, $b_first_name, $b_middle_name, $b_last_name, $g_first_name, $g_middle_name, $g_last_name, $g_father_name, $g_mother_name, $b_father_name, $b_mother_name, $username, $password, $country)";
+        $result=mysql_query($sql);
+        return $result;
+    }
+
+    public static function retrievePasskey()
+    {
+        $sql1="SELECT * from temp_members_db WHERE confirm_code ='$passkey'";
+        $result1=mysql_query($sql1);
+        return $result1;
+    }
+
+    public static function insertCoupletable($username, $password)
+    {
+        $sql2="INSERT into couple (username, password)";
+        mysql_query($sql2);
+        $cid = mysql_insert_id();
+        $result2=mysql_query($sql2);
+        return $result2;
+
+    }
+
+    public static function insertGroomtable($cid, $g_first_name, $g_middle_name, $g_last_name, $g_father_name, $g_mother_name)
+    {
+        $sql3="INSERT into groom (c_id, g_first_name, g_middle_name, g_last_name, g_father_name, g_mother_name)";
+        $result3=mysql_query($sql3);
+        return $result3;
+
+    }
+
+    public static function insertBridetable($cid, $b_first_name, $b_middle_name, $b_last_name, $b_father_name, $b_mother_name)
+    {
+        $sql4="INSERT into bride (c_id,b_first_name, b_middle_name, b_last_name, b_father_name, b_mother_name)";
+        $result4=mysql_query($sql4);
+        return $result4;
+
+
+    }
+
+    public static function deleteTemp_members_db()
+    {
+      $sql5="DELETE from temp_members_db WHERE confirm_code = '$passkey'";
+      $result5=mysql_query($sql15);
+    }
+
 }

@@ -5,9 +5,9 @@ include('config.php');
 // Passkey that got from link
 $passkey=$_GET['passkey'];
 $tbl_name1="temp_members_db";
-$tbl_name2="couple";
-$tbl_name3="groom";
-$tbl_name4="bride";
+$tbl_name2="Couple";
+$tbl_name3="Groom";
+$tbl_name4="Bride";
 
 // Retrieve data from table where row that match this passkey
 $sql1="SELECT * FROM $tbl_name1 WHERE confirm_code ='$passkey'";
@@ -67,7 +67,7 @@ $result4=mysql_query($sql4);
 
 echo "Your account has been activated";
 echo '<br>';
-echo '<a href="http://localhost/index.php"> Please Login Again</a>';
+echo '<a href="http://localhost/wedding/index.php"> Please Login Again</a>';
 
 // Delete information of this user from table "temp_members_db" that has this passkey
 $sql5="DELETE FROM $tbl_name1 WHERE confirm_code = '$passkey'";

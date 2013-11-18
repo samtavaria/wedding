@@ -1,7 +1,7 @@
 <?php
 
 include('config.php');
-require_once 'swift/lib/swift_required.php';
+require_once '/swift/lib/swift_required.php';
 
 // table name
 $tbl_name="temp_members_db";
@@ -46,9 +46,9 @@ $transport = Swift_SmtpTransport::newInstance('smtp.gmail.com', 465, "ssl")
 $mailer = Swift_Mailer::newInstance($transport);
 
 $message = Swift_Message::newInstance('Test Subject')
-  ->setFrom(array('onlineweddingusc@gmail.com' => 'Rathin'))
+  ->setFrom(array('onlineweddingusc@gmail.com' => 'OnlineWedding'))
   ->setTo(array($username))
-  ->setBody("http://localhost/confirmation.php?passkey=$confirm_code");
+  ->setBody("http://localhost/wedding/confirmation.php?passkey=$confirm_code");
 
 
 $result = $mailer->send($message);
