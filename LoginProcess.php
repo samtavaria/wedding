@@ -8,3 +8,4 @@ $sql = mysql_query($query);
 $couple = mysql_fetch_assoc($sql);
 $_SESSION['cid'] = $couple['c_id'];
 header("Location: Menu.php");
+

@@ -1,5 +1,6 @@
 <?php
 include_once('model/PersistentDatabaseConnection.php');
+include_once('GuestListView.php');
 ?>
 <html>
 
@@ -9,6 +10,7 @@ include_once('model/PersistentDatabaseConnection.php');
         function showGuestUpload() {
             document.getElementById('GuestUpload').style.display = "block";
             document.getElementById('GuestList').style.display = "none";
+            document.getElementById('GuestListViewOptions').style.display = "none";
             document.getElementById('DeleteGuestList').style.display = "none";
         }
 
@@ -16,17 +18,70 @@ include_once('model/PersistentDatabaseConnection.php');
             document.getElementById('GuestUpload').style.display = "none";
             document.getElementById('DeleteGuestList').style.display = "none";
             document.getElementById('GuestList').style.display = "block";
+            document.getElementById('GuestListViewOptions').style.display = "block";
         }
         function showDeleteGuestList() {
             document.getElementById('GuestUpload').style.display = "none";
             document.getElementById('GuestList').style.display = "none";
+            document.getElementById('GuestListViewOptions').style.display = "none";
             document.getElementById('DeleteGuestList').style.display = "block";
         }
 
         function pageLoad() {
             document.getElementById('GuestUpload').style.display = "none";
             document.getElementById('GuestList').style.display = "none";
+            document.getElementById('GuestListMehndi').style.display = "none";
+            document.getElementById('GuestListSangeet').style.display = "none";
+            document.getElementById('GuestListHaldi').style.display = "none";
+            document.getElementById('GuestListCeremony').style.display = "none";
+            document.getElementById('GuestListReception').style.display = "none";
+            document.getElementById('GuestListViewOptions').style.display = "none";
             document.getElementById('DeleteGuestList').style.display = "none";
+        }
+
+        function showMehndi() {
+            pageLoad();
+            document.getElementById('GuestListViewOptions').style.display = "block";
+            document.getElementById('GuestListMehndi').style.display = "block";
+        }
+        function showSangeet() {
+            pageLoad();
+            document.getElementById('GuestListViewOptions').style.display = "block";
+            document.getElementById('GuestListSangeet').style.display = "block";
+        }
+        function showHaldi() {
+            pageLoad();
+            document.getElementById('GuestListViewOptions').style.display = "block";
+            document.getElementById('GuestListHaldi').style.display = "block";
+        }
+        function showCeremony() {
+            pageLoad();
+            document.getElementById('GuestListViewOptions').style.display = "block";
+            document.getElementById('GuestListCeremony').style.display = "block";
+        }
+        function showReception() {
+            pageLoad();
+            document.getElementById('GuestListViewOptions').style.display = "block";
+            document.getElementById('GuestListReception').style.display = "block";
+        }
+        function showEntireList() {
+            pageLoad();
+            document.getElementById('GuestListViewOptions').style.display = "block";
+            document.getElementById('GuestList').style.display = "block";
+        }
+
+
+
+        function myfun(x) {
+            var ceremony = x+8;
+            switch (ceremony) {
+                case 9: showMehndi(); break;
+                case 10: showSangeet(); break;
+                case 11: showHaldi(); break;
+                case 12: showCeremony(); break;
+                case 13: showReception(); break;
+                default: showEntireList();break
+            }
         }
 
     </script>
@@ -35,7 +90,18 @@ include_once('model/PersistentDatabaseConnection.php');
 <div id="GuestManagementMenu" style="float: left">
     <br/>
     <span  onClick="showGuestUpload()"> <img src = "media/button/UploadGuestList.png" /></span><br/><br/>
-    <span onclick="showGuestList()"> <img src = "media/button/ViewGuestList.png" /></span><br/><br/>
+    <span onclick="showGuestList('')"> <img src = "media/button/ViewGuestList.png" /></span><br/><br/>
+    <div id = "GuestListViewOptions" >
+      <select onChange = "myfun(this.selectedIndex);">
+          <option onClick = "showAll();">View All Guests</option>
+          <option onClick = "showMehndi();">View Guests Invited to Mehndi</option>
+          <option onClick = showSangeet()>View Guests Invited to Sangeet</option>
+          <option onClick = showHaldi()>View Guests Invited to Haldi</option>
+          <option onClick = showCeremony()>View Guests Invited to Ceremony</option>
+          <option onClick = showReception()>View Guests Invited to Reception</option>
+      </select>
+        <br />
+    </div>
     <span onclick="showDeleteGuestList()"> <img src = "media/button/DeleteGuestList.png" /></span>
 
 </div>
@@ -51,35 +117,35 @@ include_once('model/PersistentDatabaseConnection.php');
     </div>
     <div id="GuestList">
         <?php
-        $result = DatabaseConnection::getGuestlist();
-       /// var_dump($result);
-        echo '<table border = "1">';
-        echo '<tr>';
-        echo '<th>Side</th>';
-        echo '<th>First Name</th>';
-        echo '<th>Middle Name</th>';
-        echo '<th>Last name</th>';
-        echo '<th>Email</th>';
-        echo '<th>Phone</th>';
-        echo '<th>Mehndi Invite</th>';
-        echo '<th>Sangeet Invite</th>';
-        echo '<th>Haldi Invite</th>';
-        echo '<th>Wedding Ceremony Invite</th>';
-        echo '<th>Wedding Reception Invite</th>';
-        echo '<th>Group</th>';
-        echo '</tr>';
-        foreach($result as $guest) {
-            echo '<tr>';
-            for($i = 3; $i <= 14; $i++) {
-                echo '<td>';
-                echo $guest[$i];
-                echo '</td>';
-            }
-            echo '</tr>';
-        }
-        echo '</table>';
+        GuestListView::viewGuestList();
         ?>
     </div>
+    <div id="GuestListMehndi">
+        <?php
+        GuestListView::viewGuestList(9);
+        ?>
+    </div>
+    <div id="GuestListSangeet">
+        <?php
+        GuestListView::viewGuestList(10);
+        ?>
+    </div>
+    <div id="GuestListHaldi">
+        <?php
+        GuestListView::viewGuestList(11);
+        ?>
+    </div>
+    <div id="GuestListCeremony">
+        <?php
+        GuestListView::viewGuestList(12);
+        ?>
+    </div>
+    <div id="GuestListReception">
+        <?php
+        GuestListView::viewGuestList(13);
+        ?>
+    </div>
+
     <div id="DeleteGuestList">
         Please Note Clicking this button will remove ALL your guest from the database.<br/>
         Precede With Caution<br /><br />

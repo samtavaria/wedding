@@ -4,105 +4,194 @@
         <title>Intelligent Survey</title>
         <link rel="stylesheet" href="css/style.css" type="text/css" media="screen"/>
 		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
-        <script type="text/javascript" src="sliding.form.js"></script>
+        <script type="text/javascript" src="javascript/sliding.form.js"></script>
         <script type="text/javascript">
 				
 		$(document).ready(function() {
-		$(".tooltip").before("<img class='tooltip_icon' src='images/tooltip.png'/>");
-		
-		$(".tooltip_icon").bind("mouseover mouseout", function() {
-		$(this).next(".tooltip").toggle();
-		});
-		
-		$('#r5').click(function(){
-					 $("#mySelect1").show();
-					 $("#mySelect2").hide();		
-				});
-		$('#r6').click(function(){
-					 $("#mySelect1").hide();
-					 $("#mySelect2").show();		
-				});
-	    $('#r51').click(function(){
-					 $("#mySelect11").show();
-					 $("#mySelect21").hide();		
-				});
-		$('#r61').click(function(){
-					 $("#mySelect11").hide();
-					 $("#mySelect21").show();		
-				});
-		$('#r52').click(function(){
-					 $("#mySelect12").show();
-					 $("#mySelect22").hide();		
-				});
-		$('#r62').click(function(){
-					 $("#mySelect12").hide();
-					 $("#mySelect22").show();		
-				});
-		$('#r53').click(function(){
-					 $("#mySelect13").show();
-					 $("#mySelect23").hide();		
-				});
-		$('#r63').click(function(){
-					 $("#mySelect13").hide();
-					 $("#mySelect23").show();		
-				});
-		
-		$('#sang_cloth').change(function(e) {
-    if ($(this).val() === "sang_Other") {
-        $("#mySelect").show();
-    }
-	else
-	{
-		 $("#mySelect").hide();
-	}
-});		
+			$(".tooltip").before("<img class='tooltip_icon' src='images/tooltip.png'/>");
+			
+			$(".tooltip_icon").bind("mouseover mouseout", function() {
+			$(this).next(".tooltip").toggle();
+			});
+			
+			$('#r5').click(function(){
+						 $("#mySelect1").show();
+						 $("#mySelect2").hide();		
+					});
+			$('#r6').click(function(){
+						 $("#mySelect1").hide();
+						 $("#mySelect2").show();		
+					});
+			$('#r51').click(function(){
+						 $("#mySelect11").show();
+						 $("#mySelect21").hide();		
+					});
+			$('#r61').click(function(){
+						 $("#mySelect11").hide();
+						 $("#mySelect21").show();		
+					});
+			$('#r52').click(function(){
+						 $("#mySelect12").show();
+						 $("#mySelect22").hide();		
+					});
+			$('#r62').click(function(){
+						 $("#mySelect12").hide();
+						 $("#mySelect22").show();		
+					});
+			$('#r53').click(function(){
+						 $("#mySelect13").show();
+						 $("#mySelect23").hide();		
+					});
+			$('#r63').click(function(){
+						 $("#mySelect13").hide();
+						 $("#mySelect23").show();		
+					});
+			
+			$('#sang_cloth').change(function(e) {
+				if ($(this).val() === "sang_Other") {
+					$("#mySelect").show();
+				}
+				else
+				{
+					 $("#mySelect").hide();
+				}
+			});		
 
-		$('#haldi_cloth').change(function(e) {
-    if ($(this).val() === "haldi_Other") {
-        $("#haldi_mySelect").show();
-    }
-	else
-	{
-		 $("#haldi_mySelect").hide();
-	}
-});		
-	
-		$('#phere_cloth').change(function(e) {
-    if ($(this).val() === "phere_Other") {
-        $("#phere_mySelect").show();
-    }
-	else
-	{
-		 $("#phere_mySelect").hide();
-	}
-});		
-
-		$('#roka_cloth').change(function(e) {
-    if ($(this).val() === "roka_Other") {
-        $("#roka_mySelect").show();
-    }
-	else
-	{
-		 $("#roka_mySelect").hide();
-	}
-});	
+			$('#haldi_cloth').change(function(e) {
+				if ($(this).val() === "haldi_Other") {
+					$("#haldi_mySelect").show();
+				}
+				else
+				{
+					 $("#haldi_mySelect").hide();
+				}
+			});		
 		
+			$('#phere_cloth').change(function(e) {
+				if ($(this).val() === "phere_Other") {
+					$("#phere_mySelect").show();
+				}
+				else
+				{
+					 $("#phere_mySelect").hide();
+				}
+			});		
+
+			$('#roka_cloth').change(function(e) {
+				if ($(this).val() === "roka_Other") {
+					$("#roka_mySelect").show();
+				}
+				else
+				{
+					 $("#roka_mySelect").hide();
+				}
+			});	
+			
+			function getCommonDetailsFor(type)
+			{
+				alert("INSIDE");
+				
+				var location     = $(type + "_loc").val();
+				var address      = $(type + "_add").val();
+				var city         = $(type + "_city").val();
+				var state        = $(type + "_state").val();
+				var zipcode      = $(type + "_zipcode").val();
+				var parking      = $(type + "_park").val();
+				var otherDetails = $(type + "_other_det").val();
+				var date         = $(type + "_date").val();
+				var details      = $(type + "_det").val();
+				var gift         = $(type + "_gift").val();
+				var cloth        = $(type + "_cloth").val();
+				var clothOther   = $(type + "_cloth_other").val();
+				
+				if(clothOther != "")
+				{
+					cloth = clothOther;
+				}
+				var encodedCommon = "location=" + location + 
+						  "&street=" + address +
+						  "&city=" + city +
+						  "&state=" + state +
+						  "&zipcode=" + zipcode +
+						  "&parking=" + parking +
+						  "&otherDetails=" + otherDetails +
+						  "&date=" + date +
+						  "&details=" + details +
+						  "&gift=" + gift +
+						  "&cloth=" + cloth;
+						  
+				return encodedCommon;
+			}
+			
+			$("#SaveButton0").click(function()
+			{
+				var commonDetails = getCommonDetailsFor("#sang");
+
+				$.ajax({
+					type: "POST",
+					url: "SaveSangeet.php",
+					data: commonDetails +
+					      "&eventType=Sangeet",
+					success: function(msg){ alert("Data saved!"); } 
+				});
+			});
+			
+			$("#SaveButton1").click(function()
+			{
+				var commonDetails = getCommonDetailsFor("#haldi");
+
+				$.ajax({
+					type: "POST",
+					url: "SaveSangeet.php",
+					data: commonDetails +
+					      "&eventType=Haldi",
+					success: function(msg){ alert("Data saved!"); } 
+				});
+			});
+			
+			$("#SaveButton2").click(function()
+			{
+				var commonDetails = getCommonDetailsFor("#phere");
+				$.ajax({
+					type: "POST",
+					url: "SavePhere.php",
+					data: commonDetails +
+					      "&eventType=Phere",
+					success: function(msg){ alert("Data saved!"); } 
+				});
+			});
+			
+			$("#SaveButton3").click(function()
+			{
+				var commonDetails = getCommonDetailsFor("#roka");
+			
+				$.ajax({
+					type: "POST",
+					url: "SaveRoka.php",
+					data: commonDetails +
+					      "&eventType=Roka",
+					success: function(msg){ alert("Data saved!"); } 
+				});
+			});
 		});
 		
 		$("[name=fooby[2][]]").change(function(){
-  $("#list").toggle($("[name=fooby[2][]]").index(this)===2);
-});
+		  $("#list").toggle($("[name=fooby[2][]]").index(this)===2);
+		});
 		$("[name=fooby[2][]1]").change(function(){
-  $("#list").toggle($("[name=fooby[2][]1]").index(this)===2);
-});
+		  $("#list").toggle($("[name=fooby[2][]1]").index(this)===2);
+		});
 		
 		$("[name=fooby[2][]2]").change(function(){
-  $("#list").toggle($("[name=fooby[2][]2]").index(this)===2);
-});
+		  $("#list").toggle($("[name=fooby[2][]2]").index(this)===2);
+		});
 		
 		$("[name=fooby[2][]3]").change(function(){
-  $("#list").toggle($("[name=fooby[2][]3]").index(this)===2);
-});
+		  $("#list").toggle($("[name=fooby[2][]3]").index(this)===2);
+		});
+
+
+
 		</script>
     </head>
     <style>
@@ -172,7 +261,7 @@ Whenever  you select or change a design template, the info stored in this form w
                             </p>
                             <p>
                                 <label for="sang_add">Address</label>
-                                <input id="sand_add" name="Address" />
+                                <input id="sang_add" name="Address" />
                                 
                             </p>
                             <p>
@@ -194,9 +283,9 @@ Whenever  you select or change a design template, the info stored in this form w
                                  <input type="radio" class="radio" value="3" name="fooby[2][]" id="r6" /><label for="r6">No</label> 
                                  
                                 <input type="radio" class="radio" value="2" name="fooby[2][]" id="r5" /><label for="r5">Yes</label>
-		<span id="mySelect1" style="display:none;"></br><label>Parking Arrangement</label>
-                                <input id="park" name="park"/></span>
-                                 <span class="tooltip">1.Giving the parking vouchers the venue will give you, to your deejay 2.Make an announcement some time during the program at the event, to tell your guests they can get their parking voucher at the deejay booth” </span>
+								<span id="mySelect1" style="display:none;"></br><label>Parking Arrangement</label>
+                                <input id="sang_park" name="park"/></span>
+                                <span class="tooltip">1.Giving the parking vouchers the venue will give you, to your deejay 2.Make an announcement some time during the program at the event, to tell your guests they can get their parking voucher at the deejay booth” </span>
                             </p>
                                 
      
@@ -242,7 +331,7 @@ Whenever  you select or change a design template, the info stored in this form w
 
                             </p>
                             <p class="submit">
-                                <button id="SaveButton" type="submit">Save</button>
+                                <button id="SaveButton0" type="Button">Save</button>
                             </p>
                              </form>
                         </fieldset>
@@ -329,7 +418,7 @@ Whenever  you select or change a design template, the info stored in this form w
 
                             </p>
                             <p class="submit">
-                                <button id="SaveButton1" type="submit">Save</button>
+                                <button id="SaveButton1" type="Button">Save</button>
                             </p>
                              </form>
                         
@@ -417,7 +506,7 @@ Whenever  you select or change a design template, the info stored in this form w
 
                             </p>
                             <p class="submit">
-                                <button id="SaveButton2" type="submit">Save</button>
+                                <button id="SaveButton2" type="Button">Save</button>
                             </p>
                              </form>
                              
@@ -506,7 +595,7 @@ Whenever  you select or change a design template, the info stored in this form w
 
                             </p>
                             <p class="submit">
-                                <button id="SaveButton3" type="submit">Save</button>
+                                <button id="SaveButton3" type="Button">Save</button>
                             </p>
                              </form>
                            

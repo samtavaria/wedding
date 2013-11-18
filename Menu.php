@@ -59,5 +59,4 @@ if (!isset($_SESSION['cid']) || empty($_SESSION['cid'])) {
             </ul>
         </div>
 
-    </body>
-</html>
+

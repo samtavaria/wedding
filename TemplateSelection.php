@@ -5,26 +5,29 @@ if (!isset($_SESSION['cid']) || empty($_SESSION['cid'])) {
     echo '<a href = "index.php">Login</a>';
     exit;
 }
+include_once('model/PersistentDatabaseConnection.php');
+DatabaseConnection::connectToDatabase();
+$backgrounds = DatabaseConnection::getAllSystemInvitationBackgrounds();
 ?>
 <!DOCTYPE html>
 <html>
 <head>
 
     <script type="text/javascript">
-        function showImage1() {
-            document.getElementById('selectedBackground').src = "media/invitation_card_backgrounds/1.jpeg";
+		<?php 
+			foreach($backgrounds as $key=>$value)
+			{
+				echo "function showImage" . $key . "() {";
+		?>
+			document.getElementById('selectedBackground').src = "<?php echo $value['img_path']; ?>"; }
+		<?php	
+			}
+		?>
+		
+		function setBackground() {
+			document.getElementById('background').value = document.getElementById('selectedBackground').src;
         }
 
-        function showImage2() {
-            document.getElementById('selectedBackground').src = "media/invitation_card_backgrounds/2.jpeg";
-        }
-
-        function showImage3() {
-            document.getElementById('selectedBackground').src = "media/invitation_card_backgrounds/3.jpeg";
-        }
-        function setBackground() {
-            document.getElementById('background').value = document.getElementById('selectedBackground').src;
-        }
     </script>
 </head>
 <body background = "media/website_images/body.jpg">
@@ -33,18 +36,16 @@ if (!isset($_SESSION['cid']) || empty($_SESSION['cid'])) {
 <div id="Layout_Selection" style="float: left; width:40%">
 
 
+	<?php
 
-    <img class="template_icon selected" title="Title 1" width="160" height="120"
-         src="media/invitation_card_backgrounds_preview/1.jpeg" onmouseover="showImage1();"/>
-
-
-    <img class="template_icon" title="Title 2" width="160" height="120" src="media/invitation_card_backgrounds_preview/2.jpeg"
-         onmouseover="showImage2();"/>
-
-
-    <img class="template_icon" title="Title 3" width="160" height="120" src="media/invitation_card_backgrounds_preview/3.jpeg"
-         onmouseover="showImage3();"/>
-
+		foreach($backgrounds as $key => $value)
+		{
+			?>
+			<img class="template_icon_selected" title=" <?php echo $value['name'] ?> " width="160" height="120"
+				src=" <?php echo $value['ico_path']; ?> " onmouseover=" <?php echo "showImage" . $key . "()"; ?>" />
+	<?php
+		}
+	?>
 
     <form action="TemplateProcess.php" method="POST" onSubmit="setBackground()">
         <input type="hidden" id="background" name="background">

@@ -8,10 +8,14 @@
  */
 class DatabaseConnection
 {
+    function __construct()
+    {
+        parent::__construct();
+    }
 
     public static function connectToDatabase()
     {
-        $conn = mysql_connect("localhost", "root", "admin");
+        $conn = mysql_connect("team12.c28dqpxgij9r.us-east-1.rds.amazonaws.com", "team12wedding", "team_12_wedding");
 
         if (!$conn) {
             echo "Unable to connect to DB: " . mysql_error();
@@ -57,8 +61,9 @@ class DatabaseConnection
 
         $cid = $_SESSION['cid'];
 
-        $sql = "SELECT Bride.b_first_name, Bride.b_middle_name, Bride.b_last_name, Groom.g_first_name, Groom.g_middle_name, Groom.g_last_name from Couple, Bride, Groom where ";
-        $sql .= "Couple.c_id =" . "'$cid'" . " and Couple.b_id = Bride.b_id and Couple.g_id = Groom.g_id";
+        $sql = "SELECT Bride.b_first_name, Bride.b_middle_name, Bride.b_last_name, Groom.g_first_name, Groom.g_middle_name, Groom.g_last_name from  Bride, Groom where ";
+        $sql .= "Bride.c_id =" . "'$cid'" ;
+        $sql .= "and Groom.c_id =" . "'$cid'" ;
 
 
         $result = mysql_query($sql);
@@ -95,8 +100,10 @@ class DatabaseConnection
 
     public static function setInvitationBackground($cid, $background)
     {
+		// This will be deprecated, leave for now and add new functionality
         $sql = "insert into css values ('', '" . $cid . "', '" . $background . "', '')";
         $result = mysql_query($sql);
+
     }
 
     public static function getInvitationBackground($cid)
@@ -107,6 +114,26 @@ class DatabaseConnection
         return $row['invitation_background'];
     }
 
+	public static function getAllSystemInvitationBackgrounds() 
+	{
+		$sql = "select * from invitation_background_images";
+		$result = mysql_query($sql);
+		
+		$bg_images = array();
+		while ($row = mysql_fetch_assoc($result)) {
+			$bg_images[] = $row;
+		}
+		return $bg_images;
+	}
+	
+	public static function getAllUserInvitationImages($cid) 
+	{
+		$sql = "select * from user_invitation_images WHERE c_id = " . "'$cid'";
+		$result = mysql_query($sql);
+		$row = mysql_fetch_assoc($result);
+		return $row;
+	}
+	
     public static function setPosition($position) {
         $combinedPosition = $position['myCss'];
         $cid = $_SESSION['cid'];
@@ -127,10 +154,10 @@ class DatabaseConnection
         $bride = explode(' ', $coupleInfo['bride']);
         $groom = explode(' ', $coupleInfo['groom']);
         $sql = "update Bride b set b.b_first_name = "."'$bride[0]'"." , b.b_middle_name = "."'$bride[1]'"." , b.b_last_name = "."'$bride[2]'"."  ";
-        $sql.= " where b.b_id = "."'$cid'";
+        $sql.= " where b.c_id = "."'$cid'";
         $result = mysql_query($sql);
         $sql = "update Groom g set g.g_first_name = "."'$groom[0]'"." , g.g_middle_name = "."'$groom[1]'"." , g.g_last_name = "."'$groom[2]'"."  ";
-        $sql.= " where g.g_id = "."'$cid'";
+        $sql.= " where g.c_id = "."'$cid'";
         $result = mysql_query($sql);
 
     }
@@ -170,6 +197,9 @@ class DatabaseConnection
         //The below step is essential because if somehow cid is not set the query will remove data for all guests
         if(empty($cid) || ! isset($cid)) {
             $cid = 'asdf';
+            echo "Please Login Again";
+            exit;
+
         }
         $sql = "Delete from Guest where c_id = "."'$cid'";
         mysql_query($sql);
@@ -178,7 +208,7 @@ class DatabaseConnection
 
     public static function getGuestlist() {
         $cid = $_SESSION['cid'];
-        $sql = "Select * from Guest where c_id = "."'$cid'"." order by guest_number";
+        $sql = "Select * from Guest where c_id = " . "'$cid'" . " order by guest_group, first_name, middle_name, last_name";
         $result = mysql_query($sql);
         $guest = array();
         while($row = mysql_fetch_row($result)) {
@@ -210,7 +240,7 @@ class DatabaseConnection
 	public static function getEventData()
 	{
 		$cid = $_SESSION['cid'];
-		$sql = "SELECT * from event where c_id =" . "'$cid'";
+		$sql = "SELECT * from Event where c_id =" . "'$cid'";
 		$result = mysql_query($sql);
 		$events = array();
 		while ($row = mysql_fetch_assoc($result)) {
@@ -219,10 +249,138 @@ class DatabaseConnection
 		return $events;
 	}
 	
+	public static function addSangeetEventData($result)
+	{
+	    $cid = $_SESSION['cid'];
+        $sql = "INSERT INTO event (" .
+		        "`venue_name`, `venue_address`," .
+				"`city`, `state`," .
+				"`zipcode`, `parking`," . 
+				"`date`, `event_name`," .
+				"`attire`, `details`," .
+				"`otherDetails`, `gift`, `c_id`)" .
+				"VALUES ( " .
+				"'" . $result['location'] . "'," .
+				"'" . $result['street'] . "'," .
+				"'" . $result['city'] . "'," .
+				"'" . $result['state'] . "'," .
+				"'" . $result['zipcode'] . "'," .
+				"'" . $result['parking'] . "'," .
+				"'" . $result['date'] . "'," .
+				"'" . $result['eventType'] . "'," .
+				"'" . $result['cloth'] . "'," .
+				"'" . $result['details'] . "'," .
+				"'" . $result['otherDetails'] . "'," .
+				"'" . $result['gift'] . "'," .
+				"'" . $result['c_id'] . "')";
+				
+				echo $sql;
+        //echo $sql.'<br />';
+        mysql_query($sql);//
+        // dont die if duplicate entry avoid that row
+        //or die(mysql_error());
+	}
+	
+		public static function addHaldiEventData($result)
+	{
+	    $cid = $_SESSION['cid'];
+        $sql = "INSERT INTO event (" .
+		        "`venue_name`, `venue_address`," .
+				"`city`, `state`," .
+				"`zipcode`, `parking`," . 
+				"`date`, `event_name`," .
+				"`attire`, `details`," .
+				"`otherDetails`, `gift`, `c_id`)" .
+				"VALUES ( " .
+				"'" . $result['location'] . "'," .
+				"'" . $result['street'] . "'," .
+				"'" . $result['city'] . "'," .
+				"'" . $result['state'] . "'," .
+				"'" . $result['zipcode'] . "'," .
+				"'" . $result['parking'] . "'," .
+				"'" . $result['date'] . "'," .
+				"'" . $result['eventType'] . "'," .
+				"'" . $result['cloth'] . "'," .
+				"'" . $result['details'] . "'," .
+				"'" . $result['otherDetails'] . "'," .
+				"'" . $result['gift'] . "'," .
+				"'" . $result['c_id'] . "')";
+				
+				echo $sql;
+        //echo $sql.'<br />';
+        mysql_query($sql);//
+        // dont die if duplicate entry avoid that row
+        //or die(mysql_error());
+	}
+	
+	public static function addPhereEventData($result)
+	{
+	    $cid = $_SESSION['cid'];
+        $sql = "INSERT INTO event (" .
+		        "`venue_name`, `venue_address`," .
+				"`city`, `state`," .
+				"`zipcode`, `parking`," . 
+				"`date`, `event_name`," .
+				"`attire`, `details`," .
+				"`otherDetails`, `gift`, `c_id`)" .
+				"VALUES ( " .
+				"'" . $result['location'] . "'," .
+				"'" . $result['street'] . "'," .
+				"'" . $result['city'] . "'," .
+				"'" . $result['state'] . "'," .
+				"'" . $result['zipcode'] . "'," .
+				"'" . $result['parking'] . "'," .
+				"'" . $result['date'] . "'," .
+				"'" . $result['eventType'] . "'," .
+				"'" . $result['cloth'] . "'," .
+				"'" . $result['details'] . "'," .
+				"'" . $result['otherDetails'] . "'," .
+				"'" . $result['gift'] . "'," .
+				"'" . $result['c_id'] . "')";
+				
+				echo $sql;
+        //echo $sql.'<br />';
+        mysql_query($sql);//
+        // dont die if duplicate entry avoid that row
+        //or die(mysql_error());
+	}
+	
+	public static function addRokaEventData($result)
+	{
+	    $cid = $_SESSION['cid'];
+        $sql = "INSERT INTO event (" .
+		        "`venue_name`, `venue_address`," .
+				"`city`, `state`," .
+				"`zipcode`, `parking`," . 
+				"`date`, `event_name`," .
+				"`attire`, `details`," .
+				"`otherDetails`, `gift`, `c_id`)" .
+				"VALUES ( " .
+				"'" . $result['location'] . "'," .
+				"'" . $result['street'] . "'," .
+				"'" . $result['city'] . "'," .
+				"'" . $result['state'] . "'," .
+				"'" . $result['zipcode'] . "'," .
+				"'" . $result['parking'] . "'," .
+				"'" . $result['date'] . "'," .
+				"'" . $result['eventType'] . "'," .
+				"'" . $result['cloth'] . "'," .
+				"'" . $result['details'] . "'," .
+				"'" . $result['otherDetails'] . "'," .
+				"'" . $result['gift'] . "'," .
+				"'" . $result['c_id'] . "')";
+				
+				echo $sql;
+        //echo $sql.'<br />';
+        mysql_query($sql);//
+        // dont die if duplicate entry avoid that row
+        //or die(mysql_error());
+	}
+	
 	public static function getBrideData()
 	{
 		$cid = $_SESSION['cid'];
-		$sql = "SELECT * from bride where b_id =" . "'$cid'";
+		$sql = "SELECT * from Bride where c_id =" . "'$cid'";
 		$result = mysql_query($sql);
 		$row = mysql_fetch_assoc($result);
 		return $row;
@@ -231,7 +389,7 @@ class DatabaseConnection
 	public static function getGroomData()
 	{
 		$cid = $_SESSION['cid'];
-		$sql = "SELECT * from groom where g_id =" . "'$cid'";
+		$sql = "SELECT * from Groom where c_id =" . "'$cid'";
 		$result = mysql_query($sql);
 		$row = mysql_fetch_assoc($result);
 		return $row;
