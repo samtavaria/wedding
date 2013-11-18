@@ -395,6 +395,7 @@ class DatabaseConnection
 		return $row;
 	}
 
+
     public static function insertTempregisterationData($confirm_code, $b_first_name, $b_middle_name, $b_last_name, $g_first_name, $g_middle_name, $g_last_name, $g_father_name, $g_mother_name, $b_father_name, $b_mother_name, $username, $password, $country)
     {
         $sql="INSERT into temp_members_db (confirm_code, b_first_name, b_middle_name, b_last_name, g_first_name, g_middle_name, g_last_name, g_father_name, g_mother_name, b_father_name, b_mother_name, username, password, country)VALUES($confirm_code, $b_first_name, $b_middle_name, $b_last_name, $g_first_name, $g_middle_name, $g_last_name, $g_father_name, $g_mother_name, $b_father_name, $b_mother_name, $username, $password, $country)";
@@ -436,10 +437,67 @@ class DatabaseConnection
 
     }
 
-    public static function deleteTemp_members_db()
+
+
+    public static function getGuestData($gid)
     {
-      $sql5="DELETE from temp_members_db WHERE confirm_code = '$passkey'";
-      $result5=mysql_query($sql15);
+        $query="SELECT mehndi, sangeet, haldi, wedding_ceremony, reception FROM  Guest WHERE g_id ='$gid'" ;
+        $sql = mysql_query($query) or die(mysql_error());
+        $row = mysql_fetch_assoc($sql);
+        return $row;
     }
 
+    public static function updateRSVP($results)
+    {
+
+        if(!empty($results[0]))
+        {
+            $query=mysql_query("update Guest set rsvp_mehndi='$results[0]' where g_id='$results[5]'");
+            $sql=mysql_query($query) or die(mysql_error());
+            echo "Hi this is the query".$sql."------";
+        }
+
+        else
+            mysql_query("update Guest set rsvp_mehndi='N/A' where g_id='$results[5]'");
+
+
+        if(!empty($results[1]))
+        {
+            mysql_query("update Guest set rsvp_sangeet='$results[1]' where g_id='$results[5]'");
+           // echo $sangeet."------";
+        }
+        else
+            mysql_query("update Guest set rsvp_sangeet='N/A' where g_id='$results[5]'");
+
+        if(!empty($results[2]))
+        {
+            mysql_query("update Guest set rsvp_haldi='$results[2]' where g_id='$results[5]'");
+           // echo $haldi."------";
+        }
+
+        else
+            mysql_query("update Guest set rsvp_haldi='N/A' where g_id='$results[5]'");
+
+        if(!empty($results[3]))
+        {
+            mysql_query("update Guest set rsvp_wedding_ceremony='$results[3]' where g_id='$results[5]'");
+            //echo $wedding."------";
+
+        }
+
+        else
+            mysql_query("update Guest set rsvp_wedding_ceremony='N/A' where g_id='$results[5]'");
+
+        if(!empty($results[4]))
+        {
+            mysql_query("update Guest set rsvp_reception='$results[4]' where g_id='$results[5]'");
+           // echo $reception."------";
+
+        }
+        else
+            mysql_query("update Guest set rsvp_reception='N/A' where g_id='$results[5]'");
+
+       // echo $gid."------";
+    }
 }
+
