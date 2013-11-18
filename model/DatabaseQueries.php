@@ -394,4 +394,65 @@ class DatabaseConnection
 		$row = mysql_fetch_assoc($result);
 		return $row;
 	}
+
+    public static function getGuestData($gid)
+    {
+        $query="SELECT mehndi, sangeet, haldi, wedding_ceremony, reception FROM  Guest WHERE g_id ='$gid'" ;
+        $sql = mysql_query($query) or die(mysql_error());
+        $row = mysql_fetch_assoc($sql);
+        return $row;
+    }
+
+    public static function updateRSVP($results)
+    {
+
+        if(!empty($results[0]))
+        {
+            $query=mysql_query("update Guest set rsvp_mehndi='$results[0]' where g_id='$results[5]'");
+            $sql=mysql_query($query) or die(mysql_error());
+            echo "Hi this is the query".$sql."------";
+        }
+
+        else
+            mysql_query("update Guest set rsvp_mehndi='N/A' where g_id='$results[5]'");
+
+
+        if(!empty($results[1]))
+        {
+            mysql_query("update Guest set rsvp_sangeet='$results[1]' where g_id='$results[5]'");
+           // echo $sangeet."------";
+        }
+        else
+            mysql_query("update Guest set rsvp_sangeet='N/A' where g_id='$results[5]'");
+
+        if(!empty($results[2]))
+        {
+            mysql_query("update Guest set rsvp_haldi='$results[2]' where g_id='$results[5]'");
+           // echo $haldi."------";
+        }
+
+        else
+            mysql_query("update Guest set rsvp_haldi='N/A' where g_id='$results[5]'");
+
+        if(!empty($results[3]))
+        {
+            mysql_query("update Guest set rsvp_wedding_ceremony='$results[3]' where g_id='$results[5]'");
+            //echo $wedding."------";
+
+        }
+
+        else
+            mysql_query("update Guest set rsvp_wedding_ceremony='N/A' where g_id='$results[5]'");
+
+        if(!empty($results[4]))
+        {
+            mysql_query("update Guest set rsvp_reception='$results[4]' where g_id='$results[5]'");
+           // echo $reception."------";
+
+        }
+        else
+            mysql_query("update Guest set rsvp_reception='N/A' where g_id='$results[5]'");
+
+       // echo $gid."------";
+    }
 }
