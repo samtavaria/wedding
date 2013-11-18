@@ -52,7 +52,7 @@ if (!isset($_SESSION['cid']) || empty($_SESSION['cid'])) {
     	<div id="heady">Start planning our D-Day...</div>
         <div id="images_hover_move" class="images_hover_move">
             <ul>
-                <li><a href="Invitation.php"><img src="images/slideshow_large_1.jpg" title="Invitation Card Design" wdith="259" height="194" /></a></li>
+                <li><a href="TemplateSelection.php"><img src="images/slideshow_large_1.jpg" title="Invitation Card Design" wdith="259" height="194" /></a></li>
                 <li><a href="GuestManagement.php"><img src="images/slideshow_large_2.jpg" title="Guest Management" wdith="259" height="194" /></a></li>
                 <li><a href="personal_website/welcome.php"><img src="images/slideshow_large_3.jpg" title="Personal Website" wdith="203" height="203" /></a></li>
                 <li><a href="survey.html"><img src="images/slideshow_large_4.jpg" title="Survey" wdith="259" height="194" /></a></li>

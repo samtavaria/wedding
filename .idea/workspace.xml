@@ -2,477 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="85cdb505-0481-4b81-a195-4f5b84a784ff" name="Default" comment="Modified all include statements to refer to mode/PersistentDatabaseConnection">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/test-suite/templates/sweety/images/darr.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/tests/_samples/smime/encrypt.p12" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/test-suite/templates/sweety/images/group.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/test-suite/templates/sweety/images/htmlicon.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/test-suite/templates/sweety/images/loading.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/test-suite/templates/sweety/images/network.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/test-suite/templates/sweety/images/rarr.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/test-suite/templates/sweety/images/runicon.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/tests/_samples/smime/sign.p12" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/tests/_samples/files/textfile.zip" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/test-suite/templates/sweety/images/xmlicon.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/1.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/test-suite/lib/yaymock/classes/Yay/Expectations/AbstractExpectation.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/lib/classes/Swift/ByteStream/AbstractFilterableInputStream.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/lib/classes/Swift/Mime/Headers/AbstractHeader.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/tests/unit/Swift/Mime/AbstractMimeEntityTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/tests/unit/Swift/Transport/AbstractSmtpEventSupportTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/tests/unit/Swift/Transport/AbstractSmtpTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/lib/classes/Swift/Transport/AbstractSmtpTransport.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/tests/acceptance/Swift/Transport/StreamBuffer/AbstractStreamBufferAcceptanceTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/test-suite/lib/Sweety/Runner/AbstractTestRunner.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/test-suite/lib/yaymock/classes/Yay/Action.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/lib/classes/Swift/Plugins/AntiFloodPlugin.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/tests/unit/Swift/Plugins/AntiFloodPluginTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/test-suite/lib/yaymock/classes/Yay/Matchers/AnyMatcher.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/lib/classes/Swift/ByteStream/ArrayByteStream.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/tests/unit/Swift/ByteStream/ArrayByteStreamTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/lib/classes/Swift/CharacterStream/ArrayCharacterStream.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/tests/unit/Swift/CharacterStream/ArrayCharacterStreamTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/lib/classes/Swift/KeyCache/ArrayKeyCache.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/tests/acceptance/Swift/KeyCache/ArrayKeyCacheAcceptanceTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/tests/unit/Swift/KeyCache/ArrayKeyCacheTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/lib/classes/Swift/Plugins/Loggers/ArrayLogger.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/tests/unit/Swift/Plugins/Loggers/ArrayLoggerTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/lib/classes/Swift/Mailer/ArrayRecipientIterator.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/tests/unit/Swift/Mailer/ArrayRecipientIteratorTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/test-suite/lib/yaymock/classes/Yay/Expectations/AtLeastExpectation.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/test-suite/lib/yaymock/classes/Yay/Expectations/AtMostExpectation.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/lib/classes/Swift/Attachment.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/lib/classes/Swift/Mime/Attachment.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/tests/acceptance/Swift/AttachmentAcceptanceTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/tests/acceptance/Swift/Mime/AttachmentAcceptanceTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/tests/smoke/Swift/Smoke/AttachmentSmokeTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/tests/unit/Swift/Mime/AttachmentTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/lib/classes/Swift/Transport/Esmtp/AuthHandler.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/tests/unit/Swift/Transport/Esmtp/AuthHandlerTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/lib/classes/Swift/Transport/Esmtp/Authenticator.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/lib/classes/Swift/Plugins/BandwidthMonitorPlugin.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/tests/unit/Swift/Plugins/BandwidthMonitorPluginTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/lib/classes/Swift/Mime/ContentEncoder/Base64ContentEncoder.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/tests/acceptance/Swift/Mime/ContentEncoder/Base64ContentEncoderAcceptanceTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/tests/unit/Swift/Mime/ContentEncoder/Base64ContentEncoderTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/lib/classes/Swift/Encoder/Base64Encoder.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/tests/acceptance/Swift/Encoder/Base64EncoderAcceptanceTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/tests/unit/Swift/Encoder/Base64EncoderTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/lib/classes/Swift/Mime/HeaderEncoder/Base64HeaderEncoder.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/tests/acceptance/Swift/Mime/HeaderEncoder/Base64HeaderEncoderAcceptanceTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/tests/unit/Swift/Mime/HeaderEncoder/Base64HeaderEncoderTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/tests/smoke/Swift/Smoke/BasicSmokeTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/tests/acceptance/Swift/Transport/StreamBuffer/BasicSocketAcceptanceTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/test-suite/lib/yaymock/classes/Yay/Expectations/BetweenExpectation.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/lib/classes/Swift/Signers/BodySigner.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/test-suite/lib/yaymock/classes/Yay/Matchers/BoundsMatcher.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/tests/bug/Swift/Bug111Test.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/tests/bug/Swift/Bug118Test.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/tests/bug/Swift/Bug206Test.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/tests/bug/Swift/Bug274Test.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/tests/bug/Swift/Bug34Test.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/tests/bug/Swift/Bug35Test.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/tests/bug/Swift/Bug38Test.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/tests/bug/Swift/Bug51Test.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/tests/bug/Swift/Bug71Test.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/tests/bug/Swift/Bug76Test.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/lib/classes/Swift/StreamFilters/ByteArrayReplacementFilter.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/tests/unit/Swift/StreamFilters/ByteArrayReplacementFilterTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/CHANGES" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/test-suite/CHANGES" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/test-suite/lib/yaymock/classes/Yay/Actions/CallbackAction.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/lib/classes/Swift/CharacterReader.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/lib/classes/Swift/CharacterReaderFactory.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/lib/classes/Swift/CharacterStream.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/lib/classes/Swift/Mime/CharsetObserver.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/test-suite/lib/Sweety/Reporter/CliReporter.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/test-suite/lib/Sweety/Runner/CliRunner.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/test-suite/lib/Sweety/Reporter/CliTestCaseReporter.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/lib/classes/Swift/Events/CommandEvent.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/tests/unit/Swift/Events/CommandEventTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/lib/classes/Swift/Events/CommandListener.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/lib/classes/Swift/ConfigurableSpool.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/lib/classes/Swift/Mime/ContentEncoder.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/lib/classes/Swift/Transport/Esmtp/Auth/CramMd5Authenticator.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/tests/unit/Swift/Transport/Esmtp/Auth/CramMd5AuthenticatorTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/lib/classes/Swift/Signers/DKIMSigner.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/tests/unit/Swift/Signers/DKIMSignerTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/lib/classes/Swift/Mime/Headers/DateHeader.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/tests/unit/Swift/Mime/Headers/DateHeaderTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/lib/classes/Swift/Plugins/DecoratorPlugin.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/tests/unit/Swift/Plugins/DecoratorPluginTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/lib/classes/Swift/DependencyContainer.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/tests/acceptance/Swift/DependencyContainerAcceptanceTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/tests/unit/Swift/DependencyContainerTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/lib/classes/Swift/DependencyException.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/test-suite/lib/yaymock/classes/Yay/Description.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/lib/classes/Swift/KeyCache/DiskKeyCache.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/tests/acceptance/Swift/KeyCache/DiskKeyCacheAcceptanceTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/lib/classes/Swift/Signers/DomainKeySigner.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/lib/classes/Swift/Plugins/Loggers/EchoLogger.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/tests/unit/Swift/Plugins/Loggers/EchoLoggerTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/lib/classes/Swift/EmbeddedFile.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/lib/classes/Swift/Mime/EmbeddedFile.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/tests/acceptance/Swift/EmbeddedFileAcceptanceTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/tests/acceptance/Swift/Mime/EmbeddedFileAcceptanceTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/tests/unit/Swift/Mime/EmbeddedFileTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/lib/classes/Swift/Encoder.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/lib/classes/Swift/Encoding.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/tests/acceptance/Swift/EncodingAcceptanceTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/lib/classes/Swift/Mime/EncodingObserver.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/test-suite/lib/yaymock/classes/Yay/Matchers/EqualMatcher.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/lib/classes/Swift/Transport/EsmtpHandler.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/lib/classes/Swift/Transport/EsmtpTransport.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/tests/unit/Swift/Transport/EsmtpTransportTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/lib/classes/Swift/Events/Event.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/lib/classes/Swift/Events/EventDispatcher.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/lib/classes/Swift/Events/EventListener.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/lib/classes/Swift/Events/EventObject.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/tests/unit/Swift/Events/EventObjectTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/test-suite/lib/yaymock/classes/Yay/Expectations/ExactlyExpectation.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/test-suite/lib/yaymock/classes/Yay/Expectation.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/test-suite/lib/yaymock/classes/Yay/ExpectationProvider.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/test-suite/lib/yaymock/classes/Yay/Expectations.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/tests/unit/Swift/Transport/EsmtpTransport/ExtensionSupportTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/lib/classes/Swift/FailoverTransport.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/lib/classes/Swift/Transport/FailoverTransport.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/tests/unit/Swift/Transport/FailoverTransportTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/lib/classes/Swift/ByteStream/FileByteStream.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/tests/acceptance/Swift/ByteStream/FileByteStreamAcceptanceTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/lib/classes/Swift/FileSpool.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/lib/classes/Swift/FileStream.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/lib/classes/Swift/Filterable.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/lib/classes/Swift/CharacterReader/GenericFixedWidthReader.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/tests/unit/Swift/CharacterReader/GenericFixedWidthReaderTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/lib/classes/Swift/Mime/Grammar.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/GuestListView.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/test-suite/lib/simpletest/HELP_MY_TESTS_DONT_WORK_ANYMORE" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/lib/classes/Swift/Mime/Header.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/lib/classes/Swift/Mime/HeaderEncoder.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/lib/classes/Swift/Mime/HeaderFactory.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/lib/classes/Swift/Mime/HeaderSet.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/lib/classes/Swift/Signers/HeaderSigner.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/lib/classes/Swift/Plugins/Reporters/HitReporter.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/tests/unit/Swift/Plugins/Reporters/HitReporterTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/lib/classes/Swift/Plugins/Reporters/HtmlReporter.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/test-suite/lib/Sweety/Reporter/HtmlReporter.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/tests/unit/Swift/Plugins/Reporters/HtmlReporterTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/test-suite/lib/Sweety/Runner/HtmlRunner.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/test-suite/lib/Sweety/Reporter/HtmlTestCaseReporter.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/tests/smoke/Swift/Smoke/HtmlWithAttachmentSmokeTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/tests/helpers/Swift/Tests/IdenticalBinaryExpectation.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/test-suite/lib/yaymock/classes/Yay/Matchers/IdenticalMatcher.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/lib/classes/Swift/Mime/Headers/IdentificationHeader.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/tests/unit/Swift/Mime/Headers/IdentificationHeaderTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/lib/classes/Swift/Image.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/lib/classes/Swift/Plugins/ImpersonatePlugin.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/lib/classes/Swift/InputByteStream.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/tests/smoke/Swift/Smoke/InternationalSmokeTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/test-suite/lib/yaymock/classes/Yay/Invocation.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/test-suite/lib/yaymock/classes/Yay/InvocationHandler.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/test-suite/lib/yaymock/classes/Yay/InvocationProxy.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/test-suite/lib/yaymock/classes/Yay/InvocationRecorder.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/lib/classes/Swift/Transport/IoBuffer.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/lib/classes/Swift/IoException.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/lib/classes/Swift/KeyCache.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/lib/classes/Swift/KeyCache/KeyCacheInputStream.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/LICENSE" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/test-suite/LICENSE" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/test-suite/lib/simpletest/LICENSE" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/lib/classes/Swift/LoadBalancedTransport.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/lib/classes/Swift/Transport/LoadBalancedTransport.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/tests/unit/Swift/Transport/LoadBalancedTransportTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/lib/classes/Swift/Plugins/Logger.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/lib/classes/Swift/Plugins/LoggerPlugin.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/tests/unit/Swift/Plugins/LoggerPluginTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/lib/classes/Swift/Transport/Esmtp/Auth/LoginAuthenticator.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/tests/unit/Swift/Transport/Esmtp/Auth/LoginAuthenticatorTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/lib/classes/Swift/Transport/MailInvoker.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/lib/classes/Swift/MailTransport.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/lib/classes/Swift/Transport/MailTransport.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/tests/unit/Swift/Transport/MailTransportTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/lib/classes/Swift/Mime/Headers/MailboxHeader.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/tests/unit/Swift/Mime/Headers/MailboxHeaderTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/lib/classes/Swift/Mailer.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/tests/unit/Swift/MailerTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/test-suite/lib/yaymock/classes/Yay/Matcher.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/lib/classes/Swift/MemorySpool.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/lib/classes/Swift/Message.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/lib/classes/Swift/Mime/Message.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/tests/acceptance/Swift/MessageAcceptanceTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/lib/classes/Swift/Plugins/MessageLogger.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/lib/classes/Swift/Mime/MimeEntity.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/lib/classes/Swift/MimePart.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/lib/classes/Swift/Mime/MimePart.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/tests/acceptance/Swift/MimePartAcceptanceTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/tests/acceptance/Swift/Mime/MimePartAcceptanceTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/tests/unit/Swift/Mime/MimePartTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/test-suite/lib/yaymock/classes/Yay/MockGenerator.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/test-suite/lib/yaymock/classes/Yay/MockObject.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/test-suite/lib/yaymock/classes/Yay/Mockery.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/lib/classes/Swift/Mime/ContentEncoder/NativeQpContentEncoder.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/tests/acceptance/Swift/Mime/ContentEncoder/NativeQpContentEncoderAcceptanceTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/lib/classes/Swift/CharacterStream/NgCharacterStream.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/test-suite/lib/yaymock/classes/Yay/NotSatisfiedException.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/lib/classes/Swift/KeyCache/NullKeyCache.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/lib/classes/Swift/NullTransport.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/lib/classes/Swift/Transport/NullTransport.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/test-suite/lib/yaymock/classes/Yay/Matchers/OptionalMatcher.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/lib/classes/Swift/OutputByteStream.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/lib/classes/Swift/Mime/ParameterizedHeader.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/lib/classes/Swift/Mime/Headers/ParameterizedHeader.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/tests/unit/Swift/Mime/Headers/ParameterizedHeaderTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/lib/classes/Swift/Mime/Headers/PathHeader.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/tests/unit/Swift/Mime/Headers/PathHeaderTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/test-suite/lib/yaymock/classes/Yay/Matchers/PatternMatcher.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/test-suite/lib/Sweety/TestLocator/PearStyleLocator.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/lib/classes/Swift/Transport/Esmtp/Auth/PlainAuthenticator.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/tests/unit/Swift/Transport/Esmtp/Auth/PlainAuthenticatorTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/lib/classes/Swift/Mime/ContentEncoder/PlainContentEncoder.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/tests/acceptance/Swift/Mime/ContentEncoder/PlainContentEncoderAcceptanceTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/tests/unit/Swift/Mime/ContentEncoder/PlainContentEncoderTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/lib/classes/Swift/Plugins/Pop/Pop3Connection.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/lib/classes/Swift/Plugins/Pop/Pop3Exception.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/lib/classes/Swift/Plugins/PopBeforeSmtpPlugin.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/tests/unit/Swift/Plugins/PopBeforeSmtpPluginTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/lib/classes/Swift/Preferences.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/tests/acceptance/Swift/Transport/StreamBuffer/ProcessAcceptanceTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/lib/classes/Swift/Mime/ContentEncoder/QpContentEncoder.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/tests/acceptance/Swift/Mime/ContentEncoder/QpContentEncoderAcceptanceTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/lib/classes/Swift/Mime/ContentEncoder/QpContentEncoderProxy.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/tests/unit/Swift/Mime/ContentEncoder/QpContentEncoderTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/lib/classes/Swift/Encoder/QpEncoder.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/tests/acceptance/Swift/Encoder/QpEncoderAcceptanceTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/tests/unit/Swift/Encoder/QpEncoderTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/lib/classes/Swift/Mime/HeaderEncoder/QpHeaderEncoder.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/tests/unit/Swift/Mime/HeaderEncoder/QpHeaderEncoderTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/README" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/test-suite/README" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/test-suite/lib/simpletest/README" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/lib/classes/Swift/Mime/ContentEncoder/RawContentEncoder.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/lib/classes/Swift/Mailer/RecipientIterator.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/lib/classes/Swift/Plugins/RedirectingPlugin.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/tests/unit/Swift/Plugins/RedirectingPluginTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/test-suite/lib/yaymock/classes/Yay/Matchers/ReferenceMatcher.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/lib/classes/Swift/ReplacementFilterFactory.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/lib/classes/Swift/Plugins/Decorator/Replacements.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/lib/classes/Swift/Plugins/Reporter.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/test-suite/lib/Sweety/Reporter.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/lib/classes/Swift/Plugins/ReporterPlugin.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/tests/unit/Swift/Plugins/ReporterPluginTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/lib/classes/Swift/Events/ResponseEvent.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/tests/unit/Swift/Events/ResponseEventTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/lib/classes/Swift/Events/ResponseListener.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/test-suite/lib/yaymock/classes/Yay/Actions/ReturnReferenceAction.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/test-suite/lib/yaymock/classes/Yay/Actions/ReturnValueAction.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/lib/classes/Swift/Encoder/Rfc2231Encoder.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/tests/acceptance/Swift/Encoder/Rfc2231EncoderAcceptanceTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/tests/unit/Swift/Encoder/Rfc2231EncoderTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/lib/classes/Swift/RfcComplianceException.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/test-suite/lib/Sweety/Runner.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/lib/classes/Swift/Signers/SMimeSigner.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/tests/unit/Swift/Signers/SMimeSignerTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SaveHaldi.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SavePhere.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SaveRoka.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SaveSangeet.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/test-suite/lib/yaymock/classes/Yay/SelfDescribing.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/lib/classes/Swift/Events/SendEvent.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/tests/unit/Swift/Events/SendEventTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/lib/classes/Swift/Events/SendListener.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/lib/classes/Swift/SendmailTransport.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/lib/classes/Swift/Transport/SendmailTransport.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/tests/unit/Swift/Transport/SendmailTransportTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/test-suite/lib/yaymock/classes/Yay/Sequence.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/lib/classes/Swift/SignedMessage.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/lib/classes/Swift/Signer.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/lib/classes/Swift/CharacterReaderFactory/SimpleCharacterReaderFactory.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/tests/acceptance/Swift/CharacterReaderFactory/SimpleCharacterReaderFactoryAcceptanceTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/test-suite/lib/yaymock/classes/Yay/SimpleDescription.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/lib/classes/Swift/Events/SimpleEventDispatcher.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/tests/unit/Swift/Events/SimpleEventDispatcherTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/lib/classes/Swift/Mime/SimpleHeaderFactory.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/tests/unit/Swift/Mime/SimpleHeaderFactoryTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/lib/classes/Swift/Mime/SimpleHeaderSet.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/tests/unit/Swift/Mime/SimpleHeaderSetTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/test-suite/lib/yaymock/classes/Yay/SimpleInvocation.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/lib/classes/Swift/KeyCache/SimpleKeyCacheInputStream.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/tests/unit/Swift/KeyCache/SimpleKeyCacheInputStreamTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/lib/classes/Swift/Transport/SimpleMailInvoker.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/lib/classes/Swift/Mime/SimpleMessage.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/tests/acceptance/Swift/Mime/SimpleMessageAcceptanceTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/tests/unit/Swift/Mime/SimpleMessageTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/lib/classes/Swift/Mime/SimpleMimeEntity.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/tests/unit/Swift/Mime/SimpleMimeEntityTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/test-suite/lib/yaymock/classes/Yay/SimpleSequence.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/test-suite/lib/yaymock/classes/Yay/SimpleState.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/test-suite/lib/yaymock/classes/Yay/SimpleStatePredicate.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/lib/classes/Swift/Plugins/Sleeper.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/lib/classes/Swift/Transport/SmtpAgent.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/lib/classes/Swift/SmtpTransport.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/tests/acceptance/Swift/Transport/StreamBuffer/SocketTimeoutTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/lib/classes/Swift/Spool.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/lib/classes/Swift/SpoolTransport.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/lib/classes/Swift/Transport/SpoolTransport.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/tests/acceptance/Swift/Transport/StreamBuffer/SslSocketAcceptanceTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/test-suite/lib/yaymock/classes/Yay/State.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/test-suite/lib/yaymock/classes/Yay/StateMachine.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/test-suite/lib/yaymock/classes/Yay/StatePredicate.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/test-suite/lib/yaymock/classes/Yay/States.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/lib/classes/Swift/Transport/StreamBuffer.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/tests/unit/Swift/Transport/StreamBufferTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/lib/classes/Swift/StreamFilter.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/lib/classes/Swift/StreamFilters/StringReplacementFilter.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/lib/classes/Swift/StreamFilters/StringReplacementFilterFactory.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/tests/unit/Swift/StreamFilters/StringReplacementFilterFactoryTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/tests/unit/Swift/StreamFilters/StringReplacementFilterTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/lib/classes/Swift.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/lib/classes/Swift/SwiftException.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/tests/helpers/Swift/Tests/SwiftSmokeTestCase.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/tests/helpers/Swift/Tests/SwiftUnitTestCase.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/test-suite/lib/simpletest/TODO.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/lib/classes/Swift/ByteStream/TemporaryFileByteStream.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/test-suite/lib/Sweety/TestLocator.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/lib/classes/Swift/Plugins/ThrottlerPlugin.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/tests/unit/Swift/Plugins/ThrottlerPluginTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/test-suite/lib/yaymock/classes/Yay/Actions/ThrowAction.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/lib/classes/Swift/Plugins/Timer.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/tests/acceptance/Swift/Transport/StreamBuffer/TlsSocketAcceptanceTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/lib/classes/Swift/Transport.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/lib/classes/Swift/Events/TransportChangeEvent.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/tests/unit/Swift/Events/TransportChangeEventTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/lib/classes/Swift/Events/TransportChangeListener.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/lib/classes/Swift/TransportException.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/lib/classes/Swift/Events/TransportExceptionEvent.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/tests/unit/Swift/Events/TransportExceptionEventTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/lib/classes/Swift/Events/TransportExceptionListener.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/lib/classes/Swift/Mime/Headers/UnstructuredHeader.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/tests/unit/Swift/Mime/Headers/UnstructuredHeaderTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/lib/classes/Swift/CharacterReader/UsAsciiReader.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/tests/unit/Swift/CharacterReader/UsAsciiReaderTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/lib/classes/Swift/CharacterReader/Utf8Reader.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/tests/unit/Swift/CharacterReader/Utf8ReaderTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/VERSION" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/test-suite/lib/simpletest/VERSION" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/lib/classes/Swift/Validate.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/test-suite/lib/yaymock/classes/Yay.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/tests/acceptance.conf.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/test-suite/lib/simpletest/authentication.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/test-suite/lib/simpletest/autorun.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/test-suite/lib/simpletest/browser.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/tests/_samples/smime/ca.crt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/tests/_samples/smime/ca.key" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/lib/dependency_maps/cache_deps.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/test-suite/lib/simpletest/collector.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/test-suite/lib/simpletest/compatibility.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/config.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/test-suite/config.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/confirmation.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/test-suite/lib/simpletest/cookies.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/tests/_samples/files/data.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/test-suite/lib/simpletest/default_reporter.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/test-suite/lib/simpletest/detached.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/tests/_samples/dkim/dkim.test.priv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/tests/_samples/dkim/dkim.test.pub" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/test-suite/lib/simpletest/dumper.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/test-suite/lib/simpletest/eclipse.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/test-suite/lib/simpletest/encoding.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/tests/_samples/smime/encrypt.crt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/tests/_samples/smime/encrypt.key" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/tests/_samples/smime/encrypt2.crt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/tests/_samples/smime/encrypt2.key" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/test-suite/lib/simpletest/errors.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/test-suite/lib/simpletest/exceptions.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/test-suite/lib/simpletest/expectation.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/final.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/test-suite/lib/simpletest/form.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/test-suite/lib/simpletest/frames.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/test-suite/lib/simpletest/http.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/test-suite/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/test-suite/lib/simpletest/invoker.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/test-suite/templates/sweety/css/main.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/lib/dependency_maps/message_deps.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/lib/dependency_maps/mime_deps.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/lib/mime_types.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/test-suite/lib/yaymock/mock.tpl.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/test-suite/lib/simpletest/mock_objects.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/tests/_samples/charsets/iso-2022-jp/one.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/tests/_samples/charsets/iso-8859-1/one.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/tests/_samples/charsets/utf-8/one.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/test-suite/lib/simpletest/page.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/test-suite/lib/simpletest/parser.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/lib/preferences.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/test-suite/lib/simpletest/reflection_php4.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/test-suite/lib/simpletest/reflection_php5.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/test-suite/lib/simpletest/remote.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/test-suite/lib/simpletest/reporter.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/rsvp_link.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/rsvp_page.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/test-suite/run.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/test-suite/lib/simpletest/scorer.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/test-suite/lib/simpletest/selector.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/test-suite/lib/simpletest/shell_tester.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/tests/_samples/smime/sign.crt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/tests/_samples/smime/sign.csr" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/tests/_samples/smime/sign.key" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/signup.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/signup_ac.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/test-suite/lib/simpletest/simpletest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/tests/smoke.conf.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/test-suite/lib/simpletest/socket.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/test-suite/templates/sweety/suite-ui-noajax.tpl.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/test-suite/templates/sweety/suite-ui.tpl.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/test-suite/templates/sweety/js/sweety-template.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/test-suite/sweety.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/lib/swift_init.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/lib/swift_required.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/lib/swift_required_pear.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/test-suite/lib/simpletest/tag.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/test-suite/lib/simpletest/test_case.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/tests/_samples/charsets/utf-8/three.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/lib/dependency_maps/transport_deps.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/tests/_samples/charsets/utf-8/two.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/test-suite/lib/simpletest/unit_tester.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/test-suite/lib/simpletest/url.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/test-suite/lib/simpletest/user_agent.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/test-suite/lib/simpletest/web_tester.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/test-suite/lib/simpletest/xml.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/test-suite/xpath-legacy.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/test-suite/lib/yaymock/yay_convenience.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swift/test-suite/lib/yaymock/yay_mock.php" />
-      <change type="DELETED" beforePath="C:\wamp\www\wedding\team12.sql" afterPath="" />
-      <change type="MOVED" beforePath="C:\wamp\www\wedding\sliding.form.js" afterPath="$PROJECT_DIR$/javascript/sliding.form.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/personal_website/Style/images/pattern.png" afterPath="$PROJECT_DIR$/personal_website/Style/images/pattern.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/model/DatabaseQueries.php" afterPath="$PROJECT_DIR$/model/DatabaseQueries.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/GuestDatabase1.csv" afterPath="$PROJECT_DIR$/tmp/GuestDatabase1.csv" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/GuestDatabaseManagement.php" afterPath="$PROJECT_DIR$/GuestDatabaseManagement.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/GuestManagement.php" afterPath="$PROJECT_DIR$/GuestManagement.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LoginProcess.php" afterPath="$PROJECT_DIR$/LoginProcess.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Menu.php" afterPath="$PROJECT_DIR$/Menu.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/model/PersistentDatabaseConnection.php" afterPath="$PROJECT_DIR$/model/PersistentDatabaseConnection.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TemplateSelection.php" afterPath="$PROJECT_DIR$/TemplateSelection.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/personal_website/aboutUs.php" afterPath="$PROJECT_DIR$/personal_website/aboutUs.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/personal_website/Common/bookmarkShare.php" afterPath="$PROJECT_DIR$/personal_website/Common/bookmarkShare.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/personal_website/ceremony.php" afterPath="$PROJECT_DIR$/personal_website/ceremony.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/personal_website/Common/footer.php" afterPath="$PROJECT_DIR$/personal_website/Common/footer.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/personal_website/guestBook.php" afterPath="$PROJECT_DIR$/personal_website/guestBook.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/personal_website/guestInformation.php" afterPath="$PROJECT_DIR$/personal_website/guestInformation.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/personal_website/Common/header.php" afterPath="$PROJECT_DIR$/personal_website/Common/header.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/personal_website/honeymoon.php" afterPath="$PROJECT_DIR$/personal_website/honeymoon.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/personal_website/index.php" afterPath="$PROJECT_DIR$/personal_website/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/personal_website/mapOfEvents.php" afterPath="$PROJECT_DIR$/personal_website/mapOfEvents.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/personal_website/Common/menu.php" afterPath="$PROJECT_DIR$/personal_website/Common/menu.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/personal_website/Style/menu_style.css" afterPath="$PROJECT_DIR$/personal_website/Style/menu_style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/personal_website/ourProposal.php" afterPath="$PROJECT_DIR$/personal_website/ourProposal.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/personal_website/ourRegistries.php" afterPath="$PROJECT_DIR$/personal_website/ourRegistries.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/personal_website/photoAlbum.php" afterPath="$PROJECT_DIR$/personal_website/photoAlbum.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/personal_website/reception.php" afterPath="$PROJECT_DIR$/personal_website/reception.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/personal_website/rsvp.php" afterPath="$PROJECT_DIR$/personal_website/rsvp.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/personal_website/Style/style.css" afterPath="$PROJECT_DIR$/personal_website/Style/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/survey.html" afterPath="$PROJECT_DIR$/survey.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/personal_website/Common/title.php" afterPath="$PROJECT_DIR$/personal_website/Common/title.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/personal_website/weddingParty.php" afterPath="$PROJECT_DIR$/personal_website/weddingParty.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/personal_website/welcome.php" afterPath="$PROJECT_DIR$/personal_website/welcome.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="wedding.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -493,7 +23,7 @@
     <file path="/TemplateProcess.php" changelist="85cdb505-0481-4b81-a195-4f5b84a784ff" time="1380861107189" ignored="false" />
     <file path="/text_stuff.html" changelist="85cdb505-0481-4b81-a195-4f5b84a784ff" time="1380866122305" ignored="false" />
     <file path="/InvitationProcess.php" changelist="85cdb505-0481-4b81-a195-4f5b84a784ff" time="1380914276626" ignored="false" />
-    <file path="/Menu.php" changelist="85cdb505-0481-4b81-a195-4f5b84a784ff" time="1382913968299" ignored="false" />
+    <file path="/Menu.php" changelist="85cdb505-0481-4b81-a195-4f5b84a784ff" time="1384742322699" ignored="false" />
     <file path="/GuestManagement.php" changelist="85cdb505-0481-4b81-a195-4f5b84a784ff" time="1384550522951" ignored="false" />
     <file path="/GuestDatabaseUpload.php" changelist="85cdb505-0481-4b81-a195-4f5b84a784ff" time="1382913913340" ignored="false" />
     <file path="/GuestDatabaseManagement.php" changelist="85cdb505-0481-4b81-a195-4f5b84a784ff" time="1384732542993" ignored="false" />
@@ -513,6 +43,7 @@
     <file path="$PROJECT_DIR$/../wedding_code/application/config/database.php" changelist="85cdb505-0481-4b81-a195-4f5b84a784ff" time="1384048045736" ignored="false" />
     <file path="$PROJECT_DIR$/../wedding_code/application/models/database_queries.php" changelist="85cdb505-0481-4b81-a195-4f5b84a784ff" time="1384200161007" ignored="false" />
     <file path="/GuestListView.php" changelist="85cdb505-0481-4b81-a195-4f5b84a784ff" time="1384550994742" ignored="false" />
+    <file path="$PROJECT_DIR$/.idea/workspace.xml" changelist="85cdb505-0481-4b81-a195-4f5b84a784ff" time="1384742354373" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -550,19 +81,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="survey.html" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="survey.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/survey.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="57" selection-start="443" selection-end="443" vertical-scroll-proportion="0.03107861">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="aboutUs.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/personal_website/aboutUs.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+            <state line="6" column="57" selection-start="443" selection-end="443" vertical-scroll-proportion="-0.65384614">
               <folding />
             </state>
           </provider>
@@ -589,7 +111,16 @@
       <file leaf-file-name="TemplateSelection.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/TemplateSelection.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="24" column="10" selection-start="712" selection-end="712" vertical-scroll-proportion="0.0">
+            <state line="24" column="10" selection-start="712" selection-end="712" vertical-scroll-proportion="-15.692307">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Menu.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Menu.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="54" column="46" selection-start="2042" selection-end="2042" vertical-scroll-proportion="0.56489944">
               <folding />
             </state>
           </provider>
@@ -652,7 +183,6 @@
         <option value="$PROJECT_DIR$/GuestDatabaseUpload.php" />
         <option value="$PROJECT_DIR$/GuestDatabaseDeletion.php" />
         <option value="$PROJECT_DIR$/index.php" />
-        <option value="$PROJECT_DIR$/Menu.php" />
         <option value="$PROJECT_DIR$/GuestManagement.php" />
         <option value="$PROJECT_DIR$/GuestListView.php" />
         <option value="$PROJECT_DIR$/LoginProcess.php" />
@@ -661,6 +191,7 @@
         <option value="$PROJECT_DIR$/model/DatabaseQueries.php" />
         <option value="$PROJECT_DIR$/GuestDatabaseManagement.php" />
         <option value="$PROJECT_DIR$/survey.html" />
+        <option value="$PROJECT_DIR$/Menu.php" />
       </list>
     </option>
   </component>
@@ -818,7 +349,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-3" y="0" width="1386" height="788" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32968238" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -924,11 +455,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Menu.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="17" selection-start="687" selection-end="687" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="13" column="12" selection-start="0" selection-end="2749" vertical-scroll-proportion="0.02251185" />
@@ -944,13 +470,6 @@
     <entry file="file://$PROJECT_DIR$/GuestManagement.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="7" column="34" selection-start="149" selection-end="149" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TemplateSelection.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="10" selection-start="712" selection-end="712" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -999,7 +518,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/survey.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="57" selection-start="443" selection-end="443" vertical-scroll-proportion="0.03107861">
+        <state line="6" column="57" selection-start="443" selection-end="443" vertical-scroll-proportion="-0.65384614">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TemplateSelection.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="10" selection-start="712" selection-end="712" vertical-scroll-proportion="-15.692307">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Menu.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="54" column="46" selection-start="2042" selection-end="2042" vertical-scroll-proportion="0.56489944">
           <folding />
         </state>
       </provider>
