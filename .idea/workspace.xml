@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="85cdb505-0481-4b81-a195-4f5b84a784ff" name="Default" comment="Modified all include statements to refer to mode/PersistentDatabaseConnection">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/model/DatabaseQueries.php" afterPath="$PROJECT_DIR$/model/DatabaseQueries.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/sliding.form.js" afterPath="$PROJECT_DIR$/javascript/sliding.form.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/GuestDatabaseManagement.php" afterPath="$PROJECT_DIR$/GuestDatabaseManagement.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/survey.html" afterPath="$PROJECT_DIR$/survey.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="wedding.iws" />
@@ -76,7 +77,25 @@
       <file leaf-file-name="DatabaseQueries.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/model/DatabaseQueries.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="114" selection-start="430" selection-end="430" vertical-scroll-proportion="-6.09434">
+            <state line="388" column="41" selection-start="11778" selection-end="11778" vertical-scroll-proportion="-10.037736">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="survey.html" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/survey.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="6" column="57" selection-start="443" selection-end="443" vertical-scroll-proportion="0.13851762">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="aboutUs.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/personal_website/aboutUs.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
               <folding />
             </state>
           </provider>
@@ -91,10 +110,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GuestDatabaseManagement.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="GuestDatabaseManagement.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/GuestDatabaseManagement.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="8" selection-start="609" selection-end="609" vertical-scroll-proportion="0.2882147">
+            <state line="19" column="0" selection-start="601" selection-end="601" vertical-scroll-proportion="-8.821428">
               <folding />
             </state>
           </provider>
@@ -159,7 +178,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/DatabaseQueries.php" />
         <option value="$PROJECT_DIR$/css/wedding.css" />
         <option value="$PROJECT_DIR$/InvitationProcess.php" />
         <option value="$PROJECT_DIR$/TemplateProcess.php" />
@@ -175,6 +193,7 @@
         <option value="$PROJECT_DIR$/model/PersistentDatabaseConnection.php" />
         <option value="$PROJECT_DIR$/model/DatabaseQueries.php" />
         <option value="$PROJECT_DIR$/GuestDatabaseManagement.php" />
+        <option value="$PROJECT_DIR$/survey.html" />
       </list>
     </option>
   </component>
@@ -239,7 +258,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="model" />
+              <option name="myItemId" value="javascript" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -276,10 +295,10 @@
       <recent name="$PROJECT_DIR$" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/javascript" />
       <recent name="$PROJECT_DIR$/css" />
       <recent name="$PROJECT_DIR$/media" />
       <recent name="$PROJECT_DIR$/model" />
-      <recent name="$PROJECT_DIR$/javascript" />
     </key>
   </component>
   <component name="RunManager">
@@ -416,13 +435,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/LoginProcess.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="0" selection-start="62" selection-end="376" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="13" column="12" selection-start="0" selection-end="2749" vertical-scroll-proportion="0.0" />
@@ -448,11 +460,6 @@
     <entry file="file://$PROJECT_DIR$/Menu.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="20" column="17" selection-start="687" selection-end="687" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/personal_website/aboutUs.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.php">
@@ -495,13 +502,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/model/DatabaseQueries.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="114" selection-start="430" selection-end="430" vertical-scroll-proportion="-6.09434">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/GuestDatabaseUpload.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
@@ -511,7 +511,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/GuestDatabaseManagement.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="8" selection-start="609" selection-end="609" vertical-scroll-proportion="0.2882147">
+        <state line="19" column="0" selection-start="601" selection-end="601" vertical-scroll-proportion="-8.821428">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/personal_website/aboutUs.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/DatabaseQueries.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="388" column="41" selection-start="11778" selection-end="11778" vertical-scroll-proportion="-10.037736">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/survey.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="57" selection-start="443" selection-end="443" vertical-scroll-proportion="0.13851762">
           <folding />
         </state>
       </provider>
