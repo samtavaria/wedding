@@ -29,31 +29,7 @@ class DatabaseConnection
 
     }
 
-    public static function getCss()
-    {
-
-        $sql = "SELECT * from custom_css order by custom_css_id desc limit 1";
-
-        $result = mysql_query($sql);
-
-        if (!$result) {
-            echo "Could not successfully run query ($sql) from DB: " . mysql_error();
-            exit;
-        }
-
-
-        $row = mysql_fetch_assoc($result);
-        return $row['css'];
-
-    }
-
-    public static function setCss($base64EncodedCss)
-    {
-        echo $base64EncodedCss;
-        $sql = "insert into custom_css values ('', '" . $base64EncodedCss . "')";
-        $result = mysql_query($sql);
-        var_dump($result);
-    }
+   
 
     public static function getCouple()
     {
