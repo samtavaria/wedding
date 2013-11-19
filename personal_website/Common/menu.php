@@ -9,13 +9,13 @@
 			//"Reception" => "reception.php",
 			"Guest Information" => "guestInformation.php",
 			"Photo Album" => "photoAlbum.php",
-			"RSVP" => "rsvp.php",
+			//"RSVP" => "rsvp.php",
 			//"Wedding Party" => "weddingParty.php",
 			//"Our Registries" => "ourRegistries.php",
 			"Guest Information" => "guestInformation.php",
 			"Photo Album" => "photoAlbum.php",
 			//"Guest Book" => "guestBook.php",
-			"RSVP" => "rsvp.php",
+			//"RSVP" => "rsvp.php",
 			//"Honeymoon" => "honeymoon.php",
 			//"Map of Events" => "mapOfEvents.php"
 			);
