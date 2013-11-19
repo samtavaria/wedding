@@ -35,6 +35,11 @@ include_once('GuestListView.php');
             document.getElementById('GuestListHaldi').style.display = "none";
             document.getElementById('GuestListCeremony').style.display = "none";
             document.getElementById('GuestListReception').style.display = "none";
+            document.getElementById('GuestListMehndiRSVP').style.display = "none";
+            document.getElementById('GuestListSangeetRSVP').style.display = "none";
+            document.getElementById('GuestListHaldiRSVP').style.display = "none";
+            document.getElementById('GuestListCeremonyRSVP').style.display = "none";
+            document.getElementById('GuestListReceptionRSVP').style.display = "none";
             document.getElementById('GuestListViewOptions').style.display = "none";
             document.getElementById('DeleteGuestList').style.display = "none";
         }
@@ -64,6 +69,31 @@ include_once('GuestListView.php');
             document.getElementById('GuestListViewOptions').style.display = "block";
             document.getElementById('GuestListReception').style.display = "block";
         }
+        function showMehndiRSVP() {
+            pageLoad();
+            document.getElementById('GuestListViewOptions').style.display = "block";
+            document.getElementById('GuestListMehndiRSVP').style.display = "block";
+        }
+        function showSangeetRSVP() {
+            pageLoad();
+            document.getElementById('GuestListViewOptions').style.display = "block";
+            document.getElementById('GuestListSangeetRSVP').style.display = "block";
+        }
+        function showHaldiRSVP() {
+            pageLoad();
+            document.getElementById('GuestListViewOptions').style.display = "block";
+            document.getElementById('GuestListHaldiRSVP').style.display = "block";
+        }
+        function showCeremonyRSVP() {
+            pageLoad();
+            document.getElementById('GuestListViewOptions').style.display = "block";
+            document.getElementById('GuestListCeremonyRSVP').style.display = "block";
+        }
+        function showReceptionRSVP() {
+            pageLoad();
+            document.getElementById('GuestListViewOptions').style.display = "block";
+            document.getElementById('GuestListReceptionRSVP').style.display = "block";
+        }
         function showEntireList() {
             pageLoad();
             document.getElementById('GuestListViewOptions').style.display = "block";
@@ -80,6 +110,11 @@ include_once('GuestListView.php');
                 case 11: showHaldi(); break;
                 case 12: showCeremony(); break;
                 case 13: showReception(); break;
+                case 14: showMehndiRSVP(); break;
+                case 15: showSangeetRSVP(); break;
+                case 16: showHaldiRSVP(); break;
+                case 17: showCeremonyRSVP(); break;
+                case 18: showReceptionRSVP(); break;
                 default: showEntireList();break
             }
         }
@@ -99,6 +134,11 @@ include_once('GuestListView.php');
           <option onClick = showHaldi()>View Guests Invited to Haldi</option>
           <option onClick = showCeremony()>View Guests Invited to Ceremony</option>
           <option onClick = showReception()>View Guests Invited to Reception</option>
+          <option onClick = "showMehndiRSVP();">View Guests who have RSVP's a yes to Mehndi</option>
+          <option onClick = showSangeetRSVP()>View Guests who have RSVP's a yes to Sangeet</option>
+          <option onClick = showHaldiRSVP()>View Guests who have RSVP's a yes to Haldi</option>
+          <option onClick = showCeremonyRSVP()>View Guests who have RSVP's a yes to Ceremony</option>
+          <option onClick = showReceptionRSVP()>View Guests who have RSVP's a yes to Reception</option>
       </select>
         <br />
     </div>
@@ -143,6 +183,31 @@ include_once('GuestListView.php');
     <div id="GuestListReception">
         <?php
         GuestListView::viewGuestList(13);
+        ?>
+    </div>
+    <div id="GuestListMehndiRSVP">
+        <?php
+        GuestListView::viewGuestList(14);
+        ?>
+    </div>
+    <div id="GuestListSangeetRSVP">
+        <?php
+        GuestListView::viewGuestList(15);
+        ?>
+    </div>
+    <div id="GuestListHaldiRSVP">
+        <?php
+        GuestListView::viewGuestList(16);
+        ?>
+    </div>
+    <div id="GuestListCeremonyRSVP">
+        <?php
+        GuestListView::viewGuestList(17);
+        ?>
+    </div>
+    <div id="GuestListReceptionRSVP">
+        <?php
+        GuestListView::viewGuestList(18);
         ?>
     </div>
 

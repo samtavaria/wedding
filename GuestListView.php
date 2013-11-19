@@ -36,35 +36,70 @@ class GuestListView
         foreach ($result as $guest) {
             switch ($ceremony) {
                 case 9 :
-                    if($guest[9] == 'Yes') {
+                    if(strtolower($guest[9])  == 'yes') {
                         echo '<tr>';
                     self::_displayGuestRow($guest);
                     echo '</tr>';
                     }
                     break;
                 case 10 :
-                    if($guest[10] == 'Yes') {
+                    if(strtolower($guest[10])  == 'yes') {
                         echo '<tr>';
                     self::_displayGuestRow($guest);
                     echo '</tr>';
                     }
                     break;
                 case 11 :
-                    if($guest[11] == 'Yes') {
+                    if(strtolower($guest[11])  == 'yes') {
                         echo '<tr>';
                     self::_displayGuestRow($guest);
                     echo '</tr>';
                     }
                     break;
                 case 12 :
-                    if($guest[12] == 'Yes') {
+                    if(strtolower($guest[12])  == 'yes') {
                         echo '<tr>';
                     self::_displayGuestRow($guest);
                     echo '</tr>';
                     }
                     break;
                 case 13 :
-                    if($guest[13] == 'Yes') {
+                    if(strtolower($guest[13])  == 'yes') {
+                        echo '<tr>';
+                    self::_displayGuestRow($guest);
+                    echo '</tr>';
+                    }
+                    break;
+                case 14 :
+                    if(strtolower($guest[15])  == 'yes') {
+                        echo '<tr>';
+                    self::_displayGuestRow($guest);
+                    echo '</tr>';
+                    }
+                    break;
+                case 15 :
+                    if(strtolower($guest[16])  == 'yes') {
+                        echo '<tr>';
+                    self::_displayGuestRow($guest);
+                    echo '</tr>';
+                    }
+                    break;
+                case 16 :
+                    if(strtolower($guest[17])  == 'yes') {
+                        echo '<tr>';
+                    self::_displayGuestRow($guest);
+                    echo '</tr>';
+                    }
+                    break;
+                case 17 :
+                    if(strtolower($guest[18])  == 'yes') {
+                        echo '<tr>';
+                    self::_displayGuestRow($guest);
+                    echo '</tr>';
+                    }
+                    break;
+                case 18 :
+                    if(strtolower($guest[19])  == 'yes') {
                         echo '<tr>';
                     self::_displayGuestRow($guest);
                     echo '</tr>';
