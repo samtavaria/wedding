@@ -29,31 +29,7 @@ class DatabaseConnection
 
     }
 
-    public static function getCss()
-    {
-
-        $sql = "SELECT * from custom_css order by custom_css_id desc limit 1";
-
-        $result = mysql_query($sql);
-
-        if (!$result) {
-            echo "Could not successfully run query ($sql) from DB: " . mysql_error();
-            exit;
-        }
-
-
-        $row = mysql_fetch_assoc($result);
-        return $row['css'];
-
-    }
-
-    public static function setCss($base64EncodedCss)
-    {
-        echo $base64EncodedCss;
-        $sql = "insert into custom_css values ('', '" . $base64EncodedCss . "')";
-        $result = mysql_query($sql);
-        var_dump($result);
-    }
+   
 
     public static function getCouple()
     {
@@ -64,7 +40,6 @@ class DatabaseConnection
         $sql = "SELECT Bride.b_first_name, Bride.b_middle_name, Bride.b_last_name, Groom.g_first_name, Groom.g_middle_name, Groom.g_last_name from  Bride, Groom where ";
         $sql .= "Bride.c_id =" . "'$cid'" ;
         $sql .= "and Groom.c_id =" . "'$cid'" ;
-
 
         $result = mysql_query($sql);
 
@@ -221,17 +196,14 @@ class DatabaseConnection
 	{
 		$cid = $_SESSION['cid'];
 		$sql = "SELECT * from website_basic_info where c_id =" . "'$cid'";
-		
+
 		$result = mysql_query($sql);
 
         if (!$result) {
             echo "Could not successfully run query ($sql) from DB: " . mysql_error();
             exit;
         }
-		if (mysql_num_rows($result) == 0) {
-            echo "No rows found, nothing to print so am exiting";
-            exit;
-        }
+
 		
 		$row = mysql_fetch_assoc($result);
 		return $row;
@@ -252,7 +224,11 @@ class DatabaseConnection
 	public static function addSangeetEventData($result)
 	{
 	    $cid = $_SESSION['cid'];
-        $sql = "INSERT INTO event (" .
+		$delSql = "DELETE FROM Event WHERE " .
+		  "c_id = " . "'" . $result['c_id'] .
+		  "' AND event_name = '" . $result['eventType'] . "'";
+				  
+        $sql = "INSERT INTO Event (" .
 		        "`venue_name`, `venue_address`," .
 				"`city`, `state`," .
 				"`zipcode`, `parking`," . 
@@ -274,8 +250,11 @@ class DatabaseConnection
 				"'" . $result['gift'] . "'," .
 				"'" . $result['c_id'] . "')";
 				
-				echo $sql;
+				echo $delSql;
+				echo "<br>" . $sql;
+				
         //echo $sql.'<br />';
+		mysql_query($delSql);
         mysql_query($sql);//
         // dont die if duplicate entry avoid that row
         //or die(mysql_error());
@@ -284,7 +263,10 @@ class DatabaseConnection
 		public static function addHaldiEventData($result)
 	{
 	    $cid = $_SESSION['cid'];
-        $sql = "INSERT INTO event (" .
+		$delSql = "DELETE FROM Event WHERE " .
+		  "c_id = '" . $result['c_id'] .
+		  "' AND event_name = '" . $result['eventType'] . "'";
+        $sql = "INSERT INTO Event (" .
 		        "`venue_name`, `venue_address`," .
 				"`city`, `state`," .
 				"`zipcode`, `parking`," . 
@@ -305,9 +287,12 @@ class DatabaseConnection
 				"'" . $result['otherDetails'] . "'," .
 				"'" . $result['gift'] . "'," .
 				"'" . $result['c_id'] . "')";
+		
+		echo $delSql;
+		echo "<br>" . $sql;
 				
-				echo $sql;
         //echo $sql.'<br />';
+		mysql_query($delSql);
         mysql_query($sql);//
         // dont die if duplicate entry avoid that row
         //or die(mysql_error());
@@ -316,7 +301,10 @@ class DatabaseConnection
 	public static function addPhereEventData($result)
 	{
 	    $cid = $_SESSION['cid'];
-        $sql = "INSERT INTO event (" .
+		$delSql = "DELETE FROM Event WHERE " .
+		  "c_id = '" . $result['c_id'] .
+		  "' AND event_name = '" . $result['eventType'] . "'";
+        $sql = "INSERT INTO Event (" .
 		        "`venue_name`, `venue_address`," .
 				"`city`, `state`," .
 				"`zipcode`, `parking`," . 
@@ -338,8 +326,11 @@ class DatabaseConnection
 				"'" . $result['gift'] . "'," .
 				"'" . $result['c_id'] . "')";
 				
-				echo $sql;
+		echo $delSql;
+		echo "<br>" . $sql;
+				
         //echo $sql.'<br />';
+		mysql_query($delSql);
         mysql_query($sql);//
         // dont die if duplicate entry avoid that row
         //or die(mysql_error());
@@ -348,7 +339,15 @@ class DatabaseConnection
 	public static function addRokaEventData($result)
 	{
 	    $cid = $_SESSION['cid'];
-        $sql = "INSERT INTO event (" .
+		$delSql = "DELETE FROM Event WHERE " .
+		  "c_id = '" . $result['c_id'] .
+		  "' AND event_name = '" . $result['eventType'] . "'";
+		$delSql = "DELETE FROM Event WHERE " .
+				  "c_id = " . $result['c_id'] .
+				  "AND event_name = " . $result['eventType'];
+		
+		
+        $sql = "INSERT INTO Event (" .
 		        "`venue_name`, `venue_address`," .
 				"`city`, `state`," .
 				"`zipcode`, `parking`," . 
@@ -370,8 +369,11 @@ class DatabaseConnection
 				"'" . $result['gift'] . "'," .
 				"'" . $result['c_id'] . "')";
 				
-				echo $sql;
+		echo $delSql;
+		echo "<br>" . $sql;
+				
         //echo $sql.'<br />';
+		mysql_query($delSql);
         mysql_query($sql);//
         // dont die if duplicate entry avoid that row
         //or die(mysql_error());
@@ -422,7 +424,7 @@ class DatabaseConnection
 
     public static function insertGroomtable($cid, $g_first_name, $g_middle_name, $g_last_name, $g_father_name, $g_mother_name)
     {
-        $sql3="INSERT into groom (c_id, g_first_name, g_middle_name, g_last_name, g_father_name, g_mother_name)";
+        $sql3="INSERT into Groom (c_id, g_first_name, g_middle_name, g_last_name, g_father_name, g_mother_name)";
         $result3=mysql_query($sql3);
         return $result3;
 
@@ -430,7 +432,7 @@ class DatabaseConnection
 
     public static function insertBridetable($cid, $b_first_name, $b_middle_name, $b_last_name, $b_father_name, $b_mother_name)
     {
-        $sql4="INSERT into bride (c_id,b_first_name, b_middle_name, b_last_name, b_father_name, b_mother_name)";
+        $sql4="INSERT into Bride (c_id,b_first_name, b_middle_name, b_last_name, b_father_name, b_mother_name)";
         $result4=mysql_query($sql4);
         return $result4;
 

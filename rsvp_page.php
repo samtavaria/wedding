@@ -141,6 +141,8 @@ $sql = mysql_query($query) or die(mysql_error());
 $row = mysql_fetch_assoc($sql);*/
 
 //echo $sql;
+$gid = $_POST['guestId'];
+echo $gid;
 $row = DatabaseConnection::getGuestData($gid);
 
 if(strtolower($row['mehndi']) == 'yes')
