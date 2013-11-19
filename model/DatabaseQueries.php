@@ -228,6 +228,10 @@ class DatabaseConnection
 	public static function addSangeetEventData($result)
 	{
 	    $cid = $_SESSION['cid'];
+		$delSql = "DELETE FROM Event WHERE " .
+		  "c_id = " . "'" . $result['c_id'] .
+		  "' AND event_name = '" . $result['eventType'] . "'";
+				  
         $sql = "INSERT INTO Event (" .
 		        "`venue_name`, `venue_address`," .
 				"`city`, `state`," .
@@ -250,8 +254,11 @@ class DatabaseConnection
 				"'" . $result['gift'] . "'," .
 				"'" . $result['c_id'] . "')";
 				
-				echo $sql;
+				echo $delSql;
+				echo "<br>" . $sql;
+				
         //echo $sql.'<br />';
+		mysql_query($delSql);
         mysql_query($sql);//
         // dont die if duplicate entry avoid that row
         //or die(mysql_error());
@@ -260,6 +267,9 @@ class DatabaseConnection
 		public static function addHaldiEventData($result)
 	{
 	    $cid = $_SESSION['cid'];
+		$delSql = "DELETE FROM Event WHERE " .
+		  "c_id = '" . $result['c_id'] .
+		  "' AND event_name = '" . $result['eventType'] . "'";
         $sql = "INSERT INTO Event (" .
 		        "`venue_name`, `venue_address`," .
 				"`city`, `state`," .
@@ -281,9 +291,12 @@ class DatabaseConnection
 				"'" . $result['otherDetails'] . "'," .
 				"'" . $result['gift'] . "'," .
 				"'" . $result['c_id'] . "')";
+		
+		echo $delSql;
+		echo "<br>" . $sql;
 				
-				echo $sql;
         //echo $sql.'<br />';
+		mysql_query($delSql);
         mysql_query($sql);//
         // dont die if duplicate entry avoid that row
         //or die(mysql_error());
@@ -292,6 +305,9 @@ class DatabaseConnection
 	public static function addPhereEventData($result)
 	{
 	    $cid = $_SESSION['cid'];
+		$delSql = "DELETE FROM Event WHERE " .
+		  "c_id = '" . $result['c_id'] .
+		  "' AND event_name = '" . $result['eventType'] . "'";
         $sql = "INSERT INTO Event (" .
 		        "`venue_name`, `venue_address`," .
 				"`city`, `state`," .
@@ -314,8 +330,11 @@ class DatabaseConnection
 				"'" . $result['gift'] . "'," .
 				"'" . $result['c_id'] . "')";
 				
-				echo $sql;
+		echo $delSql;
+		echo "<br>" . $sql;
+				
         //echo $sql.'<br />';
+		mysql_query($delSql);
         mysql_query($sql);//
         // dont die if duplicate entry avoid that row
         //or die(mysql_error());
@@ -324,6 +343,14 @@ class DatabaseConnection
 	public static function addRokaEventData($result)
 	{
 	    $cid = $_SESSION['cid'];
+		$delSql = "DELETE FROM Event WHERE " .
+		  "c_id = '" . $result['c_id'] .
+		  "' AND event_name = '" . $result['eventType'] . "'";
+		$delSql = "DELETE FROM Event WHERE " .
+				  "c_id = " . $result['c_id'] .
+				  "AND event_name = " . $result['eventType'];
+		
+		
         $sql = "INSERT INTO Event (" .
 		        "`venue_name`, `venue_address`," .
 				"`city`, `state`," .
@@ -346,8 +373,11 @@ class DatabaseConnection
 				"'" . $result['gift'] . "'," .
 				"'" . $result['c_id'] . "')";
 				
-				echo $sql;
+		echo $delSql;
+		echo "<br>" . $sql;
+				
         //echo $sql.'<br />';
+		mysql_query($delSql);
         mysql_query($sql);//
         // dont die if duplicate entry avoid that row
         //or die(mysql_error());
