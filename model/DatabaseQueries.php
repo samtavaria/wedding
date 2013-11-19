@@ -228,7 +228,7 @@ class DatabaseConnection
 	public static function addSangeetEventData($result)
 	{
 	    $cid = $_SESSION['cid'];
-        $sql = "INSERT INTO event (" .
+        $sql = "INSERT INTO Event (" .
 		        "`venue_name`, `venue_address`," .
 				"`city`, `state`," .
 				"`zipcode`, `parking`," . 
@@ -260,7 +260,7 @@ class DatabaseConnection
 		public static function addHaldiEventData($result)
 	{
 	    $cid = $_SESSION['cid'];
-        $sql = "INSERT INTO event (" .
+        $sql = "INSERT INTO Event (" .
 		        "`venue_name`, `venue_address`," .
 				"`city`, `state`," .
 				"`zipcode`, `parking`," . 
@@ -292,7 +292,7 @@ class DatabaseConnection
 	public static function addPhereEventData($result)
 	{
 	    $cid = $_SESSION['cid'];
-        $sql = "INSERT INTO event (" .
+        $sql = "INSERT INTO Event (" .
 		        "`venue_name`, `venue_address`," .
 				"`city`, `state`," .
 				"`zipcode`, `parking`," . 
@@ -324,7 +324,7 @@ class DatabaseConnection
 	public static function addRokaEventData($result)
 	{
 	    $cid = $_SESSION['cid'];
-        $sql = "INSERT INTO event (" .
+        $sql = "INSERT INTO Event (" .
 		        "`venue_name`, `venue_address`," .
 				"`city`, `state`," .
 				"`zipcode`, `parking`," . 
