@@ -24,7 +24,7 @@
         Create Free Wedding Websites | Sites with Indian Designs | </title>
 </head>
 
-<body class="home" background="media/website_images/emailer.jpg" style="background-repeat: no-repeat;-webkit-background-size: cover;
+<body class="home" background="images/emailer.jpg" style="background-repeat: no-repeat;-webkit-background-size: cover;
         -moz-background-size: cover;
         -o-background-size: cover;
         background-size: cover;">
