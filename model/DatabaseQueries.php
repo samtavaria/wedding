@@ -40,7 +40,6 @@ class DatabaseConnection
         $sql = "SELECT Bride.b_first_name, Bride.b_middle_name, Bride.b_last_name, Groom.g_first_name, Groom.g_middle_name, Groom.g_last_name from  Bride, Groom where ";
         $sql .= "Bride.c_id =" . "'$cid'" ;
         $sql .= "and Groom.c_id =" . "'$cid'" ;
-		echo $sql . "<br>";
 
         $result = mysql_query($sql);
 
@@ -197,17 +196,14 @@ class DatabaseConnection
 	{
 		$cid = $_SESSION['cid'];
 		$sql = "SELECT * from website_basic_info where c_id =" . "'$cid'";
-		
+
 		$result = mysql_query($sql);
 
         if (!$result) {
             echo "Could not successfully run query ($sql) from DB: " . mysql_error();
             exit;
         }
-		if (mysql_num_rows($result) == 0) {
-            echo "No rows found, nothing to print so am exiting";
-            exit;
-        }
+
 		
 		$row = mysql_fetch_assoc($result);
 		return $row;
