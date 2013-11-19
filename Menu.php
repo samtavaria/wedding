@@ -56,6 +56,7 @@ if (!isset($_SESSION['cid']) || empty($_SESSION['cid'])) {
                 <li><a href="GuestManagement.php"><img src="images/slideshow_large_2.jpg" title="Guest Management" wdith="259" height="194" /></a></li>
                 <li><a href="personal_website/index.php"><img src="images/slideshow_large_3.jpg" title="Personal Website" wdith="203" height="203" /></a></li>
                 <li><a href="survey.html"><img src="images/slideshow_large_4.jpg" title="Survey" wdith="259" height="194" /></a></li>
+                <li><a href="email_page.php"><img src="images/slideshow_large_5.jpg" title="Email Guest Invitations" wdith="259" height="194" /></a></li>
             </ul>
         </div>
 
