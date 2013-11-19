@@ -41,7 +41,6 @@ class DatabaseConnection
         $sql .= "Bride.c_id =" . "'$cid'" ;
         $sql .= "and Groom.c_id =" . "'$cid'" ;
 
-
         $result = mysql_query($sql);
 
         if (!$result) {
@@ -197,17 +196,14 @@ class DatabaseConnection
 	{
 		$cid = $_SESSION['cid'];
 		$sql = "SELECT * from website_basic_info where c_id =" . "'$cid'";
-		
+
 		$result = mysql_query($sql);
 
         if (!$result) {
             echo "Could not successfully run query ($sql) from DB: " . mysql_error();
             exit;
         }
-		if (mysql_num_rows($result) == 0) {
-            echo "No rows found, nothing to print so am exiting";
-            exit;
-        }
+
 		
 		$row = mysql_fetch_assoc($result);
 		return $row;
@@ -428,7 +424,7 @@ class DatabaseConnection
 
     public static function insertGroomtable($cid, $g_first_name, $g_middle_name, $g_last_name, $g_father_name, $g_mother_name)
     {
-        $sql3="INSERT into groom (c_id, g_first_name, g_middle_name, g_last_name, g_father_name, g_mother_name)";
+        $sql3="INSERT into Groom (c_id, g_first_name, g_middle_name, g_last_name, g_father_name, g_mother_name)";
         $result3=mysql_query($sql3);
         return $result3;
 
@@ -436,7 +432,7 @@ class DatabaseConnection
 
     public static function insertBridetable($cid, $b_first_name, $b_middle_name, $b_last_name, $b_father_name, $b_mother_name)
     {
-        $sql4="INSERT into bride (c_id,b_first_name, b_middle_name, b_last_name, b_father_name, b_mother_name)";
+        $sql4="INSERT into Bride (c_id,b_first_name, b_middle_name, b_last_name, b_father_name, b_mother_name)";
         $result4=mysql_query($sql4);
         return $result4;
 
