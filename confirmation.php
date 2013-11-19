@@ -56,12 +56,12 @@ $cid = mysql_insert_id();
 $result2=mysql_query($sql2);
 
 
-$sql3="INSERT INTO {$tbl_name3} (c_id, g_first_name, g_middle_name, g_last_name, g_father_name, g_mother_name)VALUES('$cid', '$g_first_name', '$g_middle_name', '$g_last_name', '$g_father_name', '$g_mother_name')";
-$result3=mysql_query($sql3);
+$sql3="INSERT INTO {$tbl_name3} (c_id, g_id, g_first_name, g_middle_name, g_last_name, g_father_name, g_mother_name)VALUES('$cid','', '$g_first_name', '$g_middle_name', '$g_last_name', '$g_father_name', '$g_mother_name')";
+    $result3=mysql_query($sql3);
 
 
 
-$sql4="INSERT INTO {$tbl_name4} (c_id,b_first_name, b_middle_name, b_last_name, b_father_name, b_mother_name)VALUES('$cid','$b_first_name', '$b_middle_name', '$b_last_name', '$b_father_name', '$b_mother_name')";
+$sql4="INSERT INTO {$tbl_name4} (c_id, b_id, b_first_name, b_middle_name, b_last_name, b_father_name, b_mother_name)VALUES('$cid','','$b_first_name', '$b_middle_name', '$b_last_name', '$b_father_name', '$b_mother_name')";
 $result4=mysql_query($sql4);
 
 
