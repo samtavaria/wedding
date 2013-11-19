@@ -40,7 +40,7 @@ class DatabaseConnection
         $sql = "SELECT Bride.b_first_name, Bride.b_middle_name, Bride.b_last_name, Groom.g_first_name, Groom.g_middle_name, Groom.g_last_name from  Bride, Groom where ";
         $sql .= "Bride.c_id =" . "'$cid'" ;
         $sql .= "and Groom.c_id =" . "'$cid'" ;
-
+		echo $sql . "<br>";
 
         $result = mysql_query($sql);
 
@@ -428,7 +428,7 @@ class DatabaseConnection
 
     public static function insertGroomtable($cid, $g_first_name, $g_middle_name, $g_last_name, $g_father_name, $g_mother_name)
     {
-        $sql3="INSERT into groom (c_id, g_first_name, g_middle_name, g_last_name, g_father_name, g_mother_name)";
+        $sql3="INSERT into Groom (c_id, g_first_name, g_middle_name, g_last_name, g_father_name, g_mother_name)";
         $result3=mysql_query($sql3);
         return $result3;
 
@@ -436,7 +436,7 @@ class DatabaseConnection
 
     public static function insertBridetable($cid, $b_first_name, $b_middle_name, $b_last_name, $b_father_name, $b_mother_name)
     {
-        $sql4="INSERT into bride (c_id,b_first_name, b_middle_name, b_last_name, b_father_name, b_mother_name)";
+        $sql4="INSERT into Bride (c_id,b_first_name, b_middle_name, b_last_name, b_father_name, b_mother_name)";
         $result4=mysql_query($sql4);
         return $result4;
 
