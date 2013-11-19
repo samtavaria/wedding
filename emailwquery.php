@@ -1,7 +1,9 @@
 <?php
-//require '/Applications/MAMP/htdocs/PHPMailer/PHPMailerAutoload.php';
+//require '/Applications/MAMP/htdocs/PHPMailer/PHPMailerAutoload.php'
 require 'phpmail/PHPMailerAutoload.php';
+include_once('model/PersistentDatabaseConnection.php');
 
+//if (!$link = mysql_connect(':/Applications/MAMP/tmp/mysql/mysql.sock', 'root', 'root')) {
 if (!$link = mysql_connect(':/Applications/MAMP/tmp/mysql/mysql.sock', 'root', 'root')) {
     echo 'Could not connect to mysql';
     exit;
