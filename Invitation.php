@@ -122,7 +122,7 @@ $position1 = explode(',', $position['all_positions']);
         </div>
         <input type="hidden" id="myCss" name="myCss">
         <input type="submit" value="Save">
-        <img src="media/invitation_card_icons/1.jpeg" id="library_img" style= "position: absolute;
+        <img src="media/invitation_card_icons/image_1.jpeg" id="library_img" style= "position: absolute;
             top: <?php echo $position1[6]; ?> ;left: <?php echo $position1[7]; ?>">
 
     </form>
