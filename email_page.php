@@ -60,15 +60,15 @@
 ?>
 
 <br><br><br>
-
+<!--other radio buttons removed until we add functionality for email to send to each separate event.-->
 <div style="float: left; margin-left: 45%">
     <form method="POST" action="emailwquery.php" onsubmit="return formValidate();">
     Invite Guests According to Guest Lists:<br><br/>
         <input type="radio" name="emails" value="radio1">All Events they are Invited To<br>
-        <input type="radio" name="emails" value="radio2">Event1<br>
-        <input type="radio" name="emails" value="radio3">Event2<br>
-        <input type="radio" name="emails" value="radio4">Event3<br>
-        <input type="radio" name="emails" value="radio5">Event4<br><br>
+<!--//        <input type="radio" name="emails" value="radio2">Event1<br>
+//        <input type="radio" name="emails" value="radio3">Event2<br>
+//        <input type="radio" name="emails" value="radio4">Event3<br>
+//        <input type="radio" name="emails" value="radio5">Event4<br><br>-->
         <input type="submit" name="Submit1" value="Invite Guests to Events">
     </form>
 </div>
