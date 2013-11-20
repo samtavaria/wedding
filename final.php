@@ -49,7 +49,7 @@ if(!empty($_POST['reception']))
 $reception = $_POST['reception'];
 }
 
-$results=array($mehandi,$sangeet,$haldi,$wedding,$reception,$gid);
+$results=array($mehandi,$sangeet,$haldi,$wedding,$reception,$_POST['gid']);
 
 DatabaseConnection::updateRSVP($results);
 
@@ -64,7 +64,7 @@ DatabaseConnection::updateRSVP($results);
 <h1> Thank You! </h1>
 
 </head>
-<body>
+<body background = media/website_images/body.jpg>
 </body>
 </html>
 
