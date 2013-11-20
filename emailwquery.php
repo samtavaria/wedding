@@ -57,6 +57,7 @@ while ($row = mysql_fetch_assoc($result)) {
         echo 'couldnt send\n';
         echo 'mail error:' . $mail->ErrorInfo;
 	}
+    $mail->ClearAllRecipients();
 }
 
 //mysql_free_result($result);
