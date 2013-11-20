@@ -7,6 +7,7 @@
  * To change this template use File | Settings | File Templates.
  */
 include_once('model/PersistentDatabaseConnection.php');
+include_once('return_homepage.php');
 
 class GuestListView
 {

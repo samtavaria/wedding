@@ -6,7 +6,10 @@
  * Time: 3:19 PM
  * To change this template use File | Settings | File Templates.
  */
+
 session_start();
+include_once('return_homepage.php');
+
 if (!isset($_SESSION['cid']) || empty($_SESSION['cid'])) {
     echo " Your credentials are invalid or your session has timed out.<br /> Please login again to continue<br />";
     echo '<a href = "index.php">Login</a>';
@@ -49,13 +52,13 @@ if (!isset($_SESSION['cid']) || empty($_SESSION['cid'])) {
         </script>
     </head>
     <body background="images/background.jpg">
-    	<div id="heady">Start planning our D-Day...</div>
+    	<div id="heady">Start planning our Wedding Day...</div>
         <div id="images_hover_move" class="images_hover_move">
             <ul>
                 <li><a href="TemplateSelection.php"><img src="images/slideshow_large_1.jpg" title="Invitation Card Design" wdith="259" height="194" /></a></li>
                 <li><a href="GuestManagement.php"><img src="images/slideshow_large_2.jpg" title="Guest Management" wdith="259" height="194" /></a></li>
                 <li><a href="personal_website/index.php"><img src="images/slideshow_large_3.jpg" title="Personal Website" wdith="203" height="203" /></a></li>
-                <li><a href="survey.html"><img src="images/slideshow_large_4.jpg" title="Survey" wdith="259" height="194" /></a></li>
+                <li><a href="survey.php"><img src="images/slideshow_large_4.jpg" title="Survey" wdith="259" height="194" /></a></li>
                 <li><a href="email_page.php"><img src="images/slideshow_large_5.jpg" title="Email Guest Invitations" wdith="259" height="194" /></a></li>
             </ul>
         </div>

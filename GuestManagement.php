@@ -1,6 +1,7 @@
 <?php
 include_once('model/PersistentDatabaseConnection.php');
 include_once('GuestListView.php');
+include_once('return_homepage.php');
 ?>
 <html>
 

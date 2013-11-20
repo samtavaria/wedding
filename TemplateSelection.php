@@ -6,6 +6,7 @@ if (!isset($_SESSION['cid']) || empty($_SESSION['cid'])) {
     exit;
 }
 include_once('model/PersistentDatabaseConnection.php');
+include_once('return_homepage.php');
 DatabaseConnection::connectToDatabase();
 $backgrounds = DatabaseConnection::getAllSystemInvitationBackgrounds();
 ?>
