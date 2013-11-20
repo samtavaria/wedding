@@ -168,6 +168,33 @@
 					      "&eventType=Roka",
 				});
 			});
+			
+			$("#SaveButton4").click(function()
+			{
+				console.debug('here');
+				var welcome_text       = $("#welcome_text").val();
+				var how_met_text       = $("#how_met_text").val();
+				var proposal_text      = $("#proposal_text").val();
+				var wedding_party_text = $("#wedding_party_text").val();
+				var registry_text      = $("#registry_text").val();
+				var bio_for_him      = $("#bio_for_him").val();
+				var bio_for_her      = $("#bio_for_her").val();
+				var honeymoon_text     = $("#honeymoon_text").val();
+				var dataString = "welcome_text="  + welcome_text +
+								 "&how_met_text=" + how_met_text +
+								 "&proposal_text=" + proposal_text +
+								 "&wedding_party_text=" + wedding_party_text +
+								 "&registry_text=" + registry_text + 
+								 "&honeymoon_text=" + honeymoon_text +
+								 "&bio_for_him=" + bio_for_him +
+								 "&bio_for_her=" + bio_for_her;
+				console.debug('there');
+				$.ajax({
+					type: "POST",
+					url: "SaveWebsiteData.php",
+					data: dataString
+				});
+			});
 		});
 		
 		$("[name=fooby[2][]]").change(function(){
@@ -595,7 +622,55 @@ Whenever  you select or change a design template, the info stored in this form w
                              </form>
                            
                         </fieldset>
-                                          
+                         
+						<fieldset class="step">
+                           
+                           <form id="formElem4" name="formElem4" action="" method="post">
+                            <legend>PersonalData</legend>
+                            Location Details:
+                            <p>
+                                <label for="welcome_text">Welcome Text</label>
+                                <input id="welcome_text" name="Welcome Text" />
+                                <span class="tooltip">Message that welcomes guest on the main page</span>
+                                
+                            </p>
+                            <p>
+                                <label for="how_met_text">How You Met</label>
+                                <input id="how_met_text" name="How You Met" />
+                                
+                            </p>
+                            <p>
+                                <label for="proposal_text">Proposal Story</label>
+                                <input id="proposal_text" name="Proposal Story"/>
+                            </p>
+                            <p>
+                                <label for="wedding_party_text">Wedding Party</label>
+                                <input id="wedding_party_text" name="Wedding Party"/>
+                                 <span class="tooltip">List names, seperated by a ","</span>
+                            </p>
+                           <p>
+                                <label for="registry_text">Where We are Registerd</label>
+                                <input id="registry_text" name="Where We are Registered"/>   
+                            </p>
+                           <p>
+                                <label for="bio_for_him">Brief Bio for Him</label>
+                                <input id="bio_for_him" name="Brief Bio for Him"/>   
+                            </p>
+                           <p>
+                                <label for="bio_for_her">Brief Bio for Her</label>
+                                <input id="bio_for_her" name="Brief Bio for Her"/>   
+                            </p>
+						   <p>
+                                <label for="honeymoon_text">Honeymoon Details</label>
+                                <input id="honeymoon_text" name="Honeymoon Details"/>
+								<span class="tooltip">Where are you going, what you plan on doing there, etc</span>								
+                            </p>
+                            <p class="submit">
+                                <button id="SaveButton4" type="Button">Save</button>
+                            </p>
+                             </form>
+                           
+                        </fieldset>
                 </div>
                 <div id="navigation" style="display:none;">
                     <ul>
@@ -610,6 +685,9 @@ Whenever  you select or change a design template, the info stored in this form w
                         </li>
                         <li>
                             <a href="#">Roka</a>
+                        </li>
+						<li>
+                            <a href="#">PersonalData</a>
                         </li>
                     </ul>
                 </div>

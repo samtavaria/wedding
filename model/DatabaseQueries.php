@@ -124,6 +124,18 @@ class DatabaseConnection
         return $resultRow;
     }
 
+	public static function getSystemInvitationIcons()
+	{
+		$sql = "SELECT * FROM supplied_invitation_images;";
+		$result = mysql_query($sql);
+		$icons = array();
+        while($row = mysql_fetch_row($result)) {
+            $icons[] = $row;
+        }
+        return $icons;
+		
+	}
+	
     public static function updateCoupleInformationFromInvitation($coupleInfo) {
         $cid = $_SESSION['cid'];
         $bride = explode(' ', $coupleInfo['bride']);
@@ -192,7 +204,7 @@ class DatabaseConnection
         return $guest;
     }
 	
-		public static function getWebsiteData()
+	public static function getWebsiteData()
 	{
 		$cid = $_SESSION['cid'];
 		$sql = "SELECT * from website_basic_info where c_id =" . "'$cid'";
@@ -209,6 +221,24 @@ class DatabaseConnection
 		return $row;
 	}
 
+	public static function setWebsiteData($data)
+	{
+		$delSql = "DELETE FROM website_basic_info WHERE c_id='" . $data['c_id'] . "'";
+		$sql = "INSERT INTO website_basic_info (" .
+				"`c_id`, `welcome_text`, `how_met_text`," .
+				"`proposal_text`, `wedding_party_text`, ".
+				"`registry_text`, `honeymoon_text`)" .
+				"VALUES( " .
+				"'" . $data['c_id'] ."', '".$data['welcome_text'] ."', '" . $data['how_met_text'] 
+				. "', '" . $data['proposal_text'] . "', '" . $data['wedding_party_text'] ."', '".$data['registry_text']."', '".$data['honeymoon_text']."')";
+				
+		echo $delSql . "<br><br>";
+		echo $sql;
+		
+		mysql_query($delSql);
+		mysql_query($sql);
+	}
+	
 	public static function getEventData()
 	{
 		$cid = $_SESSION['cid'];
