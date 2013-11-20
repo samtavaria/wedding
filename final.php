@@ -17,7 +17,7 @@ $conn = mysql_connect("team12.c28dqpxgij9r.us-east-1.rds.amazonaws.com", "team12
 
 
 //if these $_['guest_id'] and ... is not null, only then store the foll. values
-$gid= $_SESSION['gid'];
+//$gid= $_SESSION['gid'];
 
 $mehandi = '';
 $sangeet = '';

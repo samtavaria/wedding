@@ -1,11 +1,11 @@
 <?php
 
 include_once('model/PersistentDatabaseConnection.php');
-$gid=$_POST['gid'];
 
-$_SESSION['gid']=$gid;
+$gid =  substr($_SERVER['REQUEST_URI'],strpos($_SERVER['REQUEST_URI'],'=') +1);
+//$_SESSION['gid']=$gid;
 
-echo "guest_id from URL".$gid."---------------------->";
+//echo "guest_id from URL".$gid."---------------------->";
 
 $conn = mysql_connect("team12.c28dqpxgij9r.us-east-1.rds.amazonaws.com", "team12wedding", "team_12_wedding");
 
@@ -132,7 +132,7 @@ return true;
 
 	<p align="center"><b>Note:</b> Please select 'Yes' or 'No' for the following events to RSVP:</p>
 
-<form name="rsvp" id="rsvp" method="post" action="final.php" onsubmit="return check();">
+<form name="rsvp" id="rsvp" method="POST" action="final.php" onsubmit="return check();">
 
 
 <?php
@@ -141,7 +141,7 @@ $sql = mysql_query($query) or die(mysql_error());
 $row = mysql_fetch_assoc($sql);*/
 
 //echo $sql;
-$gid = $_POST['guestId'];
+
 echo $gid;
 $row = DatabaseConnection::getGuestData($gid);
 

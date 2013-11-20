@@ -52,7 +52,7 @@ while ($row = mysql_fetch_assoc($result)) {
     $mail->Subject = 'Event Invitation';
     $mail->Body = "Dear $first $nameguest, You have been invited to a wedding event! 
     Use the guest id: $c_id$guestid to RSVP using the link below:
-    http://localhost:8083/rsvp_link.php";
+    http://localhost:8083/wedding/rsvp_page.php?guest_id={$guestid}";
     if(!$mail->send()){
         echo 'couldnt send\n';
         echo 'mail eror:' . $mail->ErrorInfo;
