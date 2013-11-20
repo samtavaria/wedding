@@ -77,13 +77,13 @@
 				}
 			});		
 
-			$('#roka_cloth').change(function(e) {
-				if ($(this).val() === "roka_Other") {
-					$("#roka_mySelect").show();
+			$('#Mehndi_cloth').change(function(e) {
+				if ($(this).val() === "Mehndi_Other") {
+					$("#Mehndi_mySelect").show();
 				}
 				else
 				{
-					 $("#roka_mySelect").hide();
+					 $("#Mehndi_mySelect").hide();
 				}
 			});	
 			
@@ -129,8 +129,11 @@
 				$.ajax({
 					type: "POST",
 					url: "SaveSangeet.php",
+                    success: alert("Data Saved Successfully"),
 					data: commonDetails +
-					      "&eventType=Sangeet",
+					      "&eventType=Sangeet"
+
+
 				});
 			});
 			
@@ -141,8 +144,10 @@
 				$.ajax({
 					type: "POST",
 					url: "SaveSangeet.php",
+                    success: alert("Data Saved Successfully"),
 					data: commonDetails +
 					      "&eventType=Haldi",
+
 				});
 			});
 			
@@ -152,20 +157,24 @@
 				$.ajax({
 					type: "POST",
 					url: "SavePhere.php",
+                    success: alert("Data Saved Successfully"),
 					data: commonDetails +
 					      "&eventType=Phere",
+
 				});
 			});
 			
 			$("#SaveButton3").click(function()
 			{
-				var commonDetails = getCommonDetailsFor("#roka");
+				var commonDetails = getCommonDetailsFor("#Mehndi");
 			
 				$.ajax({
 					type: "POST",
 					url: "SaveRoka.php",
+                    success: alert("Data Saved Successfully"),
 					data: commonDetails +
-					      "&eventType=Roka",
+					      "&eventType=Mehndi"
+
 				});
 			});
 			
@@ -192,6 +201,7 @@
 				$.ajax({
 					type: "POST",
 					url: "SaveWebsiteData.php",
+                    success: alert("Data Saved Successfully"),
 					data: dataString
 				});
 			});
@@ -537,31 +547,31 @@ Whenever  you select or change a design template, the info stored in this form w
                         <fieldset class="step">
                            
                            <form id="formElem3" name="formElem3" action="" method="post">
-                            <legend>Roka</legend>
+                            <legend>Mehndi</legend>
                             Location Details:
                             <p>
-                                <label for="roka_loc">Name Of Location</label>
-                                <input id="roka_loc" name="Name Of Location" />
+                                <label for="Mehndi_loc">Name Of Location</label>
+                                <input id="Mehndi_loc" name="Name Of Location" />
                                 <span class="tooltip">i.e. Hyatt Grand, Washington D.C., The Jain Residence, the Diamond Bar Community Center. Some venues have multiple spaces, so you might you want to include the name of the area you’ll be in i.e. The Grand Ballroom, the Sunset Terrace etc. </span>
                                 
                             </p>
                             <p>
-                                <label for="roka_add">Address</label>
-                                <input id="roka_add" name="Address" />
+                                <label for="Mehndi_add">Address</label>
+                                <input id="Mehndi_add" name="Address" />
                                 
                             </p>
                             <p>
-                                <label for="roka_city">City</label>
-                                <input id="roka_city" name="City"/>
+                                <label for="Mehndi_city">City</label>
+                                <input id="Mehndi_city" name="City"/>
                             </p>
                             <p>
-                                <label for="roka_state">State</label>
-                                <input id="roka_state" name="State"/>
+                                <label for="Mehndi_state">State</label>
+                                <input id="Mehndi_state" name="State"/>
                                  <span class="tooltip">If you prefer, spell out the whole state name (as opposed to the abbreviation)</span>
                             </p>
                            <p>
-                                <label for="roka_zipcode">Zipcode</label>
-                                <input id="roka_zipcode" name="Zipcode"/>
+                                <label for="Mehndi_zipcode">Zipcode</label>
+                                <input id="Mehndi_zipcode" name="Zipcode"/>
                                  
                             </p>
                             <p>
@@ -579,41 +589,41 @@ Whenever  you select or change a design template, the info stored in this form w
                             
                             <p>
                                 <label >Any Other Location Details For Your Guest?</label>
-                                <input id="roka_other_det" name="roka_other_det"/>
+                                <input id="Mehndi_other_det" name="Mehndi_other_det"/>
                                 <span class="tooltip">This could include things like gate codes, special instructions if the directions could be confusing</span>
                             </p>
                             
                             <p>
                                 <label >The Date:</label>
-                                <input id="roka_date" name="roka_date"/>
+                                <input id="Mehndi_date" name="Mehndi_date"/>
                                 <span class="tooltip">Please enter the date as you want it to appear i.e. 10/26/13.The twenty-sixth of October,Two thousand and thirteen,October 26, 2013 </span>
                             </p>
                             
                             <p>
                                 <label >Program Details:</label>
-                                <input id="roka_det" name="roka_det"/>
+                                <input id="Mehndi_det" name="Mehndi_det"/>
                                 <span class="tooltip">i.e. Dinner... 7:30pm Program... 8:00pm</span>
                             </p>
                             
                             <p>
                                 <label >Gift Details:</label>
-                                <input id="roka_gift" name="roka_gift"/>
+                                <input id="Mehndi_gift" name="Mehndi_gift"/>
                                 <span class="tooltip">i.e. No boxed gifts, No gifts please</span>
                             </p>
                             
                             <p>
-                                <label for="roka_cloth">Clothing Attire Details :</label>
-                                <select id="roka_cloth" name="roka_cloth">
-                                    <option value="roka_Indian" selected>Indian</option>
-                                    <option value="roka_Non-Indian">Non-Indian</option>
-                                    <option value="roka_Casual">Casual</option>
-                                    <option value="roka_Formal">Formal</option>
-                                    <option value="roka_Other">Other</option>   
+                                <label for="Mehndi_cloth">Clothing Attire Details :</label>
+                                <select id="Mehndi_cloth" name="Mehndi_cloth">
+                                    <option value="Mehndi_Indian" selected>Indian</option>
+                                    <option value="Mehndi_Non-Indian">Non-Indian</option>
+                                    <option value="Mehndi_Casual">Casual</option>
+                                    <option value="Mehndi_Formal">Formal</option>
+                                    <option value="Mehndi_Other">Other</option>   
                                 </select>
                                 
                                    
-  								<span id="roka_mySelect" style="display:none;"> <label>Please describe</label>
-                                <input id="roka_cloth_other" name="roka_cloth_other"/></span>
+  								<span id="Mehndi_mySelect" style="display:none;"> <label>Please describe</label>
+                                <input id="Mehndi_cloth_other" name="Mehndi_cloth_other"/></span>
 
                             </p>
                             <p class="submit">
@@ -684,7 +694,7 @@ Whenever  you select or change a design template, the info stored in this form w
                             <a href="#">Phere</a>
                         </li>
                         <li>
-                            <a href="#">Roka</a>
+                            <a href="#">Mehndi</a>
                         </li>
 						<li>
                             <a href="#">PersonalData</a>
