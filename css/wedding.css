@@ -11,3 +11,20 @@
     float:left;
 
 }
+#home
+{
+    position:absolute;
+    right:35px;
+    width:15px;
+    height:15px;
+    top:15px;
+}
+
+#logout
+{
+    position:absolute;
+    right:15px;
+    width:15px;
+    height:15px;
+    top:15px;
+}
