@@ -1,7 +1,7 @@
 <?php
 
 include('config.php');
-
+echo "<html><body background = media/website_images/body.jpg>";
 // Passkey that got from link
 $passkey=$_GET['passkey'];
 $tbl_name1="temp_members_db";
@@ -80,3 +80,4 @@ else {
 echo "Wrong Confirmation code";
 }
 }
+echo "</body></html>";

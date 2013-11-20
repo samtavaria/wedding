@@ -14,7 +14,7 @@ return true;
 
 </SCRIPT>
 </head>
-<body bgcolor="F5B66E">
+<body background = "media/website_images/body.jpg">
 
 <table width="350" border="0" align="center" cellpadding="0" cellspacing="0">
 <tr>

@@ -51,11 +51,11 @@ while ($row = mysql_fetch_assoc($result)) {
     $mail->addAddress($email, 'guest');
     $mail->Subject = 'Event Invitation';
     $mail->Body = "Dear $first $nameguest, You have been invited to a wedding event! 
-    Use the guest id: $c_id$guestid to RSVP using the link below:
+    Please Click on the link below to rsvp.
     http://localhost:8083/wedding/rsvp_page.php?guest_id={$guestid}";
     if(!$mail->send()){
         echo 'couldnt send\n';
-        echo 'mail eror:' . $mail->ErrorInfo;
+        echo 'mail error:' . $mail->ErrorInfo;
 	}
 }
 
@@ -89,7 +89,7 @@ h1 {
 Create Free Wedding Websites | Sites with Indian Designs | </title>
 </head>
 
-<body class="home" background="images/emailer.jpg" style="background-repeat: no-repeat;-webkit-background-size: cover;
+<body class="home" background="media/website_images/body.jpg" style="background-repeat: no-repeat;-webkit-background-size: cover;
 -moz-background-size: cover;
 -o-background-size: cover;
 background-size: cover;">

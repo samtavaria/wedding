@@ -128,7 +128,7 @@ return true;
 <title>RSVP</title>	
 </head>
 
-<body>
+<body background = "media/website_images/body.jpg">
 
 	<p align="center"><b>Note:</b> Please select 'Yes' or 'No' for the following events to RSVP:</p>
 
@@ -142,7 +142,7 @@ $row = mysql_fetch_assoc($sql);*/
 
 //echo $sql;
 
-echo $gid;
+//echo $gid;
 $row = DatabaseConnection::getGuestData($gid);
 
 if(strtolower($row['mehndi']) == 'yes')
@@ -198,6 +198,7 @@ Reception:<br/>
 ?>
 
 <div align="center"><br>
+    <input type = "hidden" name = "gid" value = "<?php echo $gid; ?>" />
 <input type="submit" value="submit" name="submit"/>
 </div>
 </form>

@@ -149,6 +149,9 @@ include_once('GuestListView.php');
     <div id="GuestUpload">
         <p>Please <a href="GuestDatabaseTemplate/guestData.csv">Click here</a> to download the fie where you can add
             your guest data</p>
+        <p> Please Note: While editing the file<br />1.If using Microsoft Excel pleade do not change the format while saving the file even though excel may ask you to do so<br />
+            2.If using another editor like Libre Office or Open Office, click on seperate by comma If given such an option.
+        </p>
 
         <form method="POST" action="GuestDatabaseUpload.php" enctype="multipart/form-data">
             Select File: <input type="file" name="guestDatabase" id="guestDatabase"/> <br/>

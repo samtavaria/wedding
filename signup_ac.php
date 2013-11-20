@@ -2,7 +2,7 @@
 
 include('config.php');
 require_once 'swift/lib/swift_required.php';
-
+echo "<html><body background = media/website_images/body.jpg>";
 // table name
 $tbl_name="temp_members_db";
 
@@ -45,7 +45,7 @@ $transport = Swift_SmtpTransport::newInstance('smtp.gmail.com', 465, "ssl")
 
 $mailer = Swift_Mailer::newInstance($transport);
 
-$message = Swift_Message::newInstance('Test Subject')
+$message = Swift_Message::newInstance('Online Wedding Management System Account Registration')
   ->setFrom(array('onlineweddingusc@gmail.com' => 'OnlineWedding'))
   ->setTo(array($username))
   ->setBody("http://localhost:8083/wedding/confirmation.php?passkey=$confirm_code");
@@ -57,7 +57,7 @@ $res=1;
 
 // if not found
 else {
-echo "Not found your email in our database";
+echo "Can't found your email in our database";
 }
 
 // if your email succesfully sent
@@ -67,4 +67,4 @@ echo "Your Confirmation link Has Been Sent To Your Email Address.";
 else {
 echo "Cannot send Confirmation link to your e-mail address";
 }
-?>
+echo "</body></html>";
