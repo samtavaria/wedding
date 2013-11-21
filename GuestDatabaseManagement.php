@@ -8,6 +8,7 @@
  */
 
 include_once('model/PersistentDatabaseConnection.php');
+include_once('return_homepage.php');
 class GuestDatabaseManagement {
 
     public function convertCsvFileToDatabase ($file_name) {

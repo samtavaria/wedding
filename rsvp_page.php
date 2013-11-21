@@ -1,7 +1,7 @@
 <?php
 
 include_once('model/PersistentDatabaseConnection.php');
-
+include_once('return_homepage.php');
 $gid =  substr($_SERVER['REQUEST_URI'],strpos($_SERVER['REQUEST_URI'],'=') +1);
 //$_SESSION['gid']=$gid;
 
