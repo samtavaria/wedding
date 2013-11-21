@@ -4,9 +4,9 @@
 #home
 {
     position:absolute;
-    right:55px;
-    width:30px;
-    height:30px;
+    right:95px;
+    width:80px;
+    height:80px;
     top:15px;
 }
 
@@ -14,8 +14,8 @@
 {
     position:absolute;
     right:15px;
-    width:30px;
-    height:30px;
+    width:80px;
+    height:80px;
     top:15px;
 }
 </style>
