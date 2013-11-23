@@ -2,7 +2,20 @@
 
 include('config.php');
 require_once 'swift/lib/swift_required.php';
+require_once('recaptchalib.php');
 echo "<html><body background = media/website_images/body.jpg>";
+
+$privatekey = "6LeSuuoSAAAAAHz086OOhNo7kbzz_JvzqcKk3Gn5";
+$resp = recaptcha_check_answer ($privatekey,
+    $_SERVER["REMOTE_ADDR"],
+    $_POST["recaptcha_challenge_field"],
+    $_POST["recaptcha_response_field"]);
+
+if (!$resp->is_valid) {
+    // What happens when the CAPTCHA was entered incorrectly
+    die ("The CAPTCHA wasn't entered correctly. Please Go back and try it again.");
+}
+
 // table name
 $tbl_name="temp_members_db";
 
