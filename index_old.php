@@ -2,13 +2,6 @@
 <html>
 <head>
     <style type="text/css">
-
-@media {
-    .container{
-    width: 20%;
-    }
-}
-
         h1 {
             font-family: forte, cursive, Serif;
         }
@@ -17,11 +10,12 @@
             color: black
         }
 
-
+        ;
         h1 {
             font-size: 100%
         }
-;
+
+        ;
 
 
     </style>
@@ -62,7 +56,7 @@
 
 
 <div align='center'>
-    <h1><font size='100px'>Welcome to Phere</font>
+    <h1><font size='100px'>PHERE.COM</font>
 
         <h1>
 
@@ -70,20 +64,33 @@
 </div>
 <br><br><br>
 
-<link href="/dist/css/bootstrap.css" rel="stylesheet">
-<h2 style="margin-left:45%;"class="form-signin-heading">Login</h2>
+
+<div style="float: left; width: 90%">
+<span style="float:left; margin-left:500px">
+  <img src="media/website_images/website.jpg" style="width:150px; height:150px; border: none;"/>
+  <br/>
+  <p style="font-family: forte, cursive, Serif;">WEBSITE DESIGN</p>
+</span>
+
+
+<span style="float:left; margin-left:250px">
+  <img src="media/website_images/invitation.jpg" style="width:150px; height:150px; border: none;"/>
+  <br/>
+<p style="font-family: forte, cursive, Serif;">INVITATION DESIGN</p>
+</span>
+</div>
 <div style="float: left; margin-left: 45%">
     <form method="POST" action="LoginProcess.php" onsubmit="return formValidate();">
         Username:<br/>
-        <input type="text" class = "form-control"id="username" placeholder = "email" name="username">
-       Password: <br/>
-        <input type="password" class = "form-control"id="password" placeholder ="password"name="password"><br/>
-        <button style="padding:inherit; background-color:#580000; border-color:black;" class="btn btn-lg btn-primary btn-block" type="submit">Sign In</button>
-        </form>
-<br style="margin: 10px 0;">
-        <form action="signup.php">
-        <button style="padding:inherit; top-padding:5px;background-color:#580000; border-color:black;" class="btn btn-lg btn-primary btn-block" type="submit">Register</button></form>
-    
+        <input type="text" id="username" name="username"><br/>
+        Password: <br/>
+        <input type="password" id="password" name="password"><br/>
+        <input type="submit" value="submit">
+        <br>
+        <pre><a href="signup.php">
+<h2>Click here to create a new account</a></h2></pre>
+    </form>
 </div>
 </body>
+
 </html>
