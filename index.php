@@ -83,7 +83,10 @@
 <br style="margin: 10px 0;">
         <form action="signup.php">
         <button style="padding:inherit; top-padding:5px;background-color:#580000; border-color:black;" class="btn btn-lg btn-primary btn-block" type="submit">Register</button></form>
-    
+
+<br>
+<a href="forgot.php" style="color:black"> <h2>Forgot Password? Click here</h2></a>
 </div>
+
 </body>
 </html>
