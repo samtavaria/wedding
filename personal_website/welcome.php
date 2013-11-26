@@ -9,7 +9,7 @@ $basic_data = DatabaseConnection::getWebsiteData();
 <h3 class="sectionTitle">Welcome</h3>
 <div class="contentImg">
 	<div id="imgWrap">
-	    <p> Picture of Couple goes here </p>
+	    <p> <img src="<?php echo "/media/website_images/" . $basic_data['img_path'] ?>" alt="Image of Couple" height="300" width="300"> <br></p>
 		
 	</div>
 </div>

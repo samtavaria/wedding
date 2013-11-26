@@ -8,6 +8,7 @@ include_once('return_homepage.php');
         <link rel="stylesheet" href="css/style.css" type="text/css" media="screen"/>
 		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
         <script type="text/javascript" src="javascript/sliding.form.js"></script>
+		<script type="text/javascript" src="javascript/AjaxFileUploaderV2.1/ajaxfileupload.js"></script>
         <script type="text/javascript">
 				
 		$(document).ready(function() {
@@ -200,14 +201,67 @@ include_once('return_homepage.php');
 								 "&honeymoon_text=" + honeymoon_text +
 								 "&bio_for_him=" + bio_for_him +
 								 "&bio_for_her=" + bio_for_her;
-				console.debug('there');
+				console.debug(dataString);
 				$.ajax({
 					type: "POST",
 					url: "SaveWebsiteData.php",
-                    success: alert("Data Saved Successfully"),
 					data: dataString
 				});
+				
+				ajaxFileUpload();
+				console.debug("OVER HERE");
 			});
+			
+			function ajaxFileUpload()
+			{
+				//starting setting some animation when the ajax starts and completes
+				$("#loading")
+				.ajaxStart(function(){
+					$(this).show();
+				})
+				.ajaxComplete(function(){
+					$(this).hide();
+				});
+				
+				/*
+					prepareing ajax file upload
+					url: the url of script file handling the uploaded files
+								fileElementId: the file type of input element id and it will be the index of  $_FILES Array()
+					dataType: it support json, xml
+					secureuri:use secure protocol
+					success: call back function when the ajax complete
+					error: callback function when the ajax failed
+				*/
+				$.ajaxFileUpload
+				(
+					{
+						url:'saveUserWebsiteImage.php', 
+						secureuri:false,
+						fileElementId:'fileToUpload',
+						dataType: 'json',
+						success: function (data, status)
+						{
+							if(typeof(data.error) != 'undefined')
+							{
+								if(data.error != '')
+								{
+									console.debug(data.error);
+								}else
+								{
+									console.debug(data.msg);
+								}
+							}
+						},
+						error: function (data, status, e)
+						{
+							console.debug(e);
+						}
+					}
+				)
+				
+				return false;
+
+			} 
 		});
 		
 		$("[name=fooby[2][]]").change(function(){
@@ -643,42 +697,48 @@ Whenever  you select or change a design template, the info stored in this form w
                             Location Details:
                             <p>
                                 <label for="welcome_text">Welcome Text</label>
-                                <input id="welcome_text" name="Welcome Text" />
+                                <textarea id="welcome_text" name="Welcome Text" rows="5" cols="20" wrap="physical"></textarea>
                                 <span class="tooltip">Message that welcomes guest on the main page</span>
                                 
                             </p>
                             <p>
                                 <label for="how_met_text">How You Met</label>
-                                <input id="how_met_text" name="How You Met" />
-                                
+                                <textarea id="how_met_text" name="How You Met" rows="5" cols="20" wrap="physical"></textarea>
                             </p>
                             <p>
                                 <label for="proposal_text">Proposal Story</label>
-                                <input id="proposal_text" name="Proposal Story"/>
+								<textarea id="proposal_text" name="Proposal Story" rows="5" cols="20" wrap="physical"></textarea>
                             </p>
                             <p>
                                 <label for="wedding_party_text">Wedding Party</label>
-                                <input id="wedding_party_text" name="Wedding Party"/>
-                                 <span class="tooltip">List names, seperated by a ","</span>
+								<textarea id="wedding_party_text" name="Wedding Party" rows="5" cols="20" wrap="physical"></textarea>
+                                <span class="tooltip">List names, seperated by a ","</span>
                             </p>
                            <p>
                                 <label for="registry_text">Where We are Registerd</label>
-                                <input id="registry_text" name="Where We are Registered"/>   
+								<textarea id="registry_text" name="Where We are Registered" rows="2" cols="20" wrap="physical"></textarea>
                             </p>
                            <p>
                                 <label for="bio_for_him">Brief Bio for Him</label>
-                                <input id="bio_for_him" name="Brief Bio for Him"/>   
+								<textarea id="bio_for_him" name="Brief Bio for Him" rows="5" cols="20" wrap="physical"></textarea>
                             </p>
                            <p>
-                                <label for="bio_for_her">Brief Bio for Her</label>
-                                <input id="bio_for_her" name="Brief Bio for Her"/>   
+                                <label for="bio_for_her">Brief Bio for Her</label>  
+								<textarea id="bio_for_her" name="Brief Bio for Her" rows="5" cols="20" wrap="physical"></textarea>
                             </p>
 						   <p>
                                 <label for="honeymoon_text">Honeymoon Details</label>
-                                <input id="honeymoon_text" name="Honeymoon Details"/>
+								<textarea id="honeymoon_text" name="Honeymoon Details" rows="5" cols="20" wrap="physical"></textarea>
 								<span class="tooltip">Where are you going, what you plan on doing there, etc</span>								
                             </p>
+							<p>
+								<label for="fileToUpload">Upload Photo</label>
+								<input id="fileToUpload" type="file" size="45" name="fileToUpload" accept="image/*"/>
+								<span class="tooltip">Accepts .gif, .jpeg, or .png image files</span>		
+							</p>
+							
                             <p class="submit">
+								<img id="loading" src="javascript/AjaxFileUploaderV2.1/loading.gif" style="display:none;">
                                 <button id="SaveButton4" type="Button">Save</button>
                             </p>
                              </form>
