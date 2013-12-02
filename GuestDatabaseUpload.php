@@ -20,5 +20,7 @@ if ($_FILES["guestDatabase"]["error"] > 0) {
     //echo 'We will let you know when your process is successful<br />';
     $guestDatabaseManagement->convertCsvFileToDatabase($guestDatabaseFile);
     echo 'Your guest Database has ben succesfully created<br />';
+    unlink($guestDatabaseFile);
+
 }
 echo '</body>';
