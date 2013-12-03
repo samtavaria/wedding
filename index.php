@@ -75,7 +75,7 @@
 <div style="float: left; margin-left: 45%">
     <form method="POST" action="LoginProcess.php" onsubmit="return formValidate();">
         Username:<br/>
-        <input type="text" class = "form-control"id="username" placeholder = "email" name="username">
+        <input type="text" class = "form-control"id="username" placeholder = "email" name="username"> <br />
        Password: <br/>
         <input type="password" class = "form-control"id="password" placeholder ="password"name="password"><br/>
         <button style="padding:inherit; background-color:#580000; border-color:black;" class="btn btn-lg btn-primary btn-block" type="submit">Sign In</button>
