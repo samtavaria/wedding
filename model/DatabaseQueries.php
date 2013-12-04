@@ -73,9 +73,13 @@ class DatabaseConnection
 
     }
 
+    //Deprecated
     public static function setInvitationBackground($cid, $background)
     {
 		// This will be deprecated, leave for now and add new functionality
+        if(empty($background)) {
+            return;
+        }
         $sql = "insert into css values ('', '" . $cid . "', '" . $background . "', '')";
         $result = mysql_query($sql);
 
@@ -534,7 +538,8 @@ class DatabaseConnection
 
     public static function updateUserSelectedImage($cid, $imagePath) {
         $sql = "replace into user_selected_images values( {$cid},'{$imagePath}', '{$imagePath}')";
-        mysql_query($sql);
+
+        mysql_query($sql) or die (mysql_error());
     }
 
     public static function getUserSelectedImage($cid) {

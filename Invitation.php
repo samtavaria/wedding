@@ -9,7 +9,9 @@ if (!isset($_SESSION['cid']) || empty($_SESSION['cid'])) {
 }
 $couple = DatabaseConnection::getCouple();
 //$customCss = base64_decode(DatabaseConnection::getCss());
-$backgroundImage = DatabaseConnection::getInvitationBackground($_SESSION['cid']);
+//$backgroundImage = DatabaseConnection::getInvitationBackground($_SESSION['cid']);
+$backgroundImageArray = DatabaseConnection::getUserSelectedImage($_SESSION['cid']);
+$backgroundImage = $backgroundImageArray['image_path'];
 $position = DatabaseConnection::getPosition();
 $position1 = explode(',', $position['all_positions']);
 //var_dump($position1);

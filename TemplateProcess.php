@@ -8,6 +8,8 @@ include_once('return_homepage.php');
  * Time: 9:06 PM
  * To change this template use File | Settings | File Templates.
  */
-var_dump($_POST);
-DatabaseConnection::setInvitationBackground($_SESSION['cid'], $_POST['background']);
+//echo $_POST['background'];exit;
+if(strpos($_POST['background'],'.jpeg') !== false) {
+DatabaseConnection::updateUserSelectedImage($_SESSION['cid'], $_POST['background']);
+}
 header("Location: Invitation.php");

@@ -9,6 +9,9 @@ include_once('model/PersistentDatabaseConnection.php');
 include_once('return_homepage.php');
 DatabaseConnection::connectToDatabase();
 $backgrounds = DatabaseConnection::getAllSystemInvitationBackgrounds();
+$currentBackgroundImageArray = DatabaseConnection::getUserSelectedImage($_SESSION['cid']);
+$currentBackgroundImage = $currentBackgroundImageArray['image_path'];
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -39,24 +42,29 @@ $backgrounds = DatabaseConnection::getAllSystemInvitationBackgrounds();
 
 	<?php
 
+
 		foreach($backgrounds as $key => $value)
 		{
+
+
 			?>
+
 			<img class="template_icon_selected" title=" <?php echo $value['name'] ?> " width="160" height="120"
-				src=" <?php echo $value['ico_path']; ?> " onmouseover=" <?php echo "showImage" . $key . "()"; ?>" />
+				src=" <?php echo $value['ico_path']; ?> " onmousedown=" <?php echo "showImage" . $key . "()"; ?>" />
 	<?php
 		}
 	?>
 
     <form action="TemplateProcess.php" method="POST" onSubmit="setBackground()">
-        <input type="hidden" id="background" name="background">
+        <input type="hidden" id="background" name="background" value = "none">
         <br /><br />
         <input type="submit" value="Submit">
     </form>
 
 </div>
 <div id="myPreview" style="float:left; width:60%">
-    <img src="" id="selectedBackground" width="640" heigth="480">
+    <img src="<?php echo $currentBackgroundImage;?>" id="selectedBackground" width="640" heigth="480">
+
 </div>
 
 </body>
