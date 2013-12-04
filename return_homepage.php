@@ -1,6 +1,11 @@
 <html>
 <head>
 <link rel="stylesheet" href="dist/css/bootstrap.css">
+    <style>
+        #bs-example-navbar-collapse-1 li a {
+            color: #f5f5f5;
+        }
+    </style>
 
 <nav style="border-color:black;background-color:#580000; color:yellow;"class="navbar navbar-default" role="navigation">
   <div class="navbar-header">

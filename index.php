@@ -77,12 +77,12 @@
         Username:<br/>
         <input type="text" class = "form-control"id="username" placeholder = "email" name="username"> <br />
        Password: <br/>
-        <input type="password" class = "form-control"id="password" placeholder ="password"name="password"><br/>
-        <button style="padding:inherit; background-color:#580000; border-color:black;" class="btn btn-lg btn-primary btn-block" type="submit">Sign In</button>
+        <input type="password" class = "form-control"id="password" placeholder ="password"name="password"><br/><br />
+        <button style="padding:inherit; background-color:#580000; border-color:black; color:#f5f5f5" class="btn btn-lg btn-primary btn-block" type="submit">Sign In</button>
         </form>
 <br style="margin: 10px 0;">
         <form action="signup.php">
-        <button style="padding:inherit; top-padding:5px;background-color:#580000; border-color:black;" class="btn btn-lg btn-primary btn-block" type="submit">Register</button></form>
+        <button style="padding:inherit; top-padding:5px;background-color:#580000; border-color:black;color: #f5f5f5" class="btn btn-lg btn-primary btn-block" type="submit">Register</button></form>
 
 <br>
 <a href="forgot.php" style="color:black"> <h2>Forgot Password? Click here</h2></a>
