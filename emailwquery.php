@@ -51,6 +51,7 @@ while ($row = mysql_fetch_assoc($result)) {
     $first = $row['first_name'];
     $mail->addAddress($email, 'guest');
     $mail->Subject = 'Event Invitation';
+    $mail->SMTPDebug = 1;
     $mail->Body = "Dear $first $nameguest, You have been invited to a wedding event! 
     Please Click on the link below to rsvp.
     http://localhost:8083/wedding/rsvp_page.php?guest_id={$guestid}";

@@ -19,7 +19,7 @@
       <li><a href="TemplateSelection.php">Invitation Design</a></li>
       <li><a href="GuestManagement.php">Guest Management</a></li>
       <li><a href="personal_website/index.php">Personal Website</a></li>
-      <li><a href="survey.php">Survey</a></li>
+      <li><a href="survey.html">Survey</a></li>
       <li><a href="email_page.php">Email Guests</a></li>
     </ul>
 

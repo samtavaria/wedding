@@ -1,6 +1,6 @@
 <?php
 
-require_once '/swift/lib/swift_required.php';
+require_once 'swift/lib/swift_required.php';
 echo "<html><body background = media/website_images/body.jpg>";
 
 session_start();

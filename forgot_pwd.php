@@ -1,5 +1,5 @@
 <?php
-require_once '/swift/lib/swift_required.php';
+require_once 'swift/lib/swift_required.php';
 echo "<html><body background = media/website_images/body.jpg>";
 error_reporting(0);
 $email=$_POST['email'];
