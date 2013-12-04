@@ -18,7 +18,7 @@ class GuestListView
         $result = DatabaseConnection::getGuestlist();
         //var_dump($result);
 
-        echo '<table border = "1">';
+        echo '<table border = "1" style="background-color: #f5f5f5">';
         echo '<tr>';
         echo '<th>Side</th>';
         echo '<th>First Name</th>';

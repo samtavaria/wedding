@@ -27,16 +27,18 @@ $g_first_name=$_POST['g_first_name'];
 $g_middle_name=$_POST['g_middle_name'];
 $g_last_name=$_POST['g_last_name'];
 
-$g_father_name=$_POST['g_father_name'];
-$g_mother_name=$_POST['g_mother_name'];
+//$g_father_name=$_POST['g_father_name'];
+//$g_mother_name=$_POST['g_mother_name'];
+$g_father_name='';
+$g_mother_name='';
 
 
 $b_first_name=$_POST['b_first_name'];
 $b_middle_name=$_POST['b_middle_name'];
 $b_last_name=$_POST['b_last_name'];
 
-$b_father_name=$_POST['b_father_name'];
-$b_mother_name=$_POST['b_mother_name'];
+$b_father_name='';
+$b_mother_name='';
 
 $username=$_POST['username']; //email
 $password=$_POST['password'];
