@@ -531,5 +531,17 @@ class DatabaseConnection
 
        // echo $gid."------";
     }
+
+    public static function updateUserSelectedImage($cid, $imagePath) {
+        $sql = "replace into user_selected_images values( {$cid},'{$imagePath}', '{$imagePath}')";
+        mysql_query($sql);
+    }
+
+    public static function getUserSelectedImage($cid) {
+        $sql = "select * from user_selected_images where c_id = {$cid}";
+        $results = mysql_query($sql);
+        $resultsRow = mysql_fetch_assoc($results);
+        return $resultsRow;
+    }
 }
 
