@@ -34,8 +34,8 @@ $mail->Host       = "smtp.gmail.com"; // SMTP server example
 $mail->SMTPDebug  = 0;                     // enables SMTP debug informat
 $mail->SMTPAuth   = true;                  // enable SMTP authentication
 $mail->Port       = 587;                    // was 25 set the SMTP port for \
-$mail->Username   = "onlineweddingmanagement@gmail.com"; // SMTP account use\
-$mail->Password   = "123wedding";        // SMTP account password example
+$mail->Username   = "OWMteam12@gmail.com"; // SMTP account use\
+$mail->Password   = "wedding123";        // SMTP account password example
 $mail->SMTPSecure = 'tls';
 
 $mail->From = 'onlineweddingmanagement@gmail.com';
