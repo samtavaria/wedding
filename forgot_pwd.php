@@ -21,7 +21,7 @@ $mailer = Swift_Mailer::newInstance($transport);
 $message = Swift_Message::newInstance('Forgot Password?')
   ->setFrom(array('onlineweddingusc@gmail.com' => 'Online Wedding Management'))
   ->setTo(array($email))
-  ->setBody("http://54.204.11.81/wedding/password.php?email=$email&code=$code");
+  ->setBody("http://localhost:8083/wedding/password.php?email=$email&code=$code");
 
 
 $result = $mailer->send($message);
