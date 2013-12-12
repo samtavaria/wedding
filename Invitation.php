@@ -158,11 +158,12 @@ $position1 = explode(',', $position['all_positions']);
                 } });
 
 
-                $("#customText1").draggable({
+               /* $("#customText1").draggable({
                 cancel: '',
                 drag: function (event, ui) {
                     customText1Position = ui.position;
-                } });
+                    alert(customText1Position['top']+'=='+customText1Position['left']);
+                } });*/
             $("#customText1").elastic();
 
         });
@@ -261,9 +262,9 @@ $position1 = explode(',', $position['all_positions']);
             <br/>
 
             <!-- Now addd custom text boxes" -->
-
-            <textarea style ="background-color:transparent; border:none; resize: none; overflow: hidden;position: absolute;
-                top: <?php echo $position1[12]; ?> ;left: <?php echo $position1[13]; ?>" id="customText1" name="customText1" rows="4" cols="240" wrap="physical"  ><?php echo $customText;?></textarea>
+            <!-- text are positions dont change they are set to align with the card DO NOT change these values -->
+            <textarea style ="background-color:transparent; border:none; resize: none; overflow: hidden; position: absolute;
+                top: 153  ;left: 393" id="customText1" name="customText1" rows="4" cols="95" wrap="physical"  ><?php echo $customText;?></textarea>
 
         </div>
         <input type="hidden" id="myCss" name="myCss">
