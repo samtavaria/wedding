@@ -8,12 +8,19 @@ if (!isset($_SESSION['cid']) || empty($_SESSION['cid'])) {
     exit;
 }
 $couple = DatabaseConnection::getCouple();
+$customText = DatabaseConnection::getCustomInvitationText($_SESSION['cid']);
+
+if(empty($customText)) {
+    $customText = "You can enter custom text here";
+}
+//print_r($couple);exit;
 //$customCss = base64_decode(DatabaseConnection::getCss());
 //$backgroundImage = DatabaseConnection::getInvitationBackground($_SESSION['cid']);
 $backgroundImageArray = DatabaseConnection::getUserSelectedImage($_SESSION['cid']);
 $backgroundImage = $backgroundImageArray['image_path'];
 $position = DatabaseConnection::getPosition();
 $position1 = explode(',', $position['all_positions']);
+
 //var_dump($position1);
 ?>
 
@@ -38,6 +45,7 @@ $position1 = explode(',', $position['all_positions']);
 
     <script src="javascript/jquery-1.9.1.js"></script>
     <script src="javascript/jquery-ui.js"></script>
+    <script src="javascript/jquery.elastic.source.js"></script>
     <script type="text/javascript" src="media/farbtastic/farbtastic.js"></script>
     <link rel="stylesheet" href="media/farbtastic/farbtastic.css" type="text/css"/>
 
@@ -45,10 +53,24 @@ $position1 = explode(',', $position['all_positions']);
 
 
         $(document).ready(function () {
+
             brideposition = '';
             groomposition = '';
             wedsposition = '';
-            libraryposition = '';
+            libraryposition1 = '';
+            libraryposition2= '';
+            libraryposition3 = '';
+            libraryposition4 = '';
+            libraryposition5 = '';
+            libraryposition6 = '';
+            libraryposition7= '';
+            libraryposition8= '';
+            libraryposition= '';
+            brideParentsPosition = '';
+            groomParentsPosition = '';
+            customText1Position = '';
+
+
 
             $("#bride").draggable({
                 // options..
@@ -72,13 +94,80 @@ $position1 = explode(',', $position['all_positions']);
                 drag: function (event, ui) {
                     libraryposition = ui.position;
                 } });
+                $("#library_img1").draggable({
+                cancel: '',
+                drag: function (event, ui) {
+                    libraryposition1 = ui.position;
+                } });
+                $("#library_img2").draggable({
+                cancel: '',
+                drag: function (event, ui) {
+                    libraryposition2 = ui.position;
+                } });
+                $("#library_img3").draggable({
+                cancel: '',
+                drag: function (event, ui) {
+                    libraryposition3 = ui.position;
+                } });
+                $("#library_img4").draggable({
+                cancel: '',
+                drag: function (event, ui) {
+                    libraryposition4 = ui.position;
+                } });
+                $("#library_img5").draggable({
+                cancel: '',
+                drag: function (event, ui) {
+                    libraryposition5 = ui.position;
+                } });
+                $("#library_img6").draggable({
+                cancel: '',
+                drag: function (event, ui) {
+                    libraryposition6 = ui.position;
+                } });
+
+                $("#library_img7").draggable({
+                cancel: '',
+                drag: function (event, ui) {
+                    libraryposition7 = ui.position;
+                } });
+
+                $("#library_img8").draggable({
+                cancel: '',
+                drag: function (event, ui) {
+                    libraryposition8 = ui.position;
+                } });
+
+
+            $("#groomParents").draggable({
+                cancel: '',
+                drag: function (event, ui) {
+                    groomParentsPosition = ui.position;
+                } });
+
+
+        $("#brideParents").draggable({
+                cancel: '',
+                drag: function (event, ui) {
+                    brideParentsPosition = ui.position;
+                } });
+
+
+                $("#customText1").draggable({
+                cancel: '',
+                drag: function (event, ui) {
+                    customText1Position = ui.position;
+                } });
+            $("#customText1").elastic();
 
         });
 
     </script>
 
     <script type="text/javascript">
+
+
         function saveToDatabase() {
+           // alert('fff');
             var temp = brideposition['top']+ ',';
                 temp+= brideposition['left']+',';
                 temp+= wedsposition['top']+',';
@@ -86,7 +175,33 @@ $position1 = explode(',', $position['all_positions']);
                 temp+= groomposition['top']+',';
                 temp+= groomposition['left']+',';
                 temp+= libraryposition['top']+',';
-                temp+= libraryposition['left'];
+                temp+= libraryposition['left']+',';
+
+
+                temp+= groomParentsPosition['top']+',';
+                temp+= groomParentsPosition['left']+ ',';
+            temp+= brideParentsPosition['top']+',';
+            temp+= brideParentsPosition['left']+ ',';
+                temp+= customText1Position['top']+ ',';
+                temp+= customText1Position['left'];
+            temp+= libraryposition1['top']+',';
+            temp+= libraryposition1['left']+',';
+            temp+= libraryposition2['top']+',';
+            temp+= libraryposition2['left']+',';
+            temp+= libraryposition3['top']+',';
+            temp+= libraryposition3['left']+',';
+            temp+= libraryposition4['top']+',';
+            temp+= libraryposition4['left']+',';
+            temp+= libraryposition5['top']+',';
+            temp+= libraryposition5['left']+',';
+            temp+= libraryposition6['top']+',';
+            temp+= libraryposition6['left']+',';
+            temp+= libraryposition7['top']+',';
+            temp+= libraryposition7['left']+',';
+            temp+= libraryposition8['top']+',';
+            temp+= libraryposition8['left']+',';
+
+           // alert('hi'+temp);
             document.getElementById('myCss').value = temp;
         }
     </script>
@@ -122,11 +237,73 @@ $position1 = explode(',', $position['all_positions']);
                    name="groom" width="500px"
              type="text"
             value="<?php echo $couple[3] . " " . $couple[4] . " " . $couple[5]; ?>"> <br/>
+            <input id="groomParents"
+                   style="background-color: transparent; border: none; position: absolute; top: <?php echo $position1[8]; ?>; left: <?php echo $position1[9]; ?>"
+                   name="groomParents" width="500px"
+             type="text"
+            value="<?php echo $couple[8] . " and " . $couple[9] ; ?>">
+            <br/>
+            <input id="brideParents"
+                   style="background-color: transparent; border: none; position: absolute; top: <?php echo $position1[10]; ?>; left: <?php echo $position1[11]; ?>"
+                   name="brideParents" width="500px"
+             type="text"
+            value="<?php echo $couple[6] . " and " . $couple[7] ; ?>">
+            <br/>
+
+            <!-- Now addd custom text boxes" -->
+
+            <textarea style ="background-color:transparent; border:none; resize: none; overflow: hidden;position: absolute;
+                top: <?php echo $position1[12]; ?> ;left: <?php echo $position1[13]; ?>" id="customText1" name="customText1" rows="4" cols="240" wrap="physical"  ><?php echo $customText;?></textarea>
+
         </div>
         <input type="hidden" id="myCss" name="myCss">
         <input type="submit" value="Save">
-        <img src="media/invitation_card_icons/image_1.jpeg" id="library_img" style= "position: absolute;
+        <!-- Include icons in the page -->
+
+        <img src="media/invitation_card_icons/image_1.jpg" id="library_img" heigth = "100" width = "100" style= "position: absolute;
             top: <?php echo $position1[6]; ?> ;left: <?php echo $position1[7]; ?>">
+
+        <img src="media/invitation_card_icons/image_2.jpg" id="library_img1" heigth = "100" width = "100" style= "position: absolute;
+            top: <?php echo $position1[14]; ?> ;left: <?php echo $position1[15]; ?>">
+        <img src="media/invitation_card_icons/image_3.jpg" id="library_img2" heigth = "100" width = "100" style= "position: absolute;
+            top: <?php echo $position1[16]; ?> ;left: <?php echo $position1[17]; ?>">
+        <img src="media/invitation_card_icons/image_4.jpg" id="library_img8" heigth = "100" width = "100" style= "position: absolute;
+            top: <?php echo $position1[18]; ?> ;left: <?php echo $position1[29]; ?>">
+        <img src="media/invitation_card_icons/image_5.jpg" id="library_img3" heigth = "100" width = "100" style= "position: absolute;
+            top: <?php echo $position1[20]; ?> ;left: <?php echo $position1[21]; ?>">
+        <img src="media/invitation_card_icons/image_6.jpg" id="library_img4" heigth = "100" width = "100" style= "position: absolute;
+            top: <?php echo $position1[22]; ?> ;left: <?php echo $position1[23]; ?>">
+        <img src="media/invitation_card_icons/image_7.jpg" id="library_img5" heigth = "100" width = "100" style= "position: absolute;
+            top: <?php echo $position1[24]; ?> ;left: <?php echo $position1[25]; ?>">
+        <img src="media/invitation_card_icons/image_8.jpg" id="library_img6" heigth = "100" width = "100" style= "position: absolute;
+            top: <?php echo $position1[26]; ?> ;left: <?php echo $position1[27]; ?>">
+        <!--You cadd add more if you wish
+        <img src="media/invitation_card_icons/image_9.jpg" id="library_img7" heigth = "100" width = "100" style= "position: absolute;
+            top: <?php echo $position1[28]; ?> ;left: <?php echo $position1[29]; ?>">
+
+        <img src="media/invitation_card_icons/image_10.jpg" id="library_img" heigth = "100" width = "100" style= "position: absolute;
+            top: <?php echo $position1[31]; ?> ;left: <?php echo $position1[32]; ?>">
+        <img src="media/invitation_card_icons/image_11.jpg" id="library_img" heigth = "100" width = "100" style= "position: absolute;
+            top: <?php echo $position1[33]; ?> ;left: <?php echo $position1[34]; ?>">
+        <img src="media/invitation_card_icons/image_12.jpg" id="library_img" heigth = "100" width = "100" style= "position: absolute;
+            top: <?php echo $position1[35]; ?> ;left: <?php echo $position1[36]; ?>"> < br/>
+        <img src="media/invitation_card_icons/image_13.jpg" id="library_img" heigth = "100" width = "100" style= "position: absolute;
+            top: <?php echo $position1[37]; ?> ;left: <?php echo $position1[38]; ?>">
+        <img src="media/invitation_card_icons/image_14.jpg" id="library_img" heigth = "100" width = "100" style= "position: absolute;
+            top: <?php echo $position1[39]; ?> ;left: <?php echo $position1[40]; ?>">
+        <img src="media/invitation_card_icons/image_15.jpg" id="library_img" heigth = "100" width = "100" style= "position: absolute;
+            top: <?php echo $position1[41]; ?> ;left: <?php echo $position1[42]; ?>"> < br/>
+        <img src="media/invitation_card_icons/image_16.jpg" id="library_img" heigth = "100" width = "100" style= "position: absolute;
+            top: <?php echo $position1[43]; ?> ;left: <?php echo $position1[44]; ?>">
+        <img src="media/invitation_card_icons/image_17.jpg" id="library_img" heigth = "100" width = "100" style= "position: absolute;
+            top: <?php echo $position1[45]; ?> ;left: <?php echo $position1[46]; ?>">
+        <img src="media/invitation_card_icons/image_18.jpg" id="library_img" heigth = "100" width = "100" style= "position: absolute;
+            top: <?php echo $position1[47]; ?> ;left: <?php echo $position1[48]; ?>"> < br/>
+        <img src="media/invitation_card_icons/image_19.jpg" id="library_img" heigth = "100" width = "100" style= "position: absolute;
+            top: <?php echo $position1[49]; ?> ;left: <?php echo $position1[50]; ?>">
+        <img src="media/invitation_card_icons/image_20.jpg" id="library_img" heigth = "100" width = "100" style= "position: absolute;
+            top: <?php echo $position1[51]; ?> ;left: <?php echo $position1[52]; ?>">
+        <!--End include icons -->
 
     </form>
 

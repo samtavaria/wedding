@@ -9,7 +9,8 @@
 include_once('model/PersistentDatabaseConnection.php');
 include_once('return_homepage.php');
 DatabaseConnection::connectToDatabase();
-//var_dump($_POST);
-DatabaseConnection::setPosition($_POST);
+
+DatabaseConnection::setPosition($_POST['myCss']);
 DatabaseConnection::updateCoupleInformationFromInvitation($_POST);
+DatabaseConnection::updateCustomInvitationText($_POST['customText1']);
 header("Location: Invitation.php");

@@ -37,7 +37,7 @@ class DatabaseConnection
 
         $cid = $_SESSION['cid'];
 
-        $sql = "SELECT Bride.b_first_name, Bride.b_middle_name, Bride.b_last_name, Groom.g_first_name, Groom.g_middle_name, Groom.g_last_name from  Bride, Groom where ";
+        $sql = "SELECT Bride.b_first_name, Bride.b_middle_name, Bride.b_last_name, Groom.g_first_name, Groom.g_middle_name, Groom.g_last_name, Bride.b_father_name, Bride.b_mother_name, Groom.g_father_name, Groom.g_mother_name from  Bride, Groom where ";
         $sql .= "Bride.c_id =" . "'$cid'" ;
         $sql .= "and Groom.c_id =" . "'$cid'" ;
 
@@ -65,6 +65,10 @@ class DatabaseConnection
             $couple[] = $row['g_first_name'];
             $couple[] = $row['g_middle_name'];
             $couple[] = $row['g_last_name'];
+            $couple[] = $row['b_father_name'];
+            $couple[] = $row['b_mother_name'];
+            $couple[] = $row['g_father_name'];
+            $couple[] = $row['g_mother_name'];
 
         }
 
@@ -114,15 +118,15 @@ class DatabaseConnection
 	}
 	
     public static function setPosition($position) {
-        $combinedPosition = $position['myCss'];
+
         $cid = $_SESSION['cid'];
-        $sql = "insert into draggable values ('', '" . $cid . "','','','', '" . $combinedPosition . "')";
-        mysql_query($sql);
+        $sql = "Replace into draggable values({$cid}, '{$position}')";
+        mysql_query($sql) or die(mysql_error());
     }
 
     public static function getPosition() {
         $cid = $_SESSION['cid'];
-        $sql = "select all_positions from draggable where c_id = "."'$cid'". " order by draggable_id desc limit 1";
+        $sql = "select all_positions from draggable where c_id = {$cid}";
         $result = mysql_query($sql);
         $resultRow = mysql_fetch_assoc($result);
         return $resultRow;
@@ -547,6 +551,35 @@ class DatabaseConnection
         $results = mysql_query($sql);
         $resultsRow = mysql_fetch_assoc($results);
         return $resultsRow;
+    }
+
+    public static function updateBrideAndGroomParentData($data,$cid) {
+
+        $brideMother = $data['brideMother'];
+        $groomMother = $data['groomMother'];
+        $groomFather = $data['groomFather'];
+        $brideFather = $data['brideFather'];
+        $sql = "update Bride set b_father_name = '{$brideFather}' where c_id = {$cid}";
+        mysql_query($sql) or die (mysql_error());
+        $sql = "update Bride set b_mother_name = '{$brideMother}' where c_id = {$cid}";
+        mysql_query($sql) or die (mysql_error());
+        $sql = "update Groom set g_mother_name = '{$groomMother}' where c_id = {$cid}";
+        mysql_query($sql) or die (mysql_error());
+        $sql = "update Groom set g_father_name = '{$groomFather}' where c_id = {$cid}";
+        mysql_query($sql) or die (mysql_error());
+    }
+
+    public static function updateCustomInvitationText($text) {
+        $cid = $_SESSION['cid'];
+        $sql = "replace into invitation_text values({$cid}, '{$text}')";
+        mysql_query($sql) or die(mysql_error());
+    }
+
+    public static function getCustomInvitationText($cid) {
+        $sql = "select custom_text from invitation_text where c_id = {$cid}";
+        $results = mysql_query($sql);
+        $reultsRow = mysql_fetch_assoc($results);
+        return $reultsRow['custom_text'];
     }
 }
 

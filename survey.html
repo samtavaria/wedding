@@ -192,6 +192,10 @@ include_once('return_homepage.php');
 				var bio_for_him      = $("#bio_for_him").val();
 				var bio_for_her      = $("#bio_for_her").val();
 				var honeymoon_text     = $("#honeymoon_text").val();
+				var brideMother     = $("#brideMother").val();
+				var brideFather    = $("#brideFather").val();
+				var groomMother     = $("#groomMother").val();
+				var groomFather     = $("#groomFather").val();
 				var dataString = "welcome_text="  + welcome_text +
 								 "&how_met_text=" + how_met_text +
 								 "&proposal_text=" + proposal_text +
@@ -199,7 +203,11 @@ include_once('return_homepage.php');
 								 "&registry_text=" + registry_text + 
 								 "&honeymoon_text=" + honeymoon_text +
 								 "&bio_for_him=" + bio_for_him +
-								 "&bio_for_her=" + bio_for_her;
+                                 "&bio_for_her=" + bio_for_her +
+								 "&brideMother=" + brideMother +
+								 "&brideFather=" + brideFather +
+								 "&groomMother=" + groomMother +
+								 "&groomFather=" + groomFather;
 				console.debug('there');
 				$.ajax({
 					type: "POST",
@@ -645,6 +653,27 @@ Whenever  you select or change a design template, the info stored in this form w
                                     <label for="welcome_text">Welcome Text</label>
                                     <textarea id="welcome_text" name="Welcome Text" rows="5" cols="20" wrap="physical">This is where it goes</textarea>
                                     <span class="tooltip">Message that welcomes guest on the main page</span>
+
+                                </p>
+
+                                <p>
+                                    <label for="brideMother">Bride's mothers name</label>
+                                    <input type = "text" id="brideMother" name="brideMother" >
+
+                                </p>
+                                 <p>
+                                    <label for="brideFather">Bride's Fathers name</label>
+                                    <input type = "text" id="brideFather" name="brideFather" >
+
+                                </p>
+                                 <p>
+                                    <label for="groomMother">Groom's mothers name</label>
+                                    <input type = "text" id="groomMother" name="groomMother" >
+
+                                </p>
+                                 <p>
+                                    <label for="groomFather">Groom's mothers name</label>
+                                    <input type = "text" id="groomFather" name="groomFather" >
 
                                 </p>
                                 <p>
