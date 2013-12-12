@@ -65,6 +65,7 @@ $position1 = explode(',', $position['all_positions']);
             libraryposition6 = '';
             libraryposition7= '';
             libraryposition8= '';
+            libraryposition9= '';
             libraryposition= '';
             brideParentsPosition = '';
             groomParentsPosition = '';
@@ -94,48 +95,53 @@ $position1 = explode(',', $position['all_positions']);
                 drag: function (event, ui) {
                     libraryposition = ui.position;
                 } });
-                $("#library_img1").draggable({
-                cancel: '',
-                drag: function (event, ui) {
-                    libraryposition1 = ui.position;
-                } });
-                $("#library_img2").draggable({
+
+            $("#library_img2").draggable({
                 cancel: '',
                 drag: function (event, ui) {
                     libraryposition2 = ui.position;
                 } });
-                $("#library_img3").draggable({
+
+            $("#library_img3").draggable({
                 cancel: '',
                 drag: function (event, ui) {
-                    libraryposition3 = ui.position;
+                    libraryposition3= ui.position;
                 } });
-                $("#library_img4").draggable({
+            $("#library_img4").draggable({
                 cancel: '',
                 drag: function (event, ui) {
                     libraryposition4 = ui.position;
                 } });
-                $("#library_img5").draggable({
+            $("#library_img5").draggable({
                 cancel: '',
                 drag: function (event, ui) {
                     libraryposition5 = ui.position;
                 } });
-                $("#library_img6").draggable({
+            $("#library_img6").draggable({
                 cancel: '',
                 drag: function (event, ui) {
                     libraryposition6 = ui.position;
                 } });
-
-                $("#library_img7").draggable({
+            $("#library_img7").draggable({
                 cancel: '',
                 drag: function (event, ui) {
                     libraryposition7 = ui.position;
                 } });
-
-                $("#library_img8").draggable({
+            $("#library_img8").draggable({
                 cancel: '',
                 drag: function (event, ui) {
                     libraryposition8 = ui.position;
                 } });
+            $("#library_img9").draggable({
+                cancel: '',
+                drag: function (event, ui) {
+                    libraryposition9 = ui.position;
+                } });
+
+
+
+
+
 
 
             $("#groomParents").draggable({
@@ -183,9 +189,7 @@ $position1 = explode(',', $position['all_positions']);
             temp+= brideParentsPosition['top']+',';
             temp+= brideParentsPosition['left']+ ',';
                 temp+= customText1Position['top']+ ',';
-                temp+= customText1Position['left'];
-            temp+= libraryposition1['top']+',';
-            temp+= libraryposition1['left']+',';
+                temp+= customText1Position['left']+',';
             temp+= libraryposition2['top']+',';
             temp+= libraryposition2['left']+',';
             temp+= libraryposition3['top']+',';
@@ -200,6 +204,12 @@ $position1 = explode(',', $position['all_positions']);
             temp+= libraryposition7['left']+',';
             temp+= libraryposition8['top']+',';
             temp+= libraryposition8['left']+',';
+            temp+= libraryposition9['top']+',';
+            temp+= libraryposition9['left']+',';
+
+
+
+
 
            // alert('hi'+temp);
             document.getElementById('myCss').value = temp;
@@ -258,52 +268,24 @@ $position1 = explode(',', $position['all_positions']);
         </div>
         <input type="hidden" id="myCss" name="myCss">
         <input type="submit" value="Save">
-        <!-- Include icons in the page -->
-
-        <img src="media/invitation_card_icons/image_1.jpg" id="library_img" heigth = "100" width = "100" style= "position: absolute;
+        <img src="media/invitation_card_icons/image_1.jpg" height = "100" width = "100" id="library_img" style= "position: absolute;
             top: <?php echo $position1[6]; ?> ;left: <?php echo $position1[7]; ?>">
-
-        <img src="media/invitation_card_icons/image_2.jpg" id="library_img1" heigth = "100" width = "100" style= "position: absolute;
+        <img src="media/invitation_card_icons/image_2.jpg" height = "100" width = "100" id="library_img2" style= "position: absolute;
             top: <?php echo $position1[14]; ?> ;left: <?php echo $position1[15]; ?>">
-        <img src="media/invitation_card_icons/image_3.jpg" id="library_img2" heigth = "100" width = "100" style= "position: absolute;
+        <img src="media/invitation_card_icons/image_3.jpg" height = "100" width = "100" id="library_img3" style= "position: absolute;
             top: <?php echo $position1[16]; ?> ;left: <?php echo $position1[17]; ?>">
-        <img src="media/invitation_card_icons/image_4.jpg" id="library_img8" heigth = "100" width = "100" style= "position: absolute;
-            top: <?php echo $position1[18]; ?> ;left: <?php echo $position1[29]; ?>">
-        <img src="media/invitation_card_icons/image_5.jpg" id="library_img3" heigth = "100" width = "100" style= "position: absolute;
+        <img src="media/invitation_card_icons/image_4.jpg" height = "100" width = "100" id="library_img4" style= "position: absolute;
+            top: <?php echo $position1[18]; ?> ;left: <?php echo $position1[19]; ?>">
+        <img src="media/invitation_card_icons/image_5.jpg" height = "100" width = "100" id="library_img5" style= "position: absolute;
             top: <?php echo $position1[20]; ?> ;left: <?php echo $position1[21]; ?>">
-        <img src="media/invitation_card_icons/image_6.jpg" id="library_img4" heigth = "100" width = "100" style= "position: absolute;
+        <img src="media/invitation_card_icons/image_6.jpg" height = "100" width = "100" id="library_img6" style= "position: absolute;
             top: <?php echo $position1[22]; ?> ;left: <?php echo $position1[23]; ?>">
-        <img src="media/invitation_card_icons/image_7.jpg" id="library_img5" heigth = "100" width = "100" style= "position: absolute;
+        <img src="media/invitation_card_icons/image_7.jpg" height = "100" width = "100" id="library_img7" style= "position: absolute;
             top: <?php echo $position1[24]; ?> ;left: <?php echo $position1[25]; ?>">
-        <img src="media/invitation_card_icons/image_8.jpg" id="library_img6" heigth = "100" width = "100" style= "position: absolute;
+        <img src="media/invitation_card_icons/image_8.jpg" height = "100" width = "100" id="library_img8" style= "position: absolute;
             top: <?php echo $position1[26]; ?> ;left: <?php echo $position1[27]; ?>">
-        <!--You cadd add more if you wish
-        <img src="media/invitation_card_icons/image_9.jpg" id="library_img7" heigth = "100" width = "100" style= "position: absolute;
+        <img src="media/invitation_card_icons/image_9.jpg" height = "100" width = "100" id="library_img9" style= "position: absolute;
             top: <?php echo $position1[28]; ?> ;left: <?php echo $position1[29]; ?>">
-
-        <img src="media/invitation_card_icons/image_10.jpg" id="library_img" heigth = "100" width = "100" style= "position: absolute;
-            top: <?php echo $position1[31]; ?> ;left: <?php echo $position1[32]; ?>">
-        <img src="media/invitation_card_icons/image_11.jpg" id="library_img" heigth = "100" width = "100" style= "position: absolute;
-            top: <?php echo $position1[33]; ?> ;left: <?php echo $position1[34]; ?>">
-        <img src="media/invitation_card_icons/image_12.jpg" id="library_img" heigth = "100" width = "100" style= "position: absolute;
-            top: <?php echo $position1[35]; ?> ;left: <?php echo $position1[36]; ?>"> < br/>
-        <img src="media/invitation_card_icons/image_13.jpg" id="library_img" heigth = "100" width = "100" style= "position: absolute;
-            top: <?php echo $position1[37]; ?> ;left: <?php echo $position1[38]; ?>">
-        <img src="media/invitation_card_icons/image_14.jpg" id="library_img" heigth = "100" width = "100" style= "position: absolute;
-            top: <?php echo $position1[39]; ?> ;left: <?php echo $position1[40]; ?>">
-        <img src="media/invitation_card_icons/image_15.jpg" id="library_img" heigth = "100" width = "100" style= "position: absolute;
-            top: <?php echo $position1[41]; ?> ;left: <?php echo $position1[42]; ?>"> < br/>
-        <img src="media/invitation_card_icons/image_16.jpg" id="library_img" heigth = "100" width = "100" style= "position: absolute;
-            top: <?php echo $position1[43]; ?> ;left: <?php echo $position1[44]; ?>">
-        <img src="media/invitation_card_icons/image_17.jpg" id="library_img" heigth = "100" width = "100" style= "position: absolute;
-            top: <?php echo $position1[45]; ?> ;left: <?php echo $position1[46]; ?>">
-        <img src="media/invitation_card_icons/image_18.jpg" id="library_img" heigth = "100" width = "100" style= "position: absolute;
-            top: <?php echo $position1[47]; ?> ;left: <?php echo $position1[48]; ?>"> < br/>
-        <img src="media/invitation_card_icons/image_19.jpg" id="library_img" heigth = "100" width = "100" style= "position: absolute;
-            top: <?php echo $position1[49]; ?> ;left: <?php echo $position1[50]; ?>">
-        <img src="media/invitation_card_icons/image_20.jpg" id="library_img" heigth = "100" width = "100" style= "position: absolute;
-            top: <?php echo $position1[51]; ?> ;left: <?php echo $position1[52]; ?>">
-        <!--End include icons -->
 
     </form>
 
