@@ -63,7 +63,7 @@ $mailer = Swift_Mailer::newInstance($transport);
 $message = Swift_Message::newInstance('Online Wedding Management System Account Registration')
   ->setFrom(array('onlineweddingusc@gmail.com' => 'OnlineWedding'))
   ->setTo(array($username))
-  ->setBody("http://localhost:8083/wedding/confirmation.php?passkey=$confirm_code");
+  ->setBody("http://54.204.11.81/wedding/confirmation.php?passkey=$confirm_code");
 
 
 $result = $mailer->send($message);
