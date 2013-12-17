@@ -51,7 +51,13 @@
             }
         }
     </script>
+    <div id="google_translate_element"></div><script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'en,hi', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+        }
+    </script><script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
+    <meta name="google-translate-customization" content="7edeceaa2f0de8bf-9f7f5d7c5d655af2-gf8c8b8c437cd6425-16"></meta>
 
 </head>
 
