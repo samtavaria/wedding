@@ -8,7 +8,7 @@
  */
 include_once('GuestDatabaseManagement.php');
 include_once('return_homepage.php');
-$guestDatabaseFile = '/opt/lampp/htdocs/wedding/tmp/GuestDatabase' . $_SESSION['cid'] . '.csv';
+$guestDatabaseFile = 'C:\xampp\htdocs\wedding\tmp\GuestDatabase' . $_SESSION['cid'] . '.csv';
 $guestDatabaseManagement = new GuestDatabaseManagement();
 echo '<body background = "media/website_images/body.jpg">';
 if ($_FILES["guestDatabase"]["error"] > 0) {

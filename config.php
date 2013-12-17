@@ -1,11 +1,11 @@
 <?php
 
-$host="team12.c28dqpxgij9r.us-east-1.rds.amazonaws.com"; // Host name
-$username="team12wedding"; // Mysql username
-$password="team_12_wedding"; // Mysql password
+$host="localhost"; // Host name
+$username="root"; // Mysql username
+$password="admin"; // Mysql password
 $db_name="team12"; // Database name
 
-//$conn = mysql_connect("team12.c28dqpxgij9r.us-east-1.rds.amazonaws.com", "team12wedding", "team_12_wedding");
+//$conn = mysql_connect("localhost", "root", "admin");
 
 //Connect to server and select database.
 mysql_connect("$host", "$username", "$password")or die("cannot connect to server");

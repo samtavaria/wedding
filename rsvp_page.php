@@ -7,7 +7,7 @@ $gid =  substr($_SERVER['REQUEST_URI'],strpos($_SERVER['REQUEST_URI'],'=') +1);
 
 //echo "guest_id from URL".$gid."---------------------->";
 
-$conn = mysql_connect("team12.c28dqpxgij9r.us-east-1.rds.amazonaws.com", "team12wedding", "team_12_wedding");
+$conn = mysql_connect("localhost", "root", "admin");
 
         if (!$conn) {
             echo "Unable to connect to DB: " . mysql_error();

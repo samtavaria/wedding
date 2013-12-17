@@ -15,7 +15,7 @@ class DatabaseConnection
 
     public static function connectToDatabase()
     {
-        $conn = mysql_connect("team12.c28dqpxgij9r.us-east-1.rds.amazonaws.com", "team12wedding", "team_12_wedding");
+        $conn = mysql_connect("localhost", "root", "admin");
 
         if (!$conn) {
             echo "Unable to connect to DB: " . mysql_error();
